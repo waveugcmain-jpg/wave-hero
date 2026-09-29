@@ -98,6 +98,21 @@
 .playbook-step:nth-child(3) .playbook-number span,.playbook-step:nth-child(5) .playbook-number span{background:#e7edff;color:#1b43f5}
 .playbook-step:nth-child(6) .playbook-number span{background:#caff83}
 @media(max-width:640px){.playbook-illustration{padding:8px;border-radius:18px}}
+
+/* Explanatory loops. Static artwork remains the reduced-motion fallback. */
+.playbook-art .motion-item{transform-box:fill-box;transform-origin:center;animation-duration:7s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-delay:var(--beat,0s);animation-play-state:paused}
+.playbook-illustration.is-visible .motion-item{animation-play-state:running}
+.playbook-art .motion-rise{animation-name:pb-rise}
+.playbook-art .motion-pulse{animation-name:pb-pulse}
+.playbook-art .motion-draw{stroke-dasharray:700;animation-name:pb-draw}
+.playbook-art .motion-flow{animation-name:pb-flow;animation-duration:2.5s}
+.playbook-art .motion-scan{animation-name:pb-scan;transform-origin:left center}
+@keyframes pb-rise{0%,12%{opacity:.2;transform:translateY(15px) scale(.94)}28%,78%{opacity:1;transform:translateY(0) scale(1)}95%,100%{opacity:.2;transform:translateY(15px) scale(.94)}}
+@keyframes pb-pulse{0%,15%,85%,100%{transform:scale(1)}35%,55%{transform:scale(1.09)}65%{transform:scale(1)}}
+@keyframes pb-draw{0%,10%{stroke-dashoffset:700;opacity:.25}55%,83%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:700;opacity:.25}}
+@keyframes pb-flow{to{stroke-dashoffset:-44}}
+@keyframes pb-scan{0%,10%,100%{opacity:.3;transform:scaleX(.45)}30%,75%{opacity:1;transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.playbook-art .motion-item{animation:none!important;opacity:1;transform:none;stroke-dasharray:none}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -212,4 +227,22 @@ function scheduleReveal(){if(!revealFrame)revealFrame=requestAnimationFrame(pain
 addEventListener('scroll',scheduleReveal,{passive:true});addEventListener('resize',scheduleReveal);
 document.fonts.ready.then(scheduleReveal);paintStatement();
 document.querySelector('a[href="#why-wave"]').addEventListener('click',closeMenu);
+</script><script>
+// Animate meaningful parts of each existing SVG, keeping labels stable.
+(()=>{
+const arts=[...document.querySelectorAll('.playbook-art')];
+const animate=(el,type,delay=0)=>{if(!el)return;el.classList.add('motion-item','motion-'+type);el.style.setProperty('--beat',delay+'s')};
+arts.forEach((svg,i)=>{
+ const scene=svg.firstElementChild;
+ const nodes=[...scene.children];
+ if(i===0){nodes.filter(n=>n.tagName.toLowerCase()==='rect'&&n.getAttribute('height')==='29').forEach((n,j)=>animate(n,'pulse',j*.6));nodes.filter(n=>n.tagName.toLowerCase()==='rect'&&n.getAttribute('height')==='5').forEach((n,j)=>animate(n,'scan',j*.6));animate(scene.querySelector('g'),'rise',.8)}
+ if(i===1){scene.querySelectorAll('path[stroke-dasharray]').forEach(n=>animate(n,'flow'));scene.querySelectorAll('circle').forEach((n,j)=>animate(n,'pulse',j*.25))}
+ if(i===2){[...scene.children].filter(n=>n.tagName.toLowerCase()==='g').forEach((n,j)=>animate(n,'rise',j*.6));nodes.filter(n=>n.tagName.toLowerCase()==='rect'&&n.getAttribute('width')==='13').forEach((n,j)=>animate(n,'pulse',j*.35))}
+ if(i===3){animate(scene.querySelector('path[stroke="#1b43f5"]'),'draw');animate(scene.querySelector('circle'),'pulse',2.1)}
+ if(i===4){[...scene.children].filter(n=>n.tagName.toLowerCase()==='g').forEach((n,j)=>animate(n,j?'rise':'pulse',j*.8));scene.querySelectorAll('path[stroke-dasharray]').forEach(n=>animate(n,'flow'))}
+ if(i===5){animate(scene.querySelector('path[stroke="#caff83"]'),'draw');[...scene.children].filter(n=>n.tagName.toLowerCase()==='g').forEach((n,j)=>animate(n,'rise',j*.55))}
+});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>e.target.classList.toggle('is-visible',e.isIntersecting)),{threshold:.1});
+document.querySelectorAll('.playbook-illustration').forEach(el=>observer.observe(el));
+})();
 </script></body></html>
