@@ -146,7 +146,7 @@
 .campaign-card p{font-size:15px;line-height:1.5;letter-spacing:-.015em;margin:0;max-width:310px}
 .campaign-card:nth-child(1) p,.campaign-card:nth-child(6) p{color:#dce9e1}.campaign-card:nth-child(2) p{color:#edf1ff}
 .campaign-scroll-note{display:none}
-@media(min-width:1100px) and (min-height:740px){
+@media(min-width:800px) and (min-height:700px){
  .campaign.is-scrubbed{height:250svh}
  .is-scrubbed .campaign-stage{height:100svh;max-height:1050px;position:sticky;top:0;padding:0}
  .is-scrubbed .campaign-intro{position:absolute;left:29%;width:42%;top:50%;transform:translateY(-50%);margin:0;padding:24px 0}
@@ -161,8 +161,18 @@
 @media(min-width:1100px) and (max-height:850px){.is-scrubbed .campaign-card:nth-child(6){height:30%;top:67%}.is-scrubbed .campaign-card:nth-child(6) .campaign-number{position:absolute;top:18px;right:22px;margin:0}.is-scrubbed .campaign-card:nth-child(6) h3{margin-top:10px;margin-bottom:10px}.is-scrubbed .campaign-card:nth-child(6) p{line-height:1.4}}
 @media(max-width:1099px){.campaign-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.campaign-stage{padding:76px 24px}.campaign h2{font-size:clamp(40px,6vw,62px)}}
 @media(max-width:600px){.campaign{margin-top:6px}.campaign-stage{padding:64px 18px}.campaign-intro{margin-bottom:36px}.campaign-kicker{font-size:10px;margin-bottom:18px}.campaign h2{font-size:clamp(36px,10vw,52px)}.campaign-sub{font-size:16px;margin-top:22px}.campaign-cards{grid-template-columns:1fr;gap:14px}.campaign-card{min-height:230px;padding:26px;border-radius:24px}.campaign-card h3{font-size:28px}.campaign-card h3 .campaign-quantity{font-size:64px}.campaign-card p{font-size:16px;max-width:none}}
-@media(prefers-reduced-motion:reduce){.campaign-card{transform:none!important;opacity:1!important;will-change:auto!important}.campaign-scroll-note{display:none}}
 
+
+
+/* Give the statement its own reading distance without changing wheel behavior. */
+.statement-runway.is-pinned{height:calc(var(--statement-height) + 105svh)}
+.statement-runway.is-pinned .statement-pin{position:sticky;top:var(--statement-top)}
+.playbook-list.is-stacking{display:block;padding-bottom:clamp(48px,12vh,120px)}
+.is-stacking .playbook-step{position:sticky;top:var(--stack-top);z-index:var(--stack-index);margin-bottom:clamp(40px,10vh,100px);box-shadow:0 -8px 30px #123d3112;transform-origin:50% 0}
+.is-stacking .playbook-step:last-child{margin-bottom:0}
+
+
+@media(min-width:800px) and (max-width:1099px) and (min-height:700px){.is-scrubbed .campaign-stage{padding:0}.is-scrubbed .campaign-intro{left:29%;width:42%;padding:16px 0}.is-scrubbed .campaign h2{font-size:36px}.is-scrubbed #campaign-title{font-size:clamp(32px,4vw,43px)}.is-scrubbed .campaign-sub{font-size:15px}.is-scrubbed .campaign-card{padding:18px;height:29%;border-radius:22px}.is-scrubbed .campaign-card h3{font-size:21px;margin-bottom:10px}.is-scrubbed .campaign-card h3 .campaign-quantity{font-size:40px}.is-scrubbed .campaign-card p{font-size:14px;line-height:1.4}.is-scrubbed .campaign-number{margin-bottom:8px}.is-scrubbed .campaign-card:nth-child(6){height:31%;top:67%}.is-scrubbed .campaign-card:nth-child(6) .campaign-number{position:absolute;right:16px;top:14px}.is-scrubbed .campaign-card:nth-child(6) h3{margin-top:8px}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -283,10 +293,26 @@ const revealWords=statementCopy.split(/\s+/).map((word,index)=>{
   if(index)statement.append(document.createTextNode(' '));
   const span=document.createElement('span');span.className='reveal-word';span.textContent=word;span.setAttribute('aria-hidden','true');statement.append(span);return span;
 });
+const statementReduce=matchMedia('(prefers-reduced-motion:reduce)');
+const statementRunway=document.createElement('div');statementRunway.className='statement-runway';
+const statementPin=document.createElement('div');statementPin.className='statement-pin';
+statement.before(statementRunway);statementRunway.append(statementPin);
+const statementSub=statement.nextElementSibling;statementPin.append(statement);
+if(statementSub?.classList.contains('problem-sub'))statementPin.append(statementSub);
+function measureStatement(){
+ const top=Math.max(24,Math.min(120,innerHeight*.13));
+ statementRunway.style.setProperty('--statement-top',top+'px');
+ statementRunway.style.setProperty('--statement-height',statementPin.offsetHeight+'px');
+ statementRunway.classList.toggle('is-pinned',statementPin.offsetHeight<innerHeight-top-32);
+}
+measureStatement();
 let revealFrame=0;
 function paintStatement(){
   revealFrame=0;
-  const progress=Math.max(0,Math.min(1,(innerHeight*.88-statement.getBoundingClientRect().top)/(innerHeight*.66)));
+  const pinned=statementRunway.classList.contains('is-pinned');
+  const distance=pinned?statementRunway.offsetHeight-statementPin.offsetHeight:Math.max(innerHeight*.9,statement.offsetHeight);
+  const start=pinned?parseFloat(statementRunway.style.getPropertyValue('--statement-top')):innerHeight*.9;
+  const progress=Math.max(0,Math.min(1,(start-(pinned?statementRunway:statement).getBoundingClientRect().top)/distance));
   revealWords.forEach((word,index)=>{
     const amount=Math.max(0,Math.min(1,progress*(revealWords.length+2)-index));
     const from=[133,137,132],to=[22,28,24];
@@ -294,8 +320,8 @@ function paintStatement(){
   });
 }
 function scheduleReveal(){if(!revealFrame)revealFrame=requestAnimationFrame(paintStatement)}
-addEventListener('scroll',scheduleReveal,{passive:true});addEventListener('resize',scheduleReveal);
-document.fonts.ready.then(scheduleReveal);paintStatement();
+addEventListener('scroll',scheduleReveal,{passive:true});addEventListener('resize',()=>{measureStatement();scheduleReveal()});statementReduce.addEventListener('change',()=>{measureStatement();scheduleReveal()});
+document.fonts.ready.then(()=>{measureStatement();scheduleReveal()});paintStatement();
 document.querySelector('a[href="#why-wave"]').addEventListener('click',closeMenu);
 </script><script>
 // Animate meaningful parts of each existing SVG, keeping labels stable.
@@ -321,13 +347,16 @@ document.querySelectorAll('.playbook-illustration').forEach(el=>el.classList.add
  const section=document.querySelector('#campaign');
  const stage=section.querySelector('.campaign-stage');
  const cards=[...section.querySelectorAll('.campaign-card')];
- const desktop=matchMedia('(min-width:1100px) and (min-height:740px)');
+ const desktop=matchMedia('(min-width:800px) and (min-height:700px)');
  const reduce=matchMedia('(prefers-reduced-motion:reduce)');
  let frame=0, geometry=[];
  const clamp=v=>Math.max(0,Math.min(1,v));
  function paint(){
   frame=0;
-  if(!desktop.matches||reduce.matches)return;
+  if(!desktop.matches){
+   cards.forEach(card=>{const t=clamp((innerHeight*.94-(stage.getBoundingClientRect().top+card.offsetTop))/(innerHeight*.32));card.style.opacity=String(.15+.85*t);card.style.transform='translateY('+((1-t)*32)+'px) scale('+(.96+.04*t)+')'});
+   return;
+  }
   const progress=clamp(-section.getBoundingClientRect().top/(section.offsetHeight-stage.offsetHeight));
   cards.forEach((card,i)=>{
    const delay=[0,.07,.15,.22,.30,.37][i];
@@ -341,10 +370,10 @@ document.querySelectorAll('.playbook-illustration').forEach(el=>el.classList.add
  }
  function schedule(){if(!frame)frame=requestAnimationFrame(paint)}
  function measure(){
-  const active=desktop.matches&&!reduce.matches;
+  const active=desktop.matches;
   section.classList.toggle('is-scrubbed',active);
   cards.forEach(card=>{card.style.removeProperty('transform');card.style.removeProperty('opacity')});
-  if(active){geometry=cards.map(card=>({x:stage.clientWidth/2-card.offsetLeft-card.offsetWidth/2,y:stage.clientHeight/2-card.offsetTop-card.offsetHeight/2}));paint()}
+  if(active){geometry=cards.map(card=>({x:stage.clientWidth/2-card.offsetLeft-card.offsetWidth/2,y:stage.clientHeight/2-card.offsetTop-card.offsetHeight/2}))}paint();
  }
  addEventListener('scroll',schedule,{passive:true});
  addEventListener('resize',measure);
@@ -354,4 +383,37 @@ document.querySelectorAll('.playbook-illustration').forEach(el=>el.classList.add
 })();
 </script>
 
+
+<script>
+// Native sticky cards accumulate in a vertical deck; no wheel interception.
+(()=>{
+ const list=document.querySelector('.playbook-list');
+ const cards=[...list.children];
+ const reduce=matchMedia('(prefers-reduced-motion:reduce)');
+ let pending=0, tops=[];
+ function paint(){
+  pending=0;
+  if(!list.classList.contains('is-stacking'))return;
+  cards.forEach((card,i)=>{
+   const next=cards[i+1];
+   const progress=next?Math.max(0,Math.min(1,(innerHeight-next.getBoundingClientRect().top)/(innerHeight-tops[i+1]))):0;
+   card.style.transform='scale('+(1-.018*progress).toFixed(4)+')';
+  });
+ }
+ function queue(){if(!pending)pending=requestAnimationFrame(paint)}
+ function measure(){
+  list.classList.remove('is-stacking');
+  cards.forEach(card=>card.style.removeProperty('transform'));
+  const gap=innerWidth<=640?8:12;
+  const base=innerWidth<=640?12:28;
+  // Tall cards stick with their bottom in view, so every paragraph can be read
+  // before the next card covers it. Large screens retain visible top edges.
+  tops=cards.map((card,i)=>Math.min(base+i*gap,innerHeight-card.offsetHeight-24));
+  cards.forEach((card,i)=>{card.style.setProperty('--stack-top',tops[i]+'px');card.style.setProperty('--stack-index',i+1)});
+  list.classList.add('is-stacking');paint();
+ }
+ addEventListener('scroll',queue,{passive:true});addEventListener('resize',measure);
+ reduce.addEventListener('change',measure);document.fonts.ready.then(measure);measure();
+})();
+</script>
 </body></html>
