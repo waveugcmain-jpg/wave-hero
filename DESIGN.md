@@ -85,3 +85,7 @@ The site should feel confident, contemporary, energetic, and credible. Avoid gen
 - Hero media uses creator-image placeholders rather than real videos.
 - Remaining navigation destinations will be connected as later sections are designed.
 
+
+## Our playbook
+
+Six numbered cards form a vertical ordered stack. Alternate white copy panels left/right on desktop; mobile always puts copy first. Reuse wave-background.png with six different crops and mirrored compositions beneath pale blue overlays. Maintain Manrope headings and DM Sans 15px body copy. All six illustration slots intentionally remain empty. Section subtext awaits approved copy. Both nav and hero playbook links lead to #our-playbook.
