@@ -109,3 +109,7 @@ The CPM statement now pins with its supporting copy for 105svh of reading distan
 
 ### Explicit scroll-animation correction
 User reported campaign animation not working and explicitly requested all three scroll effects. These user-controlled scroll effects now remain enabled even when the OS reports reduced motion, matching the requested behavior; no autonomous motion was added. Campaign orbit reveal now starts at 800px width / 700px height. Smaller viewports get individual scroll-linked card reveals instead of a silent static fallback. This supersedes the reduced-motion notes above for these three effects only.
+
+
+## Strategy-call offer and conversion audit
+New #strategy-call section follows campaign deliverables. Uses the user-supplied four-step offer copy and two Book a call CTAs. Step nodes connect through responsive SVG arrows, with three particles travelling from 01 to 04 on a 6.5-second loop. Horizontal on desktop, vertical below 1100px. Pause control, offscreen/hidden-tab suspension, ResizeObserver geometry. CTA after introduction and after take-home reassurance; a mobile booking dock appears below the hero and hides near the offer, popup, or booking dialog. Booking remains an explicit placeholder at user request; one BOOKING_URL constant controls every .book button when provided. Existing page copy is unchanged per user instruction. Non-copy audit fixes: high-contrast dual focus rings, 44px mobile nav controls, anchored mobile menu dismissal. No testimonials, outcomes, deadlines or pricing invented.
