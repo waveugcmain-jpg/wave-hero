@@ -92,3 +92,6 @@ Six numbered cards form a vertical ordered stack. Alternate white copy panels le
 
 ### Playbook motion
 Each illustration has a seven-second explanatory SVG/CSS loop: research selection, connecting creators, staggered posts, tracing a winning signal, multiplying creative and building distribution. Connection paths flow continuously. IntersectionObserver suspends offscreen loops. Respect prefers-reduced-motion with fully visible static artwork. These are native vector animations, not embedded video files. Keep text labels steady and avoid animating entire panels.
+
+### Always-on animation correction
+User explicitly requested always-on loops after motion was not visible. Playbook animation now runs continuously in four-second cycles, with stronger translations/scaling, and overrides the global reduced-motion animation reset for these illustrations only. No visibility observer gate. Cards 3 and 4 use user-supplied wave-card-3.jpg and wave-card-4.jpg. Keep images in root and dist.
