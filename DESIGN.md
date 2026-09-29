@@ -98,3 +98,7 @@ User explicitly requested always-on loops after motion was not visible. Playbook
 
 ### Cards 3 and 4 photo integration
 Treat the supplied photography as directional atmosphere rather than flat wallpaper. Card 3 blends the dark breaking wave into electric blue from the right. Card 4 blends the pastel wave into a warm peach field from the left. Desktop uses horizontal CSS masks and layered radial gradients; mobile switches to vertical masks so the crop survives the stacked layout. Text and illustrations remain on solid white surfaces above the imagery.
+
+
+## 45-day campaign deliverables
+Added after Our Playbook, linked from For brands. Six semantic list items use the approved campaign copy. Desktop (1100px+ wide, 740px+ high) uses a 250svh scroll area with a sticky viewport-height stage. Cards emerge from behind the central headline in staggered order, scaling and unrotating into two surrounding columns of three. Scroll position directly controls progress and reverses the reveal. Transforms and opacity only; no scroll interception or animation dependency. Cards finish by 80% progress, leaving reading time. Smaller/shorter screens use an unpinned two-column or mobile single-column layout; reduced motion and no-JS show all deliverables immediately. Existing Manrope/DM Sans, blue/lime/green tokens retained. No additional image assets or fabricated results.
