@@ -95,3 +95,6 @@ Each illustration has a seven-second explanatory SVG/CSS loop: research selectio
 
 ### Always-on animation correction
 User explicitly requested always-on loops after motion was not visible. Playbook animation now runs continuously in four-second cycles, with stronger translations/scaling, and overrides the global reduced-motion animation reset for these illustrations only. No visibility observer gate. Cards 3 and 4 use user-supplied wave-card-3.jpg and wave-card-4.jpg. Keep images in root and dist.
+
+### Cards 3 and 4 photo integration
+Treat the supplied photography as directional atmosphere rather than flat wallpaper. Card 3 blends the dark breaking wave into electric blue from the right. Card 4 blends the pastel wave into a warm peach field from the left. Desktop uses horizontal CSS masks and layered radial gradients; mobile switches to vertical masks so the crop survives the stacked layout. Text and illustrations remain on solid white surfaces above the imagery.
