@@ -173,6 +173,28 @@
 
 
 @media(min-width:800px) and (max-width:1099px) and (min-height:700px){.is-scrubbed .campaign-stage{padding:0}.is-scrubbed .campaign-intro{left:29%;width:42%;padding:16px 0}.is-scrubbed .campaign h2{font-size:36px}.is-scrubbed #campaign-title{font-size:clamp(32px,4vw,43px)}.is-scrubbed .campaign-sub{font-size:15px}.is-scrubbed .campaign-card{padding:18px;height:29%;border-radius:22px}.is-scrubbed .campaign-card h3{font-size:21px;margin-bottom:10px}.is-scrubbed .campaign-card h3 .campaign-quantity{font-size:40px}.is-scrubbed .campaign-card p{font-size:14px;line-height:1.4}.is-scrubbed .campaign-number{margin-bottom:8px}.is-scrubbed .campaign-card:nth-child(6){height:31%;top:67%}.is-scrubbed .campaign-card:nth-child(6) .campaign-number{position:absolute;right:16px;top:14px}.is-scrubbed .campaign-card:nth-child(6) h3{margin-top:8px}}
+
+/* Offer: four tangible takeaways, one booking action. */
+.offer-section{margin-top:24px;border-radius:30px;background:#f3f4f0;color:#123d31;padding:clamp(72px,8vw,120px) clamp(24px,4vw,64px);scroll-margin-top:24px}
+.offer-inner{max-width:1320px;margin:auto}.offer-heading{text-align:center;max-width:930px;margin:auto}
+.offer-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 22px;color:#24513e;line-height:1.7}
+.offer-heading h2{font-family:Manrope,Arial,sans-serif;font-size:clamp(42px,5vw,72px);font-weight:650;line-height:1.07;letter-spacing:-.055em;text-wrap:balance;margin:0}.offer-heading h2 em{font-style:normal;color:#1b43f5}
+.offer-intro{font-size:18px;line-height:1.65;color:#4c5c53;max-width:680px;margin:26px auto 0;letter-spacing:-.015em}
+.offer-actions{display:flex;gap:28px;align-items:center;justify-content:center;margin-top:30px}.offer-section .cta{background:#1b43f5;border-color:#1b43f5;color:#fff;min-height:58px;min-width:200px;justify-content:space-between}.offer-section .cta .arrow{background:#caff83;color:#123d31}
+.offer-jump{display:inline-flex;align-items:center;gap:16px;font-size:14px;font-weight:600;min-height:48px;border-bottom:1px solid #aebbb1}.offer-jump:hover{color:#1b43f5;border-color:#1b43f5}
+.offer-timeline-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:72px 0 26px;scroll-margin-top:28px}.offer-timeline-heading h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0}.offer-motion{background:transparent;border:1px solid #bbc8be;border-radius:50px;color:#24513e;padding:10px 16px;min-height:44px;font-size:12px}
+.offer-timeline{position:relative}.offer-connections{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}.offer-edges path{fill:none;stroke:#1b43f5;stroke-width:1.5;stroke-dasharray:5 7;opacity:.5}.offer-particles{fill:#1b43f5}.offer-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.offer-step{position:relative;display:flex;flex-direction:column;align-items:center;min-width:0}.offer-node{position:relative;z-index:1;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:#f3f4f0;border:1px solid #b4c5b8;box-shadow:0 0 0 8px #f3f4f0;font:600 20px/1 Manrope,Arial,sans-serif;letter-spacing:-.04em;color:#123d31}.offer-step:last-child .offer-node{background:#caff83;border-color:#caff83}
+.offer-step article{position:relative;flex:1;width:100%;margin-top:28px;padding:30px 26px 34px;border-radius:24px;background:#fff;border:1px solid #e2e7df}
+.offer-step h4{font:650 clamp(23px,2vw,29px)/1.12 Manrope,Arial,sans-serif;letter-spacing:-.045em;margin:0 0 20px}.offer-step p{font-size:15px;line-height:1.65;color:#526158;margin:0}.offer-step:last-child article{background:#123d31;color:#fff;border-color:#123d31}.offer-step:last-child p{color:#e0ebe3}
+.offer-close{display:flex;align-items:center;justify-content:space-between;gap:40px;border-top:1px solid #d4ded4;padding-top:36px;margin-top:40px}.offer-close .offer-eyebrow{margin-bottom:10px;color:#526158}.offer-takeaway{font:600 clamp(24px,2.5vw,34px)/1.18 Manrope,Arial,sans-serif;letter-spacing:-.04em;margin:0;max-width:650px}.offer-close .cta{flex-shrink:0}
+/* Audit fixes that preserve every existing word. */
+a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5px;box-shadow:0 0 0 5px #fff}.hero a:focus-visible,.hero button:focus-visible{outline-color:#caff83;box-shadow:0 0 0 5px #123d31}.nav .cta,.menu{min-height:44px;min-width:44px}
+.booking-dock{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:4;padding:7px;background:#fff;border:1px solid #dbe3dc;border-radius:99px;box-shadow:0 8px 32px #123d3129}.booking-dock[hidden]{display:none}.booking-dock .cta{min-width:210px;justify-content:space-between}
+@media(min-width:981px){.booking-dock{display:none}}
+@media(max-width:1099px){.offer-steps{grid-template-columns:1fr;gap:24px}.offer-step{display:grid;grid-template-columns:56px 1fr;gap:24px;align-items:start}.offer-node{width:56px;height:56px;margin-top:28px}.offer-step article{margin:0;padding:28px 30px}.offer-step h4 br{display:none}.offer-step h4{font-size:28px}.offer-step h4 br:after{content:' '}.offer-step p{max-width:650px}.offer-timeline-heading{margin-top:56px}.offer-heading{max-width:760px}}
+@media(max-width:600px){.offer-section{margin-top:12px;border-radius:24px;padding:64px 20px 40px}.offer-eyebrow{font-size:10px;letter-spacing:.09em}.offer-heading h2{font-size:clamp(36px,10vw,48px)}.offer-intro{font-size:16px;margin-top:22px}.offer-actions{flex-direction:column;gap:12px;margin-top:26px}.offer-actions .cta{width:100%;max-width:300px}.offer-steps{gap:18px}.offer-step{grid-template-columns:36px 1fr;gap:14px}.offer-node{width:36px;height:36px;margin-top:24px;font-size:14px;box-shadow:0 0 0 5px #f3f4f0}.offer-step article{padding:24px 20px;border-radius:20px}.offer-step h4{font-size:25px;margin-bottom:16px}.offer-step p{font-size:15px;line-height:1.65}.offer-close{align-items:stretch;flex-direction:column;gap:24px;margin-top:30px;padding-top:30px}.offer-takeaway{font-size:28px}.offer-close .cta{align-self:flex-start}.offer-timeline-heading{gap:8px}.offer-motion{font-size:11px;padding:8px 12px}.booking-dock{bottom:max(12px,env(safe-area-inset-bottom))}}
+
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -243,7 +265,31 @@
  </div>
 </section>
 
+
+<section class="offer-section" id="strategy-call" aria-labelledby="offer-title">
+ <div class="offer-inner">
+  <header class="offer-heading">
+   <p class="offer-eyebrow">Book a call. Leave with strategy. No obligation.</p>
+   <h2 id="offer-title">Let's build your brand's <em>viral UGC campaign.</em></h2>
+   <p class="offer-intro">We'll look at your brand, your ICP and your category, then map out how we'd approach your UGC program over the first 30–45 days.</p>
+   <div class="offer-actions"><button class="cta book" type="button">Book a call <span class="arrow" aria-hidden="true">↗</span></button><a class="offer-jump" href="#on-the-call">On the call <span aria-hidden="true">↓</span></a></div>
+  </header>
+  <div class="offer-timeline-heading" id="on-the-call"><h3>On the call</h3><button class="offer-motion" type="button" aria-pressed="false">Pause animation</button></div>
+  <div class="offer-timeline">
+   <svg class="offer-connections" aria-hidden="true" focusable="false"><defs><marker id="offer-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 2L10 6L2 10" fill="none" stroke="#1b43f5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><g class="offer-edges"></g><path class="offer-route" fill="none" stroke="none"/><g class="offer-particles"><circle r="5"/><circle r="5"/><circle r="5"/></g></svg>
+   <ol class="offer-steps">
+    <li class="offer-step"><span class="offer-node" aria-hidden="true">01</span><article><h4>Build the <br>strategy</h4><p>We'll map out the creators, hooks, formats, messaging and creative angles we'd test.</p></article></li>
+    <li class="offer-step"><span class="offer-node" aria-hidden="true">02</span><article><h4>Map the <br>distribution</h4><p>We'll show you how we'd build your creator network, where we'd post, how we'd push the content and how we'd turn winning ideas into more distribution.</p></article></li>
+    <li class="offer-step"><span class="offer-node" aria-hidden="true">03</span><article><h4>Make sample <br>creatives</h4><p>We'll come up with a few sample concepts for your brand so you can see exactly where we'd take the creative.</p></article></li>
+    <li class="offer-step"><span class="offer-node" aria-hidden="true">04</span><article><h4>Take the <br>playbook</h4><p>We'll send you everything we put together — the strategy, distribution plan, creative concepts and playbook. It's yours, whether you work with us or not.</p></article></li>
+   </ol>
+  </div>
+  <div class="offer-close"><div><p class="offer-eyebrow">No obligation.</p><p class="offer-takeaway">It's yours, whether you work with us or not.</p></div><button class="cta book" type="button">Book a call <span class="arrow" aria-hidden="true">↗</span></button></div>
+ </div>
+</section>
+
 </main>
+<div class="booking-dock" hidden><button class="cta book" type="button">Book a call <span class="arrow" aria-hidden="true">↗</span></button></div>
 <aside class="popup" aria-label="Explore hooks or book a call" hidden><button class="close" id="dismiss" aria-label="Dismiss invitation">×</button><div class="popup-label">MAKE THE FIRST SECONDS COUNT</div><h2>Your next video starts with a hook.</h2><p>Find a fresh angle for your brand.</p><button class="cta" id="hook-library">View hook library <span aria-hidden="true">↗</span></button><button class="secondary book" style="display:block;margin:8px auto 0;font-size:13px;border-color:#536061">Or book a call ↗</button></aside>
 <dialog aria-labelledby="dialog-title"><button class="close" id="close-dialog" aria-label="Close dialog">×</button><span class="dialog-label" id="dialog-label">Hero prototype</span><h2 id="dialog-title"></h2><p id="dialog-copy"></p><button class="done">Back to wave</button></dialog>
 <script>
@@ -270,7 +316,9 @@ requestAnimationFrame(orbitFrame);
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('open',open);menu.textContent=open?'×':'☰'});
 function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');nav.classList.remove('open');menu.textContent='☰'}
 function show(title,copy,label='Hero prototype'){document.querySelector('#dialog-title').textContent=title;document.querySelector('#dialog-copy').textContent=copy;document.querySelector('#dialog-label').textContent=label;dialog.showModal();closeMenu()}
-document.querySelectorAll('.book').forEach(button=>button.addEventListener('click',()=>show('Let’s build your creator network.','The booking destination hasn’t been connected yet. This preview demonstrates where your strategy-call booking page will open.')));
+// Set this single value when the owner supplies the scheduling destination.
+const BOOKING_URL='';
+document.querySelectorAll('.book').forEach(button=>button.addEventListener('click',()=>{if(BOOKING_URL){location.assign(BOOKING_URL);return}show('Let’s build your creator network.','The booking destination hasn’t been connected yet. This preview demonstrates where your strategy-call booking page will open.')}));
 document.querySelectorAll('[data-section]').forEach(button=>button.addEventListener('click',()=>show(button.dataset.section,'This section will be designed next. This preview covers the navigation and hero section.')));
 document.querySelector('#playbook').addEventListener('click',()=>document.querySelector('#our-playbook').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
 document.querySelector('#hook-library').addEventListener('click',()=>show('The hook library','The hook library destination will be connected once your content is ready. This preview demonstrates the entry point.'));
@@ -414,6 +462,39 @@ document.querySelectorAll('.playbook-illustration').forEach(el=>el.classList.add
  }
  addEventListener('scroll',queue,{passive:true});addEventListener('resize',measure);
  reduce.addEventListener('change',measure);document.fonts.ready.then(measure);measure();
+})();
+</script>
+
+<script>
+(()=>{
+ const offer=document.querySelector('#strategy-call'), timeline=offer.querySelector('.offer-timeline');
+ const svg=offer.querySelector('.offer-connections'), edges=svg.querySelector('.offer-edges'), route=svg.querySelector('.offer-route');
+ const particles=[...svg.querySelectorAll('circle')], nodes=[...offer.querySelectorAll('.offer-node')], control=offer.querySelector('.offer-motion');
+ let length=0,phase=0,last=0,raf=0,visible=false,paused=false;
+ function geometry(){
+  const base=timeline.getBoundingClientRect();
+  svg.setAttribute('viewBox','0 0 '+base.width+' '+base.height);
+  const pts=nodes.map(node=>{const r=node.getBoundingClientRect();return {x:r.left-base.left+r.width/2,y:r.top-base.top+r.height/2,r:r.width/2+10}});
+  route.setAttribute('d',pts.map((p,i)=>(i?'L':'M')+p.x+' '+p.y).join(' '));length=route.getTotalLength();
+  edges.replaceChildren();
+  pts.slice(0,-1).forEach((p,i)=>{const q=pts[i+1],dx=q.x-p.x,dy=q.y-p.y,d=Math.hypot(dx,dy);const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d','M'+(p.x+dx/d*p.r)+' '+(p.y+dy/d*p.r)+'L'+(q.x-dx/d*q.r)+' '+(q.y-dy/d*q.r));path.setAttribute('marker-end','url(#offer-arrow)');edges.append(path)});
+  draw();
+ }
+ function draw(){if(!length)return;particles.forEach((dot,i)=>{const p=route.getPointAtLength(((phase+i/3)%1)*length);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y)})}
+ function animate(time){raf=0;if(paused||!visible||document.hidden){last=0;return}if(last)phase=(phase+Math.min(time-last,64)/6500)%1;last=time;draw();raf=requestAnimationFrame(animate)}
+ function sync(){if(raf)cancelAnimationFrame(raf);raf=0;last=0;if(!paused&&visible&&!document.hidden)raf=requestAnimationFrame(animate)}
+ new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync()},{rootMargin:'100px'}).observe(timeline);
+ new ResizeObserver(geometry).observe(timeline);document.fonts.ready.then(geometry);geometry();
+ control.addEventListener('click',()=>{paused=!paused;control.setAttribute('aria-pressed',String(paused));control.textContent=paused?'Play animation':'Pause animation';sync()});document.addEventListener('visibilitychange',sync);
+ const dock=document.querySelector('.booking-dock');let queued=0;
+ function dockPaint(){queued=0;const hero=document.querySelector('.hero').getBoundingClientRect();const offerBox=offer.getBoundingClientRect();const popupVisible=!document.querySelector('.popup').hidden;dock.hidden=innerWidth>980||hero.bottom>0||offerBox.top<innerHeight||popupVisible||document.querySelector('dialog').open;}
+ function dockQueue(){if(!queued)queued=requestAnimationFrame(dockPaint)}
+ addEventListener('scroll',dockQueue,{passive:true});addEventListener('resize',dockQueue);document.querySelector('#dismiss').addEventListener('click',dockQueue);document.querySelector('dialog').addEventListener('close',dockQueue);document.querySelectorAll('.book').forEach(button=>button.addEventListener('click',dockQueue));dockPaint();
+ // Restore direct section links after font and sticky-layout measurements settle.
+ let userMoved=false; const markMoved=()=>{userMoved=true}; addEventListener('wheel',markMoved,{once:true,passive:true});addEventListener('touchstart',markMoved,{once:true,passive:true});
+ document.fonts.ready.then(()=>requestAnimationFrame(()=>{if(location.hash&&!userMoved){const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));target?.scrollIntoView({behavior:'instant',block:'start'})}}));
+ // Preserve link copy while ensuring anchored navigation closes on mobile.
+ document.querySelectorAll('.links a[href^="#"]').forEach(link=>link.addEventListener('click',closeMenu));
 })();
 </script>
 </body></html>
