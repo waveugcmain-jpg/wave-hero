@@ -195,6 +195,28 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 @media(max-width:1099px){.offer-steps{grid-template-columns:1fr;gap:24px}.offer-step{display:grid;grid-template-columns:56px 1fr;gap:24px;align-items:start}.offer-node{width:56px;height:56px;margin-top:28px}.offer-step article{margin:0;padding:28px 30px}.offer-step h4 br{display:none}.offer-step h4{font-size:28px}.offer-step h4 br:after{content:' '}.offer-step p{max-width:650px}.offer-timeline-heading{margin-top:56px}.offer-heading{max-width:760px}}
 @media(max-width:600px){.offer-section{margin-top:12px;border-radius:24px;padding:64px 20px 40px}.offer-eyebrow{font-size:10px;letter-spacing:.09em}.offer-heading h2{font-size:clamp(36px,10vw,48px)}.offer-intro{font-size:16px;margin-top:22px}.offer-actions{flex-direction:column;gap:12px;margin-top:26px}.offer-actions .cta{width:100%;max-width:300px}.offer-steps{gap:18px}.offer-step{grid-template-columns:36px 1fr;gap:14px}.offer-node{width:36px;height:36px;margin-top:24px;font-size:14px;box-shadow:0 0 0 5px #f3f4f0}.offer-step article{padding:24px 20px;border-radius:20px}.offer-step h4{font-size:25px;margin-bottom:16px}.offer-step p{font-size:15px;line-height:1.65}.offer-close{align-items:stretch;flex-direction:column;gap:24px;margin-top:30px;padding-top:30px}.offer-takeaway{font-size:28px}.offer-close .cta{align-self:flex-start}.offer-timeline-heading{gap:8px}.offer-motion{font-size:11px;padding:8px 12px}.booking-dock{bottom:max(12px,env(safe-area-inset-bottom))}}
 
+/* High-attention offer treatment and founder belief statement. */
+.offer-section{position:relative;isolation:isolate;overflow:hidden;background:#1b43f5;color:#fff;box-shadow:inset 0 1px 0 #ffffff2e}
+.offer-section:before{content:'';position:absolute;z-index:-2;inset:-20%;background:url('wave-background.png') 50% 48%/cover no-repeat;filter:saturate(.45) contrast(1.25);opacity:.12;transform:scaleX(-1)}
+.offer-section:after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(145deg,#1b43f5f7 5%,#183edff2 55%,#102e9ef7 100%)}
+.offer-eyebrow,.offer-intro,.offer-close .offer-eyebrow{color:#e7ecff}.offer-heading h2 em{color:#caff83}
+.offer-section .cta{background:#caff83;border-color:#caff83;color:#123d31;box-shadow:0 18px 40px #081b681f}.offer-section .cta:hover{background:#fff;border-color:#fff}.offer-section .cta .arrow{background:#123d31;color:#fff}
+.offer-jump{color:#fff;border-color:#ffffff73}.offer-jump:hover{color:#caff83;border-color:#caff83}
+.offer-timeline-heading{border-top:1px solid #ffffff3d;padding-top:28px}.offer-motion{border-color:#ffffff66;color:#fff;background:#ffffff12}.offer-motion:hover{background:#fff;color:#123d31}
+.offer-edges path{stroke:#caff83;opacity:.72}.offer-particles{fill:#caff83}#offer-arrow path{stroke:#caff83}
+.offer-node{background:#1b43f5;border-color:#caff83;box-shadow:0 0 0 8px #1b43f5;color:#fff}.offer-step:last-child .offer-node{background:#caff83;color:#123d31}
+.offer-step article{border:0;box-shadow:0 22px 55px #071c7224}.offer-step p{color:#526158}.offer-step:nth-child(2) article{background:#e9eeff}.offer-step:nth-child(3) article{background:#caff83}.offer-step:nth-child(4) article{background:#123d31}.offer-step:nth-child(3) p{color:#405347}.offer-step:last-child p{color:#dce9e1}
+.offer-close{border:0;border-radius:26px;background:#102e9e;padding:34px 38px;margin-top:48px}.offer-close .offer-eyebrow{color:#caff83}.offer-takeaway{color:#fff}
+.founder-callout{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(580px,73vw,780px);margin-top:24px;border-radius:30px;color:#fff;display:flex;align-items:center;background:#082f4b}
+.founder-callout:before{content:'';position:absolute;z-index:-3;inset:0;background:url('wave-background.png') 51% 50%/cover no-repeat;filter:saturate(.72) contrast(1.18) brightness(.74);transform:scale(1.015)}
+.founder-callout:after{content:'';position:absolute;z-index:-2;inset:0;background:linear-gradient(90deg,#061d27ed 0%,#092837c9 42%,#08294759 72%,#061b29a8 100%)}
+.founder-texture{position:absolute;z-index:-1;inset:0;opacity:.24;background-image:radial-gradient(#caff83 1px,transparent 1px);background-size:7px 7px;mask-image:linear-gradient(90deg,#000 0%,#0008 60%,transparent 92%);pointer-events:none}
+.founder-inner{width:min(1180px,calc(100% - 80px));margin:auto;padding:96px 0;display:flex;flex-direction:column;justify-content:center}
+.founder-kicker{display:flex;align-items:center;gap:14px;margin:0 0 38px;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#caff83}.founder-kicker:before{content:'';width:8px;height:8px;border-radius:50%;background:#caff83}
+.founder-quote{max-width:1120px;margin:0;font:560 clamp(40px,4.35vw,68px)/1.12 Manrope,Arial,sans-serif;letter-spacing:-.052em;text-wrap:balance}.founder-signoff{display:flex;align-items:center;gap:18px;margin-top:52px;padding-top:26px;border-top:1px solid #ffffff4a;width:min(460px,100%)}.founder-mark{font:750 30px/1 Manrope,Arial,sans-serif;letter-spacing:-.06em}.founder-mark span{color:#caff83}.founder-signoff p{margin:0;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#d7e6df}
+@media(max-width:1099px){.offer-node{box-shadow:0 0 0 7px #1b43f5}.founder-callout{min-height:620px}.founder-inner{width:min(100% - 48px,900px)}.founder-quote{font-size:clamp(38px,6.2vw,58px)}}
+@media(max-width:600px){.offer-section{padding-bottom:20px}.offer-node{box-shadow:0 0 0 5px #1b43f5}.offer-close{padding:28px 24px}.founder-callout{min-height:610px;margin-top:12px;border-radius:24px;align-items:flex-end}.founder-callout:before{background-position:61% 50%}.founder-callout:after{background:linear-gradient(180deg,#061d2766 0%,#061d27d6 48%,#061d27f5 100%)}.founder-texture{mask-image:linear-gradient(180deg,#0008,transparent 42%,#000 100%)}.founder-inner{width:calc(100% - 40px);padding:72px 0 56px}.founder-kicker{margin-bottom:26px;font-size:10px}.founder-quote{font-size:clamp(32px,9.2vw,43px);line-height:1.13}.founder-signoff{margin-top:38px;padding-top:22px}}
+
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -285,6 +307,15 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
    </ol>
   </div>
   <div class="offer-close"><div><p class="offer-eyebrow">No obligation.</p><p class="offer-takeaway">It's yours, whether you work with us or not.</p></div><button class="cta book" type="button">Book a call <span class="arrow" aria-hidden="true">↗</span></button></div>
+ </div>
+</section>
+
+<section class="founder-callout" aria-labelledby="founder-belief">
+ <div class="founder-texture" aria-hidden="true"></div>
+ <div class="founder-inner">
+  <p class="founder-kicker">From the founders</p>
+  <h2 class="founder-quote" id="founder-belief">We believe the next generation of brands will grow by getting more people to talk about them. Wave builds that at scale with a creator network, constant experimentation and always-on distribution.</h2>
+  <div class="founder-signoff"><div class="founder-mark" aria-label="wave">wave<span>.</span></div></div>
  </div>
 </section>
 
@@ -498,3 +529,4 @@ document.querySelectorAll('.playbook-illustration').forEach(el=>el.classList.add
 })();
 </script>
 </body></html>
+
