@@ -182,3 +182,7 @@ Replaced the long strategy timeline with one centered pale neutral panel and the
 ## Solid strategy panel
 Changed the strategy invitation to a unified deep-green #123D31 background, white copy, lime headline emphasis and lime CTA. Removed the pale gradient. Compact dimensions and border glow retained. Desktop/mobile visual checks and production build passed.
 
+
+## Lower-page visual balance and motion verification
+Screenshot audit found repeated dark-green panels, excessive 120px founder margins, oversized closing typography and inconsistent section spacing. Strategy panel now pale blue #E4ECFF with cobalt action/emphasis and dark readable copy; border orbit 14s. Founder margins 32px desktop / 20px mobile. FAQ padding 80px desktop with 20px question rows. Closing headline capped at 78px with reduced vertical spacing, footer top padding 72px. Text/content preserved. Campaign scroll animation verified through start/mid/end; six cards finish visible. Fixed reduced-motion branch to display cards without transformations. Verified widths 320/390/768/1440, orbit/pause, no browser errors, production build.
+
