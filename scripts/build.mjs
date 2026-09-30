@@ -9,6 +9,7 @@ const files = [
   "creator-grid.png",
   "cta-portraits.png",
   "footer-waves.png",
+  "founder-sunset.png",
   "wave-background.png",
   "wave-card-3.jpg",
   "wave-card-4.jpg",
@@ -37,6 +38,7 @@ for (const font of ["dm-sans-latin.woff2", "manrope-latin.woff2", "OFL.txt"]) {
 const html = await readFile(path.join(outputDir, "index.html"), "utf8");
 const localReferences = [
   "footer-waves.png",
+  "founder-sunset.png",
   "cta-portraits.png",
   "creator-grid.png",
   "wave-background.png",

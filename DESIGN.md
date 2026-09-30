@@ -198,3 +198,7 @@ User explicitly clarified: begin with cards hidden inside the center text, scrol
 ## Campaign brief acceptance and control removal
 Removed the unsolicited campaign pause/play control and its state entirely. Campaign is driven only by scroll position, with center-origin scale/rotation, staggered outward movement and exact reverse traversal. Desktop triggers at 800px by 700px with the existing 250svh runway; smaller screens retain reversible individual reveals. Short-laptop card spacing/type was adjusted only where necessary to keep all copy within its card, including card 2 at 800x700. Verified start/12%/40%/85%/100%/reverse states at 1440x900,1100x740,800x700,390x844; zero errors, no text overflow, exact reverse states, first two cards only at early scroll, six complete by 85%. Border-dot pause control is separate and unchanged.
 
+
+## Strategy illustration and sunset founder image
+Reused the existing native creative-playbook SVG as a small decorative accent above the strategy headline; no new visual language or dependency. Founder background now uses user-supplied founder-sunset.png with a dark blue-green overlay, preserved warm sunset tones, subtle dot texture and softly glowing white text. Asset included in production build. Desktop/mobile screenshots inspected, no horizontal overflow, build passed.
+
