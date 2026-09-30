@@ -194,3 +194,7 @@ Reproduced both animations being suppressed by reduced-motion settings. Per expl
 ## Campaign choreography confirmed
 User explicitly clarified: begin with cards hidden inside the center text, scroll outward to full-size positions, retrace exactly on upward scroll. Removed the early-progress offset introduced during diagnostics. Progress remains derived exclusively from scroll position, with deterministic reverse transforms; tiny subpixel start values snap to zero. Verified matching start/mid states forward and backward at 1918x910 and fully visible final six cards. Preserve this choreography in future edits.
 
+
+## Campaign brief acceptance and control removal
+Removed the unsolicited campaign pause/play control and its state entirely. Campaign is driven only by scroll position, with center-origin scale/rotation, staggered outward movement and exact reverse traversal. Desktop triggers at 800px by 700px with the existing 250svh runway; smaller screens retain reversible individual reveals. Short-laptop card spacing/type was adjusted only where necessary to keep all copy within its card, including card 2 at 800x700. Verified start/12%/40%/85%/100%/reverse states at 1440x900,1100x740,800x700,390x844; zero errors, no text overflow, exact reverse states, first two cards only at early scroll, six complete by 85%. Border-dot pause control is separate and unchanged.
+
