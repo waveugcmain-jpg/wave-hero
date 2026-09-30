@@ -174,3 +174,7 @@ Replaced the faded rectangular ocean photograph in the footer with locally bundl
 ## Compact footer and founder note
 Raised the footer wave foreground by reducing its band to 260px desktop / 170px mobile with negative top spacing. Entire asset fits the band to preserve crest silhouettes and keep legal text above water. Founder note now uses the supplied one-goal copy in a compact rectangle, with 120px exterior desktop whitespace and 72px mobile whitespace. Existing links and dialogs retained.
 
+
+## Compact strategy invitation
+Replaced the long strategy timeline with one centered pale neutral panel and the user's exact new copy. Single booking CTA retains the existing placeholder. Small blue glow follows the rounded border on a 12-second loop, with pause control, offscreen/tab suspension and reduced-motion support. Verified 320/390/768/1440px without overflow, moving offset distance, booking dialog and no browser errors. Production build passed.
+

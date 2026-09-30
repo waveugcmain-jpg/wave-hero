@@ -319,6 +319,20 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 .footer-ocean{height:260px;margin:-80px -64px 0;background:url('footer-waves.png') center bottom/100% 100% no-repeat;mix-blend-mode:multiply;pointer-events:none}
 @media(max-width:1100px){.wave-footer{padding:80px 36px 0}.footer-grid{grid-template-columns:repeat(4,1fr);gap:32px}.footer-brand{grid-column:1/-1;display:flex;align-items:center;gap:36px}.footer-brand p{margin:0;max-width:320px}.footer-ocean{margin:-55px -36px 0;height:240px}}
 @media(max-width:600px){.wave-footer{margin-top:12px;padding:64px 24px 0;border-radius:0 0 19px 19px}.footer-grid{grid-template-columns:1fr 1fr;gap:36px 24px}.footer-brand{display:block}.footer-logo{font-size:40px}.footer-brand p{margin-top:16px;font-size:16px;max-width:260px}.footer-column h2{font-size:10px;margin:0 0 14px}.footer-column a,.footer-column button{font-size:14px}.footer-bottom{margin-top:40px;padding:24px 0 4px;flex-direction:column;align-items:flex-start;gap:8px;font-size:12px}.footer-legal{gap:10px;flex-wrap:wrap}.footer-legal button{font-size:12px}.footer-ocean{height:170px;margin:-35px -24px;background-position:center bottom}}
+/* Compact strategy invitation: centered editorial hierarchy and a single border light. */
+.strategy-panel{position:relative;isolation:isolate;margin-top:24px;border:1px solid #cbd6d0;border-radius:16px;background:radial-gradient(ellipse at 20% 25%,#f9faef 0,transparent 60%),linear-gradient(125deg,#edf1ec,#e3ebec);padding:64px 32px 58px;text-align:center;color:#182e2b;scroll-margin-top:24px}
+.strategy-content{max-width:940px;margin:auto}
+.strategy-panel h2{font:500 clamp(30px,3.5vw,52px)/1.12 Manrope,Arial,sans-serif;letter-spacing:-.045em;margin:0;text-wrap:balance}
+.strategy-panel h2 span{color:#496b60}
+.strategy-description{max-width:640px;margin:24px auto 0;font:400 18px/1.6 'DM Sans',Arial,sans-serif;color:#435651}
+.strategy-promise{font:600 15px/1.6 'DM Sans',Arial,sans-serif;margin:16px auto 26px;max-width:630px}
+.strategy-panel .cta{background:#123d31;color:white;min-height:56px;padding:8px 10px 8px 24px;gap:24px}.strategy-panel .arrow{background:#caff83;color:#123d31}
+.strategy-glow{position:absolute;left:0;top:0;width:7px;height:7px;border-radius:50%;background:#3975ff;box-shadow:0 0 7px 3px #3975ff88,0 0 20px 7px #1b43f533;offset-path:inset(0 round 16px);offset-distance:0%;animation:strategy-orbit 12s linear infinite;pointer-events:none}
+@keyframes strategy-orbit{to{offset-distance:100%}}
+.strategy-motion{position:absolute;bottom:12px;right:18px;border:0;background:transparent;font:400 11px 'DM Sans',sans-serif;color:#435651;padding:8px;cursor:pointer}
+.motion-paused .strategy-glow,.motion-offscreen .strategy-glow,.motion-hidden .strategy-glow{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.strategy-glow{animation:none}.strategy-motion{display:none}}
+@media(max-width:600px){.strategy-panel{margin-top:12px;padding:42px 24px 56px}.strategy-panel h2{font-size:30px}.strategy-description{font-size:16px;margin-top:22px}.strategy-promise{font-size:14px}.strategy-motion{bottom:8px}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -413,26 +427,15 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
  </div>
 </section>
 
-<section class="offer-section" id="strategy-call" aria-labelledby="offer-title">
- <div class="offer-inner">
-  <header class="offer-heading">
-   <p class="offer-eyebrow">Book a call. Leave with strategy. No obligation.</p>
-   <h2 id="offer-title">Let's build your brand's <em>viral UGC campaign.</em></h2>
-   <p class="offer-intro">We'll look at your brand, your ICP and your category, then map out how we'd approach your UGC program over the first 30–45 days.</p>
-   <div class="offer-actions"><button class="cta book" type="button">Book a call <span class="arrow" aria-hidden="true">↗</span></button><a class="offer-jump" href="#on-the-call">On the call <span aria-hidden="true">↓</span></a></div>
-  </header>
-  <div class="offer-timeline-heading" id="on-the-call"><h3>On the call</h3><button class="offer-motion" type="button" aria-pressed="false">Pause animation</button></div>
-  <div class="offer-timeline">
-   <svg class="offer-connections" aria-hidden="true" focusable="false"><defs><marker id="offer-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 2L10 6L2 10" fill="none" stroke="#1b43f5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><g class="offer-edges"></g><path class="offer-route" fill="none" stroke="none"/><g class="offer-particles"><circle r="5"/><circle r="5"/><circle r="5"/></g></svg>
-   <ol class="offer-steps">
-    <li class="offer-step"><span class="offer-node" aria-hidden="true">01</span><article><h4>Build the <br>strategy</h4><p>We'll map out the creators, hooks, formats, messaging and creative angles we'd test.</p></article></li>
-    <li class="offer-step"><span class="offer-node" aria-hidden="true">02</span><article><h4>Map the <br>distribution</h4><p>We'll show you how we'd build your creator network, where we'd post, how we'd push the content and how we'd turn winning ideas into more distribution.</p></article></li>
-    <li class="offer-step"><span class="offer-node" aria-hidden="true">03</span><article><h4>Make sample <br>creatives</h4><p>We'll come up with a few sample concepts for your brand so you can see exactly where we'd take the creative.</p></article></li>
-    <li class="offer-step"><span class="offer-node" aria-hidden="true">04</span><article><h4>Take the <br>playbook</h4><p>We'll send you everything we put together — the strategy, distribution plan, creative concepts and playbook. It's yours, whether you work with us or not.</p></article></li>
-   </ol>
-  </div>
-  <div class="offer-close"><div><p class="offer-eyebrow">No obligation.</p><p class="offer-takeaway">It's yours, whether you work with us or not.</p></div><button class="cta book" type="button">Book a call <span class="arrow" aria-hidden="true">↗</span></button></div>
+<section class="strategy-panel" id="strategy-call" aria-labelledby="offer-title">
+ <span class="strategy-glow" aria-hidden="true"></span>
+ <div class="strategy-content">
+  <h2 id="offer-title">BOOK A CALL. WE'LL BUILD YOUR STRATEGY. <span>NO QUESTIONS ASKED</span></h2>
+  <p class="strategy-description">We'll look at your brand, ICP and category and show you what we'd test in your first 45 days.</p>
+  <p class="strategy-promise">You get the strategy, sample creative and distribution plan. No obligation.</p>
+  <button class="cta book" type="button">BOOK A CALL <span class="arrow" aria-hidden="true">→</span></button>
  </div>
+ <button class="strategy-motion" type="button" aria-pressed="false" aria-label="Pause border animation">Pause animation</button>
 </section>
 
 <section class="founder-callout" aria-labelledby="founder-belief">
@@ -668,25 +671,10 @@ document.querySelectorAll('.playbook-illustration').forEach(el=>el.classList.add
 
 <script>
 (()=>{
- const offer=document.querySelector('#strategy-call'), timeline=offer.querySelector('.offer-timeline');
- const svg=offer.querySelector('.offer-connections'), edges=svg.querySelector('.offer-edges'), route=svg.querySelector('.offer-route');
- const particles=[...svg.querySelectorAll('circle')], nodes=[...offer.querySelectorAll('.offer-node')], control=offer.querySelector('.offer-motion');
- let length=0,phase=0,last=0,raf=0,visible=false,paused=false;
- function geometry(){
-  const base=timeline.getBoundingClientRect();
-  svg.setAttribute('viewBox','0 0 '+base.width+' '+base.height);
-  const pts=nodes.map(node=>{const r=node.getBoundingClientRect();return {x:r.left-base.left+r.width/2,y:r.top-base.top+r.height/2,r:r.width/2+10}});
-  route.setAttribute('d',pts.map((p,i)=>(i?'L':'M')+p.x+' '+p.y).join(' '));length=route.getTotalLength();
-  edges.replaceChildren();
-  pts.slice(0,-1).forEach((p,i)=>{const q=pts[i+1],dx=q.x-p.x,dy=q.y-p.y,d=Math.hypot(dx,dy);const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d','M'+(p.x+dx/d*p.r)+' '+(p.y+dy/d*p.r)+'L'+(q.x-dx/d*q.r)+' '+(q.y-dy/d*q.r));path.setAttribute('marker-end','url(#offer-arrow)');edges.append(path)});
-  draw();
- }
- function draw(){if(!length)return;particles.forEach((dot,i)=>{const p=route.getPointAtLength(((phase+i/3)%1)*length);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y)})}
- function animate(time){raf=0;if(paused||!visible||document.hidden){last=0;return}if(last)phase=(phase+Math.min(time-last,64)/6500)%1;last=time;draw();raf=requestAnimationFrame(animate)}
- function sync(){if(raf)cancelAnimationFrame(raf);raf=0;last=0;if(!paused&&visible&&!document.hidden)raf=requestAnimationFrame(animate)}
- new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync()},{rootMargin:'100px'}).observe(timeline);
- new ResizeObserver(geometry).observe(timeline);document.fonts.ready.then(geometry);geometry();
- control.addEventListener('click',()=>{paused=!paused;control.setAttribute('aria-pressed',String(paused));control.textContent=paused?'Play animation':'Pause animation';sync()});document.addEventListener('visibilitychange',sync);
+ const panel=document.querySelector('.strategy-panel'), motion=panel.querySelector('.strategy-motion');
+ motion.addEventListener('click',()=>{const paused=panel.classList.toggle('motion-paused');motion.setAttribute('aria-pressed',String(paused));motion.textContent=paused?'Play animation':'Pause animation';motion.setAttribute('aria-label',paused?'Play border animation':'Pause border animation')});
+ new IntersectionObserver(entries=>panel.classList.toggle('motion-offscreen',!entries[0].isIntersecting)).observe(panel);
+ document.addEventListener('visibilitychange',()=>panel.classList.toggle('motion-hidden',document.hidden));
  const dock=document.querySelector('.booking-dock');let queued=0;
  function dockPaint(){queued=0;const popupVisible=!document.querySelector('.popup').hidden;dock.hidden=popupVisible||document.querySelector('dialog').open||nav.classList.contains('open');}
  function dockQueue(){if(!queued)queued=requestAnimationFrame(dockPaint)}
