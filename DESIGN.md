@@ -127,4 +127,12 @@ The founder statement follows the supplied reference's wide, regular-weight edit
 
 Verification: Playwright with Edge at 320, 390, 768, 1024, 1440 and 1915px; no horizontal overflow or clipped copy. Timeline movement, pause/resume, booking placeholder dialog and JavaScript parsing pass. Google Fonts loaded during final verification. Existing booking URL remains intentionally unconnected. See design-qa.md.
 
+### Persistent booking control
+
+The fixed booking pill remains available across desktop and mobile, including through the strategy-call offer and closing statement. It hides only while the hook-library popup, mobile navigation, or booking dialog is open so those controls never overlap. The booking destination remains the approved placeholder.
+
+### Founder spacing, luminous type and halftone refinement
+
+The supplied reference now informs more generous whitespace: 800–820px desktop section, 1260px maximum text measure, 144px vertical content padding, and 100px top / 132px bottom mobile padding. Pure white DM Sans text has a restrained 22px glow without blur on the glyphs. Neutral grey dots at 8px intervals sit above the original high-quality wave photograph and dark overlay; mobile uses a subtler 7px pattern. All founder wording is unchanged. Mutation observers keep the booking dock synchronized with popup, modal and navigation dismissal, including Escape. No site-wide audit concepts or new palette were applied.
+
 

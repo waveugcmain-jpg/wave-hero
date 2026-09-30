@@ -27,3 +27,9 @@ Remaining P0/P1/P2 findings: none. This is scoped visual and interaction QA, not
 
 final result: passed
 
+## Publishing pass: founder refinement and persistent CTA
+
+Reference: Screenshot 2026-09-30 013323.png, 1915 x 797. Compared the current founder section with the supplied reference's whitespace, white text and dot-treated photographic background; exact image/copy intentionally remains Wave's. Evidence: outputs/founder-final-1915.png (1891 x 820 section), founder-final-1440.png and founder-final-390.png (378 x 760 section), density 1. Current-run Playwright checks at 1915, 1440, 390 and 320px passed: no horizontal overflow, dock visible through hero/campaign/offer/founder, dock suppressed during dialogs and returned on close. Mobile menu Escape also restores the dock. No browser page errors; all scripts parse. Copy preserved. Desktop and mobile screenshots visually inspected for whitespace, text glow, image crop and neutral dot contrast. Existing original wave image reused. Broader revamp remains unpublished.
+
+final result: passed
+
