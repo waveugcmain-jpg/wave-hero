@@ -166,3 +166,7 @@ Art direction keeps the inspiration's large rounded canvas, oversized centered h
 The exact requested CTA headline and supporting sentence are preserved. No-obligation reassurance and three takeaways summarize the already approved strategy-call offer. Buttons reuse the existing .book handler and BOOKING_URL. User confirmed no booking URL for this iteration; retain the placeholder dialog. Added minimal footer with a functional FAQs anchor. Existing sections and all scripts remain byte-for-byte unchanged.
 
 New motion is limited to existing button hover and short color transitions; global reduced-motion rules apply. No entrance animation hides copy. Verified in Edge/Playwright at 320, 390, 768, 1024, 1440 and 1915px, keyboard accordion toggles, booking dialog/Escape, fonts and zero browser errors. See design-qa.md. No live Sites deployment was requested in this turn.
+
+## Sculptural footer foreground — 2026-10-01
+Replaced the faded rectangular ocean photograph in the footer with locally bundled, AI-generated footer-waves.png. Layered teal and cobalt waves use a crisp irregular foam silhouette against white, following the reference's foreground composition. No opacity mask; multiply blending keeps the white backdrop seamless. Responsive cropping preserves depth without covering links. All footer content and behavior unchanged. Verified 320, 390, 768, 1024 and 1440px, links, dialogs, and production build.
+
