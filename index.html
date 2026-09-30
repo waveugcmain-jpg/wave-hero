@@ -618,10 +618,10 @@ document.querySelectorAll('.playbook-illustration').forEach(el=>el.classList.add
    cards.forEach(card=>{const t=clamp((innerHeight*.94-(stage.getBoundingClientRect().top+card.offsetTop))/(innerHeight*.32));card.style.opacity=String(.15+.85*t);card.style.transform='translateY('+((1-t)*32)+'px) scale('+(.96+.04*t)+')'});
    return;
   }
-  const progress=clamp(.12+.88*(-section.getBoundingClientRect().top/(section.offsetHeight-stage.offsetHeight)));
+  const progress=clamp(-section.getBoundingClientRect().top/(section.offsetHeight-stage.offsetHeight));
   cards.forEach((card,i)=>{
    const delay=[0,.07,.15,.22,.30,.37][i];
-   const t=clamp((progress-delay)/.43);
+   const t=progress<.001?0:clamp((progress-delay)/.43);
    const eased=1-Math.pow(1-t,3);
    const g=geometry[i];
    const scale=.16+.84*eased;

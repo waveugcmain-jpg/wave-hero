@@ -190,3 +190,7 @@ Screenshot audit found repeated dark-green panels, excessive 120px founder margi
 ## Animation reliability repair
 Reproduced both animations being suppressed by reduced-motion settings. Per explicit repeated user instruction, these two animations now run with local pause/play controls even under that preference. Border dot uses requestAnimationFrame along measured rounded edges at 14 seconds per lap; suspends offscreen/hidden tab. Campaign has a visible initial reveal, scroll scrub on tall desktop and responsive card reveals on short/mobile windows, plus an accessible pause/play control that shows all cards. Tested physical dot movement and rendered card transforms at 1440x900, 961x652 and 390x844 under both motion preferences; all six pass with zero browser errors. Also verified pause/play and real wheel input. This supersedes the previous reduced-motion static behavior for these two explicitly requested animations.
 
+
+## Campaign choreography confirmed
+User explicitly clarified: begin with cards hidden inside the center text, scroll outward to full-size positions, retrace exactly on upward scroll. Removed the early-progress offset introduced during diagnostics. Progress remains derived exclusively from scroll position, with deterministic reverse transforms; tiny subpixel start values snap to zero. Verified matching start/mid states forward and backward at 1918x910 and fully visible final six cards. Preserve this choreography in future edits.
+
