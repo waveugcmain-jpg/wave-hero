@@ -1,0 +1,12 @@
+{
+  "name": "wave-ugc-ambassador-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wave UGC ambassador agency website",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

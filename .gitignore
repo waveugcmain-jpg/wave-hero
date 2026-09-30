@@ -1,2 +1,6 @@
 .openai/
+.netlify/
+dist/
+node_modules/
+npm-debug.log*
 
