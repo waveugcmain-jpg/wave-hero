@@ -113,3 +113,9 @@ User reported campaign animation not working and explicitly requested all three 
 
 ## Strategy-call offer and conversion audit
 New #strategy-call section follows campaign deliverables. Uses the user-supplied four-step offer copy and two Book a call CTAs. Step nodes connect through responsive SVG arrows, with three particles travelling from 01 to 04 on a 6.5-second loop. Horizontal on desktop, vertical below 1100px. Pause control, offscreen/hidden-tab suspension, ResizeObserver geometry. CTA after introduction and after take-home reassurance; a mobile booking dock appears below the hero and hides near the offer, popup, or booking dialog. Booking remains an explicit placeholder at user request; one BOOKING_URL constant controls every .book button when provided. Existing page copy is unchanged per user instruction. Non-copy audit fixes: high-contrast dual focus rings, 44px mobile nav controls, anchored mobile menu dismissal. No testimonials, outcomes, deadlines or pricing invented.
+
+## High-attention offer and founder statement
+The offer now creates a strong cobalt visual reset after the white campaign section. Lime is reserved for the emphasized promise, CTA, active nodes and animated route particles; white, pale blue, lime and deep green cards maintain readable contrast while making the four steps visually distinct. The existing offer copy and animation behavior remain unchanged.
+
+A new founder callout follows the offer. It uses the supplied belief statement over the existing `wave-background.png`, treated with a deep green-blue photographic filter and a restrained halftone texture inspired by the provided reference. The statement remains the dominant element; no founder names, portraits, testimonials or performance claims were invented. Desktop uses a wide editorial composition, while mobile shifts the crop and darkens the lower field to protect readability.
+
