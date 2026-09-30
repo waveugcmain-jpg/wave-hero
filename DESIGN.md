@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Final CTA portrait atmosphere — 2026-10-01
+
+The lime closing CTA now includes six decorative circular creator portraits around its desktop perimeter. The headline, support copy and button stay clear of imagery. Portraits have varied sizes, restrained desaturation/opacity and feathered circular masks that blend into lime; they do not animate. Below 700px, four smaller portraits occupy a dedicated band above the headline. The layer is aria-hidden and pointer-events:none.
+
+Asset: cta-portraits.png, generated with the built-in ImageGen tool as a precise 3x2 sheet of six fictional everyday adults with natural skin texture, casual clothing and daylight. These are decorative fictional people, not testimonials or named creators. CSS background-size 300% 200% selects each portrait. Included in the Netlify production build and asset validation. Existing wording, booking handler and other sections unchanged. Build and browser checks passed at 320, 390, 768, 1024, 1440 and 1915px; booking dialog passed, no page errors. Desktop/tablet/mobile evidence inspected in outputs/portraits-cta-*.png.
+
 ## Ways to work with Wave — 2026-10-01
 
 The #work-with-us section sits immediately after #campaign and before #strategy-call. Two native radio options select Done for you (default) or Done with you; CSS :has() shows the corresponding detail panel without a JavaScript dependency. Full user-supplied descriptions, nine/ten deliverables and six outcomes per option are included. One shared Book a strategy call button uses the existing booking handler and approved placeholder destination. No pricing or capacity badges.
