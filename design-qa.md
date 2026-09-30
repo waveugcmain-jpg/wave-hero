@@ -1,35 +1,34 @@
-# Two-section redesign QA — 2026-09-30
+# FAQ and final CTA QA — 2026-09-30
 
-Source visual truth: C:/Users/Aryan/OneDrive/Pictures/Screenshots/Screenshot 2026-09-30 013323.png (1915 x 797). Reference is an art-direction source, not a literal clone; Wave copy and imagery are preserved at the user's request.
+final result: passed
 
-Implementation evidence: task outputs/offer-1440.png, founder-1915.png, offer-390.png, founder-390.png. Browser: Playwright, Microsoft Edge, deviceScaleFactor 1. CSS viewport widths: 320, 390, 768, 1024, 1440, 1915. At 1915 x 797, founder section capture is 1891 x 730 due to page inset and section bounds. Section captures compared proportionally after excluding reference's surrounding page chrome. No density scaling.
+Scope: the two new closing sections. Booking is intentionally a prototype; user confirmed no destination URL. This is visual and interaction QA, not full-site accessibility certification or measured conversion uplift.
 
-## Findings and comparison history
-
-- Prior offer had white headings on pale cards and four competing background colors. Replaced with dark text, one warm neutral background, blue actions, and four vertical numbered rows.
-- Prior founder statement was too heavy, narrow, and textured compared with reference. Replaced bold heading treatment with regular DM Sans, a wide reading measure, subdued photography, and white metadata.
-- Final desktop full-section captures were opened alongside the supplied reference. Reference's light typography, large text field, generous inset, dark image and understated signature informed the design; landscape image and attributed testimonial were intentionally not copied.
-- Mobile section captures reviewed as focused checks of wrapping, step spacing and image crop. Tall element screenshots may capture the existing offscreen fixed skip link due to browser screenshot viewport expansion; it is outside the ordinary viewport unless keyboard-focused. No source modification to the skip link.
+## Visual sources and comparison
+- User source: C:/Users/Aryan/OneDrive/Pictures/Screenshots/Screenshot 2026-09-30 183027.png (1835 x 867) and Screenshot 2026-09-30 183420.png (1898 x 640).
+- Reference is structural inspiration, not a literal clone. Keep centered bold hierarchy, rounded wide panel, whitespace and dominant pill action; intentionally replace yellow/black or photographic backgrounds with Wave lime/deep green and omit decorative badges/ribbons/unverified social proof.
+- Evidence in the task outputs directory: cta-1915.png (1891 x 837), cta-1440.png (1416 x 820), cta-390.png (378 x 654), faq-1440.png and faq-390.png. Desktop reference and final CTA were opened together in one comparison input; mobile CTA and FAQ also inspected at readable scale.
+- CSS viewports tested: 320, 390, 768, 1024, 1440, 1915 x 1000; deviceScaleFactor 1. Reference dimensions differ because these are structure references; compare section composition and hierarchy proportionally, not pixel-match unrelated copy.
+- State: first FAQ open, other answers closed. All questions additionally toggled using Enter and Space. Focused typography, answer wrapping, button and reassurance are readable in desktop/mobile section captures; no extra crop needed.
+- Tall FAQ element captures include existing fixed controls due to screenshot viewport expansion; these are not new FAQ elements. Existing booking dock persists as required by the source design handoff. Ordinary viewport captures also checked.
 
 ## Required surfaces
+- Typography: loaded Manrope and DM Sans; high-weight CTA display, quieter FAQ hierarchy; no clipping at tested sizes.
+- Layout: desktop split FAQ stacks at 700px. CTA headline wraps cleanly; 24px mobile gutters; large button targets. document scrollWidth equals viewport width at all six widths.
+- Colors: exact existing lime #CAFF83, deep green #123D31, neutral #F3F4F0, cobalt #1B43F5; secondary #52605C. Text uses opaque solid backgrounds.
+- Assets: no new image assets; no stock photos, generated illustrations, approximated badges or logos. Existing text wordmark and CTA pattern retained.
+- Content: all 13 supplied questions and answers; exact CTA headline and subheading. Reassurance/takeaways drawn from existing offer. No invented outcome claims added.
 
-- Typography: existing Manrope / DM Sans retained and loaded from Google Fonts. Offer 500-weight display and 600-weight step titles; founder DM Sans 400. No clipped headings or paragraphs at tested widths.
-- Spacing: two-column offer stacks below 800px; 24px mobile gutters; clear row separators and generous CTA spacing. No document overflow.
-- Color: #F5F5F0 paper, #182321 ink, #52605C supporting copy, #1B43F5 emphasis and CTA. Founder white on dark overlay. Removed multicolor cards and lime metadata.
-- Image quality: existing wave-background.png reused at cover size with intentional desktop/mobile crops, no new image or illustration approximations.
-- Copy: programmatically confirmed all content following the style element, including HTML and JavaScript, matches original source exactly.
+## Behavior and code
+- All 13 native details controls toggle correctly with Enter and Space.
+- Final CTA opens the existing booking placeholder dialog; Escape closes it.
+- Reduced-motion rendering checked; new content remains fully visible.
+- Browser pageerror count: zero. Google Fonts loaded.
+- Existing scripts byte-for-byte identical to HEAD; existing section source preserved.
+- FAQ works without JavaScript through native HTML controls.
 
-## Behavior
+## Findings and iteration history
+No actionable P0/P1/P2 findings in new sections after desktop/mobile inspection. Preserved original mixed line endings to avoid unrelated source churn. No design correction loop required.
 
-All inline scripts parse. Browser pageerror count: zero. Timeline particle coordinates advance, remain fixed while paused, and resume. Booking action opens existing dialog. Popup dismissal works. No new links or destinations introduced; booking is still a placeholder.
-
-Remaining P0/P1/P2 findings: none. This is scoped visual and interaction QA, not a full accessibility certification or conversion experiment.
-
-final result: passed
-
-## Publishing pass: founder refinement and persistent CTA
-
-Reference: Screenshot 2026-09-30 013323.png, 1915 x 797. Compared the current founder section with the supplied reference's whitespace, white text and dot-treated photographic background; exact image/copy intentionally remains Wave's. Evidence: outputs/founder-final-1915.png (1891 x 820 section), founder-final-1440.png and founder-final-390.png (378 x 760 section), density 1. Current-run Playwright checks at 1915, 1440, 390 and 320px passed: no horizontal overflow, dock visible through hero/campaign/offer/founder, dock suppressed during dialogs and returned on close. Mobile menu Escape also restores the dock. No browser page errors; all scripts parse. Copy preserved. Desktop and mobile screenshots visually inspected for whitespace, text glow, image crop and neutral dot contrast. Existing original wave image reused. Broader revamp remains unpublished.
-
-final result: passed
-
+## Known limitation
+Booking cannot complete until a real URL is supplied; intentionally retained at user's request. Existing site motion and prototype navigation are outside this change.

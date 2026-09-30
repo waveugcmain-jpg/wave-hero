@@ -233,6 +233,43 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 @media(max-width:1099px){.founder-callout{min-height:740px}.founder-inner{width:calc(100% - 128px);padding:120px 0}.founder-quote{font-size:clamp(36px,4.2vw,46px)}}
 @media(max-width:800px){.founder-inner{width:calc(100% - 80px);padding:104px 0 120px}.founder-quote{font-size:clamp(32px,4.6vw,38px)}}
 @media(max-width:600px){.founder-callout{min-height:760px}.founder-inner{width:calc(100% - 56px);padding:100px 0 132px}.founder-kicker{margin-bottom:38px}.founder-quote{font-size:clamp(27px,7.3vw,32px);line-height:1.28;letter-spacing:-.032em;text-shadow:0 0 16px #ffffff24,0 2px 10px #03131d55}.founder-signoff{margin-top:44px}.founder-texture{background-size:7px 7px;opacity:.17}}
+
+/* Closing sequence: editorial FAQ, then a single high-contrast invitation. */
+.wave-faq{color:#123d31;background:#f3f4f0;border-radius:28px;margin-top:24px;padding:112px 64px;scroll-margin-top:24px}
+.faq-layout{max-width:1280px;margin:auto;display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.45fr);gap:clamp(48px,7vw,112px);align-items:start}
+.faq-intro{position:sticky;top:56px}
+.closing-label{font:600 11px/1.5 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;margin:0 0 26px}
+.faq-intro h2{font:600 clamp(60px,6.5vw,94px)/1 'Manrope',sans-serif;letter-spacing:-.065em;margin:0 0 28px}
+.faq-intro>p:not(.closing-label){max-width:260px;font-size:17px;line-height:1.65;color:#52605c;margin:0}
+.faq-contact{margin-top:44px;padding-top:26px;border-top:1px solid #cfd7cd;max-width:260px}
+.faq-contact p{font-size:14px;margin:0 0 8px;color:#52605c}
+.faq-contact button{display:inline-flex;align-items:center;gap:18px;min-height:44px;border:0;border-bottom:1px solid #1b43f5;background:none;padding:8px 0;color:#1b43f5;font-weight:700;font-size:15px}
+.faq-item{border-bottom:1px solid #cfd7cd}
+.faq-item:first-child{border-top:1px solid #cfd7cd}
+.faq-item summary{display:list-item;position:relative;list-style-position:inside;padding:25px 4px 25px 0;cursor:pointer;font:600 clamp(17px,1.42vw,21px)/1.4 'Manrope',sans-serif;letter-spacing:-.025em;transition:color .18s}
+.faq-item summary::marker{color:#1b43f5;font-size:13px}
+.faq-number{display:inline-block;font:500 11px/1.4 'DM Sans',sans-serif;letter-spacing:.03em;color:#52605c;margin:0 17px 0 5px;vertical-align:3px}
+.faq-item summary:hover,.faq-item[open] summary{color:#1b43f5}
+.faq-item summary:focus-visible{outline:3px solid #1b43f5;outline-offset:5px;border-radius:3px}
+.faq-answer{padding:0 30px 27px 48px;font-size:16px;line-height:1.75;color:#52605c;max-width:680px}
+.faq-answer p{margin:0}.faq-answer strong{font-weight:650;color:#123d31}
+.final-cta{margin-top:24px;border-radius:28px;background:#caff83;color:#123d31;padding:40px 64px 48px;text-align:center}
+.final-cta-inner{max-width:1280px;margin:auto}
+.final-cta-meta{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:28px;border-bottom:1px solid #123d3133;text-align:left}
+.final-wordmark{font:800 34px/1 'Manrope',sans-serif;letter-spacing:-.075em}
+.final-cta-meta .closing-label{margin:0;font-size:10px;letter-spacing:.12em}
+.final-cta h2{max-width:1100px;font:800 clamp(48px,6.7vw,102px)/1.02 'Manrope',sans-serif;letter-spacing:-.06em;margin:74px auto 26px;text-wrap:balance}
+.final-cta h2 span{display:block}
+.final-cta-sub{font-size:clamp(18px,1.65vw,24px);line-height:1.5;letter-spacing:-.025em;margin:0 0 32px}
+.final-cta .cta{background:#123d31;border-color:#123d31;color:#caff83;min-height:66px;padding:9px 10px 9px 30px;gap:32px;font-size:16px;letter-spacing:.02em}
+.final-cta .cta .arrow{width:46px;height:46px;background:#caff83;color:#123d31}
+.final-cta .cta:hover .arrow{transform:translateX(2px)}
+.final-reassurance{font-size:13px;line-height:1.6;margin:18px 0 56px;color:#284f35}
+.final-takeaways{list-style:none;padding:26px 0 0;margin:0;display:flex;justify-content:center;flex-wrap:wrap;gap:16px 36px;border-top:1px solid #123d3133;font-size:12px;line-height:1.5;font-weight:500}
+.final-takeaways li{display:flex;gap:12px;align-items:center}.final-takeaways span{font-size:10px;opacity:.75}
+.closing-footer{max-width:1280px;display:flex;justify-content:space-between;gap:24px;margin:0 auto;padding:28px 20px 108px;color:#52605c;font-size:12px;line-height:1.6}.closing-footer p{margin:0}.closing-footer a{min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:980px){.wave-faq{padding:80px 36px}.faq-layout{grid-template-columns:minmax(200px,.7fr) minmax(0,1.3fr);gap:40px}.final-cta{padding:32px 36px 40px}.final-cta h2{margin-top:64px}.faq-number{margin-right:10px}}
+@media(max-width:700px){.wave-faq{margin-top:12px;padding:64px 24px;border-radius:22px}.faq-layout{grid-template-columns:1fr;gap:36px}.faq-intro{position:static}.faq-intro h2{font-size:64px;margin-bottom:20px}.faq-intro>p:not(.closing-label){max-width:320px;font-size:16px}.faq-contact{margin-top:22px;border:0;padding:0;max-width:none}.faq-contact p{display:none}.closing-label{margin-bottom:20px}.faq-item summary{font-size:17px;padding:23px 0}.faq-number{margin:0 8px 0 2px;font-size:10px;vertical-align:2px}.faq-answer{padding:0 4px 24px 27px;font-size:15px;line-height:1.75}.final-cta{margin-top:12px;padding:28px 24px 32px;border-radius:22px}.final-cta-meta{padding-bottom:22px}.final-wordmark{font-size:30px}.final-cta-meta .closing-label{font-size:9px;max-width:145px;text-align:right}.final-cta h2{font-size:clamp(38px,9.2vw,64px);line-height:1.06;letter-spacing:-.055em;margin:52px auto 24px}.final-cta h2 span{display:inline}.final-cta-sub{font-size:18px;max-width:270px;margin:0 auto 28px}.final-cta .cta{min-height:62px;font-size:15px;gap:28px}.final-reassurance{max-width:240px;margin:18px auto 36px;font-size:12px}.final-takeaways{flex-direction:column;align-items:center;gap:12px;padding-top:24px}.closing-footer{padding:24px 18px 108px;align-items:start}.closing-footer p{max-width:220px}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -335,7 +372,37 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
  </div>
 </section>
 
+
+<section class="wave-faq" id="faqs" aria-labelledby="faq-title">
+ <div class="faq-layout">
+  <div class="faq-intro"><p class="closing-label">Good questions. Straight answers.</p><h2 id="faq-title">FAQS</h2><p>Everything you need to know before we build your next wave.</p><div class="faq-contact"><p>Want to talk about your brand?</p><button class="book" type="button">Let's talk <span aria-hidden="true">↗</span></button></div></div>
+  <div class="faq-list"><details class="faq-item" open><summary><span class="faq-number" aria-hidden="true">01</span>What is a UGC program?</summary><div class="faq-answer"><p>We recruit real creators who create <strong>new accounts dedicated to your brand</strong>, then post about your brand consistently. We build the network, run the content and keep testing until we find what gets people to stop, watch and share.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">02</span>What exactly is a Wave campaign?</summary><div class="faq-answer"><p>A <strong>30–45 day UGC campaign</strong> where we build your creator network, run the content, test different creative ideas and find what gets your audience to pay attention.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">03</span>How many creators do you work with?</summary><div class="faq-answer"><p>We typically work with <strong>8, 10 or 20+ creators</strong>, depending on the campaign and how aggressively you want to test.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">04</span>Are these real creators?</summary><div class="faq-answer"><p>Yes. We recruit real creators who fit your brand and audience. They create dedicated UGC pages and post about your brand consistently.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">05</span>How much content will we get?</summary><div class="faq-answer"><p>Our standard campaign produces roughly <strong>300–450 pieces of content</strong> across Instagram Reels and YouTube Shorts.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">06</span>What happens if a video goes viral?</summary><div class="faq-answer"><p>We don't just move on to the next video. We figure out <strong>why it worked</strong>, put more creators behind the idea and turn the winning format into more content. We also share strong winners with your paid team.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">07</span>Do you only make content, or do you handle distribution too?</summary><div class="faq-answer"><p>Distribution is a big part of the program. We build the creator network, manage the posting strategy and create a constant stream of content around your brand.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">08</span>Can we use the winning videos for paid ads?</summary><div class="faq-answer"><p>Yes. We identify strong-performing creatives and can pass the winners to your paid team to test and scale.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">09</span>What do we actually get at the end of the campaign?</summary><div class="faq-answer"><p>You get more than a folder of videos. You get an active creator network, the content produced during the campaign, your <strong>hook/messaging/format learnings</strong>, winning creative and a clearer picture of what to test next.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">10</span>Do we need to manage the creators?</summary><div class="faq-answer"><p>No. That's our job. We handle creator recruitment, coordination, content direction, posting and the testing process end to end.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">11</span>What if nothing goes viral?</summary><div class="faq-answer"><p>We can't promise that a specific video will go viral. But we don't just post and hope. <strong>We keep testing, learning and engineering new creative until we find something that breaks through.</strong> The more we learn, the more shots we have at getting there.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">12</span>How is Wave different from a normal UGC agency?</summary><div class="faq-answer"><p>Most UGC agencies are built around getting you a certain number of videos. <strong>Wave is built around finding what works.</strong> We use creators and content as an experimentation engine to find winning hooks, formats and messages — then keep pushing the winners.</p></div></details>
+<details class="faq-item"><summary><span class="faq-number" aria-hidden="true">13</span>How do we get started?</summary><div class="faq-answer"><p>Book a call. We'll look at your brand, ICP and category, then show you how we'd approach your first 30–45 days. We'll also put together sample creative and a distribution plan for your brand.</p></div></details></div>
+ </div>
+</section>
+<section class="final-cta" id="build-with-wave" aria-labelledby="final-cta-title">
+ <div class="final-cta-inner">
+  <div class="final-cta-meta"><span class="final-wordmark">wave.</span><p class="closing-label">Your brand. The next wave.</p></div>
+  <h2 id="final-cta-title"><span>BUILD VIRAL UGC</span> <span>PROGRAMS THAT</span> <span>MILLIONS WATCH</span></h2>
+  <p class="final-cta-sub">We’ll show you exactly how we’d build yours.</p>
+  <button class="cta book" type="button">BOOK A CALL <span class="arrow" aria-hidden="true">→</span></button>
+  <p class="final-reassurance">No obligation. The plan is yours, whether we work together or not.</p>
+  <ul class="final-takeaways" aria-label="What you take away"><li><span aria-hidden="true">01</span> A strategy for your brand</li><li><span aria-hidden="true">02</span> Sample creative</li><li><span aria-hidden="true">03</span> Your distribution plan</li></ul>
+ </div>
+</section>
 </main>
+<footer class="closing-footer"><p>Creator-led. Tested daily. Built to scale.</p><a href="#faqs">FAQs</a></footer>
 <div class="booking-dock"><button class="cta book" type="button">Book a call <span class="arrow" aria-hidden="true">↗</span></button></div>
 <aside class="popup" aria-label="Explore hooks or book a call" hidden><button class="close" id="dismiss" aria-label="Dismiss invitation">×</button><div class="popup-label">MAKE THE FIRST SECONDS COUNT</div><h2>Your next video starts with a hook.</h2><p>Find a fresh angle for your brand.</p><button class="cta" id="hook-library">View hook library <span aria-hidden="true">↗</span></button><button class="secondary book" style="display:block;margin:8px auto 0;font-size:13px;border-color:#536061">Or book a call ↗</button></aside>
 <dialog aria-labelledby="dialog-title"><button class="close" id="close-dialog" aria-label="Close dialog">×</button><span class="dialog-label" id="dialog-label">Hero prototype</span><h2 id="dialog-title"></h2><p id="dialog-copy"></p><button class="done">Back to wave</button></dialog>

@@ -136,3 +136,13 @@ The fixed booking pill remains available across desktop and mobile, including th
 The supplied reference now informs more generous whitespace: 800–820px desktop section, 1260px maximum text measure, 144px vertical content padding, and 100px top / 132px bottom mobile padding. Pure white DM Sans text has a restrained 22px glow without blur on the glyphs. Neutral grey dots at 8px intervals sit above the original high-quality wave photograph and dark overlay; mobile uses a subtler 7px pattern. All founder wording is unchanged. Mutation observers keep the booking dock synchronized with popup, modal and navigation dismissal, including Escape. No site-wide audit concepts or new palette were applied.
 
 
+
+## FAQ and final CTA — 2026-09-30
+
+Added #faqs and #build-with-wave after the founder statement. All thirteen supplied questions and answers are preserved, including bold emphasis. FAQ uses native details/summary controls, independent expansion, first item open by default, keyboard Enter/Space support and visible cobalt focus. No JavaScript or dependency is needed to read the answers. Desktop uses an editorial 0.8fr/1.45fr grid with sticky introduction; below 700px it becomes one column.
+
+Art direction keeps the inspiration's large rounded canvas, oversized centered headline, generous whitespace and dominant pill CTA. Yellow/black, decorative badges, ribbons and unrelated stock photography are omitted. Wave's #CAFF83 lime and #123D31 deep green create the final visual reset after the quiet #F3F4F0 FAQ; #1B43F5 identifies FAQ interaction. Existing Manrope/DM Sans retained. CTA uses Manrope 800, 48–102px desktop / 38–64px mobile, 1.02–1.06 leading and -0.06em tracking. FAQ questions use Manrope 600 at 17–21px; answers use DM Sans 15–16px at 1.75 leading. Desktop outer padding 64px, mobile 24px; section radii 28px/22px. No new photography, fake testimonials, statistics or scarcity claims.
+
+The exact requested CTA headline and supporting sentence are preserved. No-obligation reassurance and three takeaways summarize the already approved strategy-call offer. Buttons reuse the existing .book handler and BOOKING_URL. User confirmed no booking URL for this iteration; retain the placeholder dialog. Added minimal footer with a functional FAQs anchor. Existing sections and all scripts remain byte-for-byte unchanged.
+
+New motion is limited to existing button hover and short color transitions; global reduced-motion rules apply. No entrance animation hides copy. Verified in Edge/Playwright at 320, 390, 768, 1024, 1440 and 1915px, keyboard accordion toggles, booking dialog/Escape, fonts and zero browser errors. See design-qa.md. No live Sites deployment was requested in this turn.
