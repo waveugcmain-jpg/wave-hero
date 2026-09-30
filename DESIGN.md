@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Final footer — 2026-10-01
+
+Replaced the minimal closing footer with a white five-column footer: Wave wordmark and supplied tagline, For Brands, For Creators, Wave and Resources. All requested labels and copyright/legal controls retained. The existing hero wave-background.png forms a 340px bottom photographic band faded into white; mobile uses a 230px crop. Existing Manrope/DM Sans and deep green typography retained. Four navigation groups wrap to two columns below 600px, with 44px minimum targets. Legal/copyright content stays above photography for contrast.
+
+Existing section anchors are connected. Done For You and Done With You select the appropriate radio before navigating to #work-with-us. Booking reuses the existing placeholder handler. Unbuilt creator, contact, careers, resources and legal destinations open an explicit Coming soon dialog, without invented URLs or policy content. Five widths (320–1440px), every footer anchor, both model selections, every preview dialog and booking tested; zero page errors or horizontal overflow. Production build passed; desktop/mobile captures inspected in outputs/footer-1440.png and footer-390.png.
+
 ## Final CTA portrait atmosphere — 2026-10-01
 
 The lime closing CTA now includes six decorative circular creator portraits around its desktop perimeter. The headline, support copy and button stay clear of imagery. Portraits have varied sizes, restrained desaturation/opacity and feathered circular masks that blend into lime; they do not animate. Below 700px, four smaller portraits occupy a dedicated band above the headline. The layer is aria-hidden and pointer-events:none.
