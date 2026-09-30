@@ -1,5 +1,13 @@
 # Wave website design handoff
 
+## Ways to work with Wave — 2026-10-01
+
+The #work-with-us section sits immediately after #campaign and before #strategy-call. Two native radio options select Done for you (default) or Done with you; CSS :has() shows the corresponding detail panel without a JavaScript dependency. Full user-supplied descriptions, nine/ten deliverables and six outcomes per option are included. One shared Book a strategy call button uses the existing booking handler and approved placeholder destination. No pricing or capacity badges.
+
+Reference: codex-clipboard-221f9493-5d79-4916-9f7c-15b098a609f5.png. Retain a two-option selector and shared detail surface; adapt to deep green #123D31, lime #CAFF83, white and pale neutral. Manrope display 38–66px desktop and 34–48px mobile; DM Sans body 15–17px. Wide desktop heading/copy split, white panel with deliverables and outcome columns; below 700px stack the details while keeping both choices visible. Native radio focus and arrow-key selection; restrained hover color transitions; existing reduced-motion rule applies.
+
+Validation: production build passed; both choices checked at 320, 390, 768, 1024 and 1440px without horizontal overflow; default selection, section order, ArrowRight selection and booking dialog passed with zero page errors. Desktop and mobile screenshots inspected in task outputs/work-for-1440.png and work-with-390.png. Existing fixed booking pill remains as specified in prior handoff.
+
 This document is the visual and implementation source of truth for agents working on the Wave website. Read it before making design or interaction changes.
 
 ## Product and audience

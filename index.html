@@ -271,6 +271,27 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 .closing-footer{max-width:1280px;display:flex;justify-content:space-between;gap:24px;margin:0 auto;padding:28px 20px 108px;color:#52605c;font-size:12px;line-height:1.6}.closing-footer p{margin:0}.closing-footer a{min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:980px){.wave-faq{padding:80px 36px}.faq-layout{grid-template-columns:minmax(200px,.7fr) minmax(0,1.3fr);gap:40px}.final-cta{padding:32px 36px 40px}.final-cta h2{margin-top:64px}.faq-number{margin-right:10px}}
 @media(max-width:700px){.wave-faq{margin-top:12px;padding:64px 24px;border-radius:22px}.faq-layout{grid-template-columns:1fr;gap:36px}.faq-intro{position:static}.faq-intro h2{font-size:64px;margin-bottom:20px}.faq-intro>p:not(.closing-label){max-width:320px;font-size:16px}.faq-contact{margin-top:22px;border:0;padding:0;max-width:none}.faq-contact p{display:none}.closing-label{margin-bottom:20px}.faq-item summary{font-size:17px;padding:23px 0}.faq-number{margin:0 8px 0 2px;font-size:10px;vertical-align:2px}.faq-answer{padding:0 4px 24px 27px;font-size:15px;line-height:1.75}.final-cta{margin-top:12px;padding:28px 24px 32px;border-radius:22px}.final-cta-meta{padding-bottom:22px}.final-wordmark{font-size:30px}.final-cta-meta .closing-label{font-size:9px;max-width:145px;text-align:right}.final-cta h2{font-size:clamp(38px,9.2vw,64px);line-height:1.06;letter-spacing:-.055em;margin:52px auto 24px}.final-cta h2 span{display:inline}.final-cta-sub{font-size:18px;max-width:270px;margin:0 auto 28px}.final-cta .cta{min-height:62px;font-size:15px;gap:28px}.final-reassurance{max-width:240px;margin:18px auto 36px;font-size:12px}.final-takeaways{flex-direction:column;align-items:center;gap:12px;padding-top:24px}.closing-footer{padding:24px 18px 108px;align-items:start}.closing-footer p{max-width:220px}}
+/* Ways to work with Wave: native choices keep both models keyboard accessible. */
+.work-wave{margin-top:24px;padding:88px 64px 56px;border-radius:28px;background:#123d31;color:#fff;scroll-margin-top:24px}
+.work-inner{max-width:1280px;margin:auto}.work-heading{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:end;margin-bottom:44px}
+.work-kicker{font:600 11px/1.5 'DM Sans',sans-serif;letter-spacing:.14em;color:#caff83;margin:0 0 22px}
+.work-heading h2{font:600 clamp(38px,4.3vw,66px)/1.06 Manrope,sans-serif;letter-spacing:-.055em;margin:0;max-width:620px;text-wrap:balance}
+.work-heading>p{font-size:17px;line-height:1.65;color:#d6e4dc;margin:0;max-width:480px}.work-heading strong{color:#fff;font-weight:600}
+.work-options{border:0;padding:0;margin:0 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px}
+.work-options legend{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.work-choice{position:relative;display:flex;align-items:center;gap:18px;min-height:86px;padding:20px 24px;border:1px solid #789789;border-radius:16px;cursor:pointer;color:#fff;transition:background .18s,border-color .18s,color .18s}
+.work-choice:has(input:checked){background:#caff83;color:#123d31;border-color:#caff83}.work-choice:hover{border-color:#caff83}.work-choice:has(input:focus-visible){outline:3px solid white;outline-offset:4px}
+.work-choice input{margin:0;width:20px;height:20px;accent-color:#123d31;cursor:pointer;flex-shrink:0}.work-choice span{font:600 19px/1.4 Manrope,sans-serif;letter-spacing:-.025em}.work-choice small{margin-left:auto;font-size:11px;letter-spacing:.08em}
+.work-panel{display:none;background:#fff;color:#123d31;border-radius:22px;padding:44px}
+.work-inner:has(#work-for:checked) #work-for-panel,.work-inner:has(#work-with:checked) #work-with-panel{display:block}
+.work-panel-head{max-width:880px;margin-bottom:36px}.work-panel h3{font:600 clamp(28px,2.7vw,42px)/1.15 Manrope,sans-serif;letter-spacing:-.045em;margin:0 0 18px;text-wrap:pretty}
+.work-panel-head>p{font-size:16px;line-height:1.65;color:#52605c;margin:0;max-width:800px}
+.work-detail-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px}.work-panel h4{font-size:10px;line-height:1.6;letter-spacing:.12em;font-weight:700;margin:0 0 20px;color:#52605c}
+.work-inclusions{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}.work-inclusions li{padding:13px 0;border-top:1px solid #dce3dc;font-size:14px;line-height:1.55;color:#304d40}
+.work-outcomes{background:#f3f4f0;padding:26px 28px;border-radius:16px}.work-outcomes h4{color:#123d31}.work-outcomes ul{padding:0 0 0 17px;margin:0}.work-outcomes li{padding:0 0 13px 5px;font-size:16px;line-height:1.5;font-weight:500;letter-spacing:-.015em}.work-outcomes li:last-child{padding-bottom:0}.work-outcomes li::marker{color:#1b43f5}
+.work-bottom{margin-top:32px;padding-top:26px;border-top:1px solid #547765;display:flex;align-items:center;justify-content:space-between;gap:24px}.work-bottom p{margin:0;color:#d6e4dc;font-size:14px;line-height:1.6}.work-bottom .cta{flex-shrink:0}
+@media(max-width:1000px){.work-wave{padding:64px 32px 40px}.work-heading{gap:32px}.work-panel{padding:32px}.work-detail-grid{gap:28px;grid-template-columns:1fr 1fr}.work-inclusions{grid-template-columns:1fr}}
+@media(max-width:700px){.work-wave{margin-top:12px;padding:52px 20px 32px;border-radius:22px}.work-heading{grid-template-columns:1fr;gap:24px;margin-bottom:30px}.work-heading h2{font-size:clamp(34px,8.5vw,48px)}.work-heading>p{font-size:16px}.work-options{gap:8px;margin-bottom:20px}.work-choice{min-height:82px;padding:16px 12px;gap:9px;border-radius:12px}.work-choice span{font-size:15px;line-height:1.3}.work-choice small{display:none}.work-choice input{width:17px;height:17px}.work-panel{padding:26px 20px;border-radius:16px}.work-panel h3{font-size:29px}.work-panel-head>p{font-size:15px}.work-panel-head{margin-bottom:28px}.work-detail-grid{grid-template-columns:1fr;gap:26px}.work-inclusions li{font-size:15px;padding:12px 0}.work-outcomes{padding:22px 20px}.work-outcomes li{font-size:15px}.work-bottom{flex-direction:column;align-items:flex-start;margin-top:26px;padding-top:24px;gap:20px}.work-bottom .cta{width:100%;justify-content:space-between;font-size:14px}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -341,6 +362,29 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
  </div>
 </section>
 
+
+<section class="work-wave" id="work-with-us" aria-labelledby="work-title">
+ <div class="work-inner">
+  <header class="work-heading"><div><p class="work-kicker">HOW TO WORK WITH US</p><h2 id="work-title">TWO WAYS TO BUILD YOUR WAVE</h2></div><p>Whether you want us to run it or build it alongside your team, the goal is the same: <strong>build an organic distribution channel that keeps getting better.</strong></p></header>
+  <fieldset class="work-options"><legend>Choose how to work with Wave</legend>
+   <label class="work-choice" for="work-for"><input type="radio" name="work-model" id="work-for" value="for-you" aria-controls="work-for-panel" checked><span>Done for you</span><small aria-hidden="true">01</small></label>
+   <label class="work-choice" for="work-with"><input type="radio" name="work-model" id="work-with" value="with-you" aria-controls="work-with-panel"><span>Done with you</span><small aria-hidden="true">02</small></label>
+  </fieldset>
+  <div class="work-panel" id="work-for-panel" role="region" aria-labelledby="work-for-title">
+   <header class="work-panel-head"><h3 id="work-for-title">You give us the brand. We run the whole thing.</h3><p>We handle the strategy, creator recruitment, UGC pages, content, testing, distribution and reporting.</p></header>
+   <div class="work-detail-grid"><div><h4>YOU GET</h4><ul class="work-inclusions"><li>A dedicated campaign manager</li><li>Creator recruitment &amp; management</li><li>Creative strategy &amp; playbook</li><li>Dedicated UGC creator pages</li><li>Daily content &amp; distribution</li><li>Weekly performance analysis</li><li>Winning creative &amp; format reports</li><li>Winners handed to your paid team</li><li>Full campaign reporting</li></ul></div>
+    <div class="work-outcomes"><h4>THE OUTCOMES WE'RE CHASING</h4><ul><li>Millions of organic views</li><li>Increase in branded search</li><li>Winning hooks, messages &amp; formats you can scale</li><li>A growing network of creators around your brand</li><li>A new always-on organic distribution channel</li><li>A new way to acquire customers outside paid media</li></ul></div>
+   </div>
+  </div>
+  <div class="work-panel" id="work-with-panel" role="region" aria-labelledby="work-with-title">
+   <header class="work-panel-head"><h3 id="work-with-title">Already have a UGC program? We help you build it bigger and better.</h3><p>We work alongside your team to build the creative playbook, recruit and manage creators, improve your testing system and scale what’s already working.</p></header>
+   <div class="work-detail-grid"><div><h4>YOU GET</h4><ul class="work-inclusions"><li>Creative strategy &amp; playbook</li><li>Creator recruitment &amp; scaling framework</li><li>Creator briefs &amp; content systems</li><li>Distribution strategy</li><li>Testing framework</li><li>Weekly performance analysis</li><li>Winning creative analysis</li><li>Creative testing recommendations</li><li>Ongoing strategic support</li><li>A system your team can keep running</li></ul></div>
+    <div class="work-outcomes"><h4>THE OUTCOMES WE'RE CHASING</h4><ul><li>More creators producing content consistently</li><li>More creative tests without adding more work to your team</li><li>More winning hooks, formats &amp; messages to scale</li><li>A clear system for knowing what creative to make next</li><li>Winning UGC that can move from organic → paid</li><li>A scalable organic acquisition channel your team can keep growing</li></ul></div>
+   </div>
+  </div>
+  <div class="work-bottom"><p>Two ways to work together. One goal: build your wave.</p><button class="cta book" type="button">Book a strategy call <span class="arrow" aria-hidden="true">↗</span></button></div>
+ </div>
+</section>
 
 <section class="offer-section" id="strategy-call" aria-labelledby="offer-title">
  <div class="offer-inner">
