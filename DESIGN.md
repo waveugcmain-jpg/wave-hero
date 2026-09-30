@@ -119,3 +119,12 @@ The offer now creates a strong cobalt visual reset after the white campaign sect
 
 A new founder callout follows the offer. It uses the supplied belief statement over the existing `wave-background.png`, treated with a deep green-blue photographic filter and a restrained halftone texture inspired by the provided reference. The statement remains the dominant element; no founder names, portraits, testimonials or performance claims were invented. Desktop uses a wide editorial composition, while mobile shifts the crop and darkens the lower field to protect readability.
 
+## Offer and founder redesign — 2026-09-30
+
+Supersedes the high-attention offer treatment above. User requested design changes only: all HTML copy and JavaScript remain byte-for-byte unchanged. The offer now uses warm white #F5F5F0, ink #182321, secondary text #52605C and cobalt #1B43F5 for the campaign promise and booking actions. Removed the multicolor cards, competing lime accents, photographic offer fill, and heavy closing panel. Desktop is a two-column editorial grid: 500-weight Manrope promise and CTA on the left, four numbered timeline rows on the right. The existing animated route and pause control remain. Below 800px the grid stacks; minimum tested width is 320px.
+
+The founder statement follows the supplied reference's wide, regular-weight editorial typography. DM Sans 400, 38–62px desktop, 29–38px mobile, 1.19/1.23 leading, tight tracking. White label and signature, no lime or dot texture. Existing ocean photograph is subdued by desaturation and a uniform dark overlay. No names, claims, images, or text added. Full offer and statement CSS was consolidated rather than appending another override layer.
+
+Verification: Playwright with Edge at 320, 390, 768, 1024, 1440 and 1915px; no horizontal overflow or clipped copy. Timeline movement, pause/resume, booking placeholder dialog and JavaScript parsing pass. Google Fonts loaded during final verification. Existing booking URL remains intentionally unconnected. See design-qa.md.
+
+
