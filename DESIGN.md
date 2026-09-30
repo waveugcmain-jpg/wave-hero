@@ -170,3 +170,7 @@ New motion is limited to existing button hover and short color transitions; glob
 ## Sculptural footer foreground — 2026-10-01
 Replaced the faded rectangular ocean photograph in the footer with locally bundled, AI-generated footer-waves.png. Layered teal and cobalt waves use a crisp irregular foam silhouette against white, following the reference's foreground composition. No opacity mask; multiply blending keeps the white backdrop seamless. Responsive cropping preserves depth without covering links. All footer content and behavior unchanged. Verified 320, 390, 768, 1024 and 1440px, links, dialogs, and production build.
 
+
+## Compact footer and founder note
+Raised the footer wave foreground by reducing its band to 260px desktop / 170px mobile with negative top spacing. Entire asset fits the band to preserve crest silhouettes and keep legal text above water. Founder note now uses the supplied one-goal copy in a compact rectangle, with 120px exterior desktop whitespace and 72px mobile whitespace. Existing links and dialogs retained.
+
