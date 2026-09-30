@@ -178,3 +178,7 @@ Raised the footer wave foreground by reducing its band to 260px desktop / 170px 
 ## Compact strategy invitation
 Replaced the long strategy timeline with one centered pale neutral panel and the user's exact new copy. Single booking CTA retains the existing placeholder. Small blue glow follows the rounded border on a 12-second loop, with pause control, offscreen/tab suspension and reduced-motion support. Verified 320/390/768/1440px without overflow, moving offset distance, booking dialog and no browser errors. Production build passed.
 
+
+## Solid strategy panel
+Changed the strategy invitation to a unified deep-green #123D31 background, white copy, lime headline emphasis and lime CTA. Removed the pale gradient. Compact dimensions and border glow retained. Desktop/mobile visual checks and production build passed.
+
