@@ -202,3 +202,7 @@ Removed the unsolicited campaign pause/play control and its state entirely. Camp
 ## Strategy illustration and sunset founder image
 Reused the existing native creative-playbook SVG as a small decorative accent above the strategy headline; no new visual language or dependency. Founder background now uses user-supplied founder-sunset.png with a dark blue-green overlay, preserved warm sunset tones, subtle dot texture and softly glowing white text. Asset included in production build. Desktop/mobile screenshots inspected, no horizontal overflow, build passed.
 
+
+## Live Calendly booking
+Added official Calendly inline widget for https://calendly.com/founder-waveugc/new-meeting immediately after final CTA and before footer. White/deep-green/cobalt customization, fixed responsive height to avoid embed resize collapse, accessible section heading and direct external fallback link. All .book buttons now scroll and focus the inline booking section instead of opening placeholder dialog. Verified live event title/date calendar in iframe, section order, focus and mobile overflow. No booking submitted. Calendly external widget requires network; no credentials required. Reference: https://developer.calendly.com/api-docs/overview/embedding/getting-started.
+
