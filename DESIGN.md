@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Section 2 copy and creator portraits — 2026-10-01
+
+Updated the problem subheadline to the user's organic viral growth channel copy, with a fine cobalt left rule, quieter setup and larger bold cobalt “the answer is wave”. Creator card now says “Trained ugc creators working with us”. Lime card uses bold “Our goal” and three separate goal lines: make your brand go viral; build you an organic growth channel; find and scale winning creatives. Distribution headline is now “build an army of creator pages talking about you.” Four existing fictional portraits from cta-portraits.png replace generic play icons inside the connected creator-page illustration; no new identities or testimonials implied. Existing scroll-linked statement behavior retained.
+
+Verified card and page overflow at 320, 390, 768, 1024 and 1440px, all four portraits, all three goals and exact distribution copy, with no page errors. Desktop/mobile artwork and subheadline captures inspected. Production build passed.
+
 ## Static hero and supporting-copy hierarchy — 2026-10-01
 
 Supersedes the rotating-headline entry below at the user's request. Removed all headline typing/backspacing code, caret and sizing layers. Restored the original semantic headline. On phones the display scales from 19px at 320px to 34px at 600px, preserving the two intentional lines with the offer phrase on one line. Supporting copy stays weight 400, now white, 16px on phones, 17px on tablets, 18px desktop and 19px wide desktop, with 1.65 leading and more space before the CTA. Pricing remains removed. Changes scoped to the hero.

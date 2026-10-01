@@ -371,6 +371,21 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
  .intro .eyebrow{font-size:8px;letter-spacing:.08em;margin-bottom:18px}
  .intro .sub{font-size:16px;line-height:1.65;max-width:390px;margin:22px auto 26px}
 }
+/* Section 2: editorial answer, clear goals and human creator-page imagery. */
+.why-wave .problem-sub{max-width:850px;margin-top:32px;padding-left:22px;border-left:3px solid #1b43f5;font-size:clamp(18px,1.65vw,23px);line-height:1.5;color:#465047;letter-spacing:-.02em}
+.problem-sub>span{display:block}
+.why-wave .problem-sub strong{display:block;margin-top:8px;font-family:Manrope,Arial,sans-serif;font-weight:750;font-size:clamp(27px,3vw,42px);line-height:1.15;letter-spacing:-.045em;color:#1b43f5}
+.goal-card h3{font-size:32px;font-weight:800}
+.goal-card .card-index{margin-bottom:10px}
+.goal-card .goal-mark{width:52px}
+.goal-lines{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:9px;font-size:15px;line-height:1.45;color:#173f2c}
+.goal-lines li{padding-left:14px;position:relative}
+.goal-lines li:before{content:'';width:4px;height:4px;border-radius:50%;background:#173f2c;position:absolute;left:0;top:.6em}
+.distribution-card .post-node{width:58px;height:78px;padding:5px;gap:4px;border-radius:11px}
+.distribution-card .creator-portrait{display:block;flex-shrink:0;width:100%;height:51px;border-radius:7px;background-image:url('cta-portraits.png');background-size:300% 200%;background-repeat:no-repeat}
+.post-a .creator-portrait{background-position:0 0}.post-b .creator-portrait{background-position:50% 0}.post-c .creator-portrait{background-position:100% 0}.post-d .creator-portrait{background-position:0 100%}
+.distribution-card h3{font-size:clamp(24px,2vw,29px);line-height:1.16;text-wrap:pretty}
+@media(max-width:600px){.why-wave .problem-sub{font-size:18px;margin-top:26px;padding-left:16px}.why-wave .problem-sub strong{font-size:29px;margin-top:10px}.goal-card{gap:0}.goal-lines{font-size:15px}.distribution-card h3{font-size:28px}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -388,13 +403,13 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 <section class="why-wave" id="why-wave" aria-labelledby="problem-statement">
   <div class="why-inner">
     <h2 class="problem-statement" id="problem-statement">CPMs on Meta keep rising. Making winning creatives at scale keeps getting harder. Going viral consistently is a challenge.</h2>
-    <p class="problem-sub">you know you need to scale organic distribution, <strong>the answer is wave</strong></p>
+    <p class="problem-sub"><span>you know you need an organic viral growth channel,</span> <strong>the answer is wave</strong></p>
     <div class="metrics proof-grid" aria-label="The wave advantage">
       <article class="proof-card creators-card">
         <p class="card-index">01 <span>THE CREATOR NETWORK</span></p>
         <h3 class="creator-number">500<span>+</span><small>CREATORS</small></h3>
         <div class="creator-faces" aria-hidden="true"><i></i><i></i><i></i><i></i><span>+</span></div>
-        <div class="card-copy"><h4>Trained UGC creators<br>in our network.</h4><p>Creators who know how to make people stop, watch and share.</p></div>
+        <div class="card-copy"><h4>Trained ugc creators<br>working with us</h4><p>Creators who know how to make people stop, watch and share.</p></div>
         <div class="creator-tags" aria-hidden="true"><span>STOP.</span><span>WATCH.</span><span>SHARE.</span></div>
       </article>
       <article class="proof-card experience-card">
@@ -404,19 +419,19 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
         <p class="card-detail">Previously worked on campaigns for Cars24, Meesho, Country Delight, Adani, Goodscore, Vama and more.</p>
       </article>
       <article class="proof-card goal-card">
-        <p class="card-index">03 <span>OUR GOAL</span></p>
-        <div class="goal-row"><h3>Make your<br>brand go viral.</h3><svg class="goal-mark" viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="40" r="32" stroke="currentColor" opacity=".25"/><circle cx="40" cy="40" r="21" stroke="currentColor" opacity=".5"/><circle cx="40" cy="40" r="9" fill="currentColor"/><path d="M41 39 68 12m-16 0h16v16" stroke="currentColor" stroke-width="2.5"/></svg></div>
-        <p class="card-detail">Build an organic growth channel. Find the creative worth making <strong>100 more of.</strong></p>
+        <p class="card-index" aria-hidden="true">03</p>
+        <div class="goal-row"><h3>Our goal</h3><svg class="goal-mark" viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="40" r="32" stroke="currentColor" opacity=".25"/><circle cx="40" cy="40" r="21" stroke="currentColor" opacity=".5"/><circle cx="40" cy="40" r="9" fill="currentColor"/><path d="M41 39 68 12m-16 0h16v16" stroke="currentColor" stroke-width="2.5"/></svg></div>
+        <ul class="goal-lines"><li>make your brand go viral.</li><li>build you an organic growth channel.</li><li>find and scale winning creatives</li></ul>
       </article>
       <article class="proof-card distribution-card">
         <p class="card-index">04 <span>BUILD A WAVE</span></p>
-        <div class="distribution-visual" role="img" aria-label="One brand connects to a network of creator posts">
+        <div class="distribution-visual" role="img" aria-label="Wave connects to multiple creator pages, illustrated with creator portraits">
           <svg viewBox="0 0 320 250" fill="none" aria-hidden="true"><g stroke="#caff83" stroke-opacity=".5" stroke-width="1.2"><path d="M160 124 58 53M160 124 265 48M160 124 275 179M160 124 64 202M160 124 153 229M160 124 161 18"/><circle cx="160" cy="124" r="75" stroke-dasharray="3 7"/><circle cx="160" cy="124" r="110" stroke-opacity=".14"/></g><g fill="#caff83"><circle cx="109" cy="89" r="3"/><circle cx="212" cy="86" r="3"/><circle cx="218" cy="152" r="3"/><circle cx="112" cy="163" r="3"/></g></svg>
           <div class="network-center" aria-hidden="true">wave<span>.</span></div>
-          <div class="post-node post-a" aria-hidden="true"><i>▶</i><span></span><span></span></div><div class="post-node post-b" aria-hidden="true"><i>▶</i><span></span><span></span></div><div class="post-node post-c" aria-hidden="true"><i>▶</i><span></span><span></span></div><div class="post-node post-d" aria-hidden="true"><i>▶</i><span></span><span></span></div>
+          <div class="post-node post-a" aria-hidden="true"><i class="creator-portrait"></i><span></span><span></span></div><div class="post-node post-b" aria-hidden="true"><i class="creator-portrait"></i><span></span><span></span></div><div class="post-node post-c" aria-hidden="true"><i class="creator-portrait"></i><span></span><span></span></div><div class="post-node post-d" aria-hidden="true"><i class="creator-portrait"></i><span></span><span></span></div>
           <span class="network-dot dot-top" aria-hidden="true"></span><span class="network-dot dot-bottom" aria-hidden="true"></span>
         </div>
-        <div class="card-copy"><h3>Build always-on<br>distribution.</h3><p>Creators keep posting about your brand every day, flooding the algorithm and creating a wave of content around your brand.</p></div>
+        <div class="card-copy"><h3>build an army of creator pages talking about you.</h3><p>Creators keep posting about your brand every day, flooding the algorithm and creating a wave of content around your brand.</p></div>
       </article>
     </div>
   </div>
