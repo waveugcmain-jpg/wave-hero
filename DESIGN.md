@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Rotating hero headline — 2026-10-01
+
+Hero now holds each complete headline for 10 seconds, backspaces at 28ms per character, pauses 350ms, then types the next at 55ms per character. Alternates the existing headline with the exact supplied “Build viral ugc programs that millions watch”. Retains white/lime emphasis and adds a slim blinking caret. Both layouts reserve space with hidden grid sizing layers to prevent CTA/media movement. Screen readers receive a stable heading rather than character announcements. The explicitly requested loop runs under reduced-motion settings and suspends in hidden tabs. Pricing removed from desktop and mobile navigation.
+
+Validated erase, partial typing, both completed headlines and return loop in Edge at 1440, 390 and 320px with reduced motion enabled; stable CTA position, no horizontal overflow or page errors. Desktop/mobile captures inspected; production build passed.
+
 ## Final footer — 2026-10-01
 
 Replaced the minimal closing footer with a white five-column footer: Wave wordmark and supplied tagline, For Brands, For Creators, Wave and Resources. All requested labels and copyright/legal controls retained. The existing hero wave-background.png forms a 340px bottom photographic band faded into white; mobile uses a 230px crop. Existing Manrope/DM Sans and deep green typography retained. Four navigation groups wrap to two columns below 600px, with 44px minimum targets. Legal/copyright content stays above photography for contrast.
@@ -205,4 +211,3 @@ Reused the existing native creative-playbook SVG as a small decorative accent ab
 
 ## Live Calendly booking
 Added official Calendly inline widget for https://calendly.com/founder-waveugc/new-meeting immediately after final CTA and before footer. White/deep-green/cobalt customization, fixed responsive height to avoid embed resize collapse, accessible section heading and direct external fallback link. All .book buttons now scroll and focus the inline booking section instead of opening placeholder dialog. Verified live event title/date calendar in iframe, section order, focus and mobile overflow. No booking submitted. Calendly external widget requires network; no credentials required. Reference: https://developer.calendly.com/api-docs/overview/embedding/getting-started.
-
