@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Static hero and supporting-copy hierarchy — 2026-10-01
+
+Supersedes the rotating-headline entry below at the user's request. Removed all headline typing/backspacing code, caret and sizing layers. Restored the original semantic headline. On phones the display scales from 19px at 320px to 34px at 600px, preserving the two intentional lines with the offer phrase on one line. Supporting copy stays weight 400, now white, 16px on phones, 17px on tablets, 18px desktop and 19px wide desktop, with 1.65 leading and more space before the CTA. Pricing remains removed. Changes scoped to the hero.
+
+Verified Edge rendering at 320, 390, 600, 768, 1440 and 1920px: no horizontal overflow, offer phrase fits its container, original headline present, animation elements absent, regular subheadline weight and no page errors. Mobile/desktop screenshots inspected; production build passed.
+
 ## Rotating hero headline — 2026-10-01
 
 Hero now holds each complete headline for 10 seconds, backspaces at 28ms per character, pauses 350ms, then types the next at 55ms per character. Alternates the existing headline with the exact supplied “Build viral ugc programs that millions watch”. Retains white/lime emphasis and adds a slim blinking caret. Both layouts reserve space with hidden grid sizing layers to prevent CTA/media movement. Screen readers receive a stable heading rather than character announcements. The explicitly requested loop runs under reduced-motion settings and suspends in hidden tabs. Pricing removed from desktop and mobile navigation.
