@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Laptop-scale network and staged interaction — 2026-10-04
+
+The network now uses the full available laptop width and most of the viewport height, with larger portraits and a responsive larger brand hub. Replaced the 185svh runway with 300svh. Scroll reveals all 36 creators progressively with smoothstep opacity/scale/translation; each native button remains disabled until its reveal finishes, then its plus badge appears. Full reveal finishes at roughly 75% progress, leaving the last quarter for exploration before sticky release. Reverse scroll restores prior states. This explicitly requested user-controlled choreography stays active under reduced-motion settings; there is no autonomous animation. Tab from the focusable section reveals/enables all profiles for keyboard access.
+
+Detail panels can move beside their portrait on shorter laptop screens instead of covering the selected button. Verified at 1280x720, 1366x768, 1440x900 and 390x844: initial disabled state, partial visibility/readiness, all 36 click interactions, no portrait clipping/overflow, pinned exploration interval, normal scroll release, reverse progress and keyboard access. Tested under OS reduced motion as well. Production build passed; local preview uses updated dist. Existing hosted-publication blockers remain unresolved.
+
 ## 36-creator Instagram army — 2026-10-04
 
 Expanded the interactive scene from 12 to 36 individual creators. A new generated fictional 6x6 contact sheet (creator-army.jpg) uses casual Instagram-style profile photos with varied outdoor/home/cafe settings and expressions. Subtle coral/pink/purple story rings frame each avatar. Desktop uses three concentric, size-varied groups; mobile uses a dense 6-column arrangement with clear space for the centered brand hub. No portraits repeat within the network. Existing illustrative-profile disclosure retained.

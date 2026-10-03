@@ -28,7 +28,7 @@
 .network-popover .network-angles{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
 .network-angles span{font:500 11px/1.4 'DM Sans',sans-serif;background:#f0f4ef;color:#294838;border:1px solid #e3e9df;padding:6px 8px;border-radius:6px}
 .network-close{position:absolute;right:2px;top:2px;min-width:40px;min-height:40px;padding:0;background:none;border:0;border-radius:50%;color:#526259;font-size:22px}
-.creator-network.is-network-enhanced{height:185svh;min-height:1100px}
+.creator-network.is-network-enhanced{height:300svh;min-height:1600px}
 .is-network-enhanced .network-stage{position:sticky;top:0;height:100svh;min-height:650px;display:flex;flex-direction:column;justify-content:center}
 .is-network-enhanced .network-scene{height:min(74svh,720px);min-height:550px;flex-shrink:0}
 .is-network-enhanced .network-person-inner{opacity:var(--reveal,0);transform:translateY(calc((1 - var(--reveal,0))*24px)) scale(calc(.66 + var(--reveal,0)*.34));visibility:hidden;will-change:transform,opacity}
@@ -45,7 +45,6 @@
  .is-network-enhanced .network-stage{min-height:620px}.is-network-enhanced .network-scene{min-height:530px;height:72svh;max-height:690px}
  .network-popover{width:285px;padding:17px 38px 17px 17px}.network-popover p{font-size:13px}
 }
-@media(prefers-reduced-motion:reduce){.creator-network.is-network-enhanced{height:auto;min-height:0}.is-network-enhanced .network-stage{position:relative;height:auto}.is-network-enhanced .network-person-inner{opacity:1;transform:none;visibility:visible}.is-network-enhanced .network-connections path{opacity:1;stroke-dashoffset:0}}
 @media(max-height:640px){.creator-network.is-network-enhanced{height:auto;min-height:0}.is-network-enhanced .network-stage{position:relative;height:auto;min-height:0}.is-network-enhanced .network-scene{height:550px}}
 
 /* A denser army of social profile circles, with a restrained Instagram-style story ring. */
@@ -59,3 +58,23 @@
 @media(min-width:701px) and (max-width:1000px){.network-person{width:calc(var(--size)*.78)}.network-center-brand{width:128px;height:128px}}
 @media(max-width:700px){.network-person{width:46px}.network-person button{padding:2px}.network-face{border-width:2px}.network-plus{width:16px;height:16px;font-size:12px}.network-center-brand{width:100px;height:100px}.network-handle{display:none}.network-scene,.is-network-enhanced .network-scene{min-height:580px}.network-stage,.is-network-enhanced .network-stage{min-height:720px}.network-note{padding-top:18px}}
 @media(max-width:350px){.network-person{width:44px}.network-center-brand{width:94px;height:94px}.network-center-brand h2{font-size:18px}}
+
+/* Scroll-led choreography: settle each portrait before enabling exploration. */
+.is-network-enhanced .network-person:not(.is-ready) button{pointer-events:none;cursor:default}
+.is-network-enhanced .network-person:not(.is-ready) .network-plus{opacity:0;transform:scale(.6)}
+.network-plus{transition:opacity .2s,transform .2s}
+.creator-network:focus-visible{outline:2px solid #1b43f5;outline-offset:-3px}
+@media(min-width:701px){
+ .network-stage{max-width:none;padding:48px 32px 54px}
+ .network-scene{max-width:none;width:100%}
+ .is-network-enhanced .network-stage{min-height:0}
+ .is-network-enhanced .network-scene{height:calc(100svh - 132px);min-height:0;max-height:none}
+ .network-person{width:calc(var(--size)*1.3)}
+ .network-center-brand{width:clamp(138px,21svh,196px);height:clamp(138px,21svh,196px)}
+ .network-center-brand h2{font-size:clamp(26px,3.9svh,36px)}
+ .network-note{width:100%;max-width:none;justify-content:center;gap:22px;padding-top:20px}
+ .network-handle{font-size:10px}.network-handle small{font-size:9px}
+}
+@media(min-width:701px) and (max-height:800px){.network-person{width:calc(var(--size)*1.15)}}
+@media(min-width:701px) and (max-width:1000px){.network-person{width:var(--size)}}
+@media(min-width:701px) and (max-height:640px){.is-network-enhanced .network-scene{height:520px}.network-person{width:var(--size)}}
