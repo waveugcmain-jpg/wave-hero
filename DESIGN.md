@@ -1,5 +1,13 @@
 # Wave website design handoff
 
+## Editorial strategy invitation and copy updates — 2026-10-04
+
+Replaced the centered pale-blue strategy invitation with a warm-paper (#F8F9F5) two-column layout. Left: small existing BOOK A CALL label, large Manrope strategy promise, cobalt NO QUESTIONS ASKED and existing description. Right: cobalt inset panel with the enlarged existing creative-playbook SVG, unchanged takeaway/reassurance and a full-width lime booking button. No new text, claims or testimonials. Stacks below 700px. Existing border motion/pause and Calendly navigation retained.
+
+Hero copy is now “build an army of dedicated creator accounts that make your product go viral”, set in three intentional lines with lime emphasis on dedicated creator accounts. Card 4 now reads “Make your brand impossible to forget.” and “A network of creator accounts keeps your brand in front of consumers every day, keeping you top of mind when it matters.” Existing creator portraits retained; supporting copy weight 600.
+
+Verified at 320, 390, 700, 768, 1024, 1440 and 1920px: exact hero/Card 4 text, unchanged strategy text blocks, no page/card overflow, working booking focus and border pause/resume, zero page errors. Desktop/mobile screenshots inspected. Production build passed. Conversion impact is unmeasured.
+
 ## Section 2 copy and creator portraits — 2026-10-01
 
 Updated the problem subheadline to the user's organic viral growth channel copy, with a fine cobalt left rule, quieter setup and larger bold cobalt “the answer is wave”. Creator card now says “Trained ugc creators working with us”. Lime card uses bold “Our goal” and three separate goal lines: make your brand go viral; build you an organic growth channel; find and scale winning creatives. Distribution headline is now “build an army of creator pages talking about you.” Four existing fictional portraits from cta-portraits.png replace generic play icons inside the connected creator-page illustration; no new identities or testimonials implied. Existing scroll-linked statement behavior retained.

@@ -386,6 +386,31 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 .post-a .creator-portrait{background-position:0 0}.post-b .creator-portrait{background-position:50% 0}.post-c .creator-portrait{background-position:100% 0}.post-d .creator-portrait{background-position:0 100%}
 .distribution-card h3{font-size:clamp(24px,2vw,29px);line-height:1.16;text-wrap:pretty}
 @media(max-width:600px){.why-wave .problem-sub{font-size:18px;margin-top:26px;padding-left:16px}.why-wave .problem-sub strong{font-size:29px;margin-top:10px}.goal-card{gap:0}.goal-lines{font-size:15px}.distribution-card h3{font-size:28px}}
+/* Strategy invitation: editorial promise paired with a tangible creative-playbook offer. */
+.intro .army-headline>span,.intro .army-headline>em{display:block}
+.intro .army-headline{font-size:clamp(42px,4.25vw,68px);line-height:1.13}
+.distribution-card .card-copy p{font-weight:600;line-height:1.65}
+.strategy-panel{background:#f8f9f5;color:#123d31;border:1px solid #d8e1d8;padding:clamp(40px,5vw,80px);margin-top:32px;text-align:left;box-shadow:inset 0 1px 0 #fff}
+.strategy-content{max-width:1280px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.85fr);align-items:center;gap:clamp(40px,6vw,96px)}
+.strategy-editorial{min-width:0;padding:12px 0}
+.strategy-panel h2{font-size:clamp(40px,4.5vw,68px);font-weight:600;line-height:1.04;letter-spacing:-.055em;text-wrap:initial}
+.strategy-panel h2 .strategy-kicker{display:flex;align-items:center;gap:12px;color:#123d31;font:600 11px/1.5 'DM Sans',sans-serif;letter-spacing:.13em;margin-bottom:34px}
+.strategy-kicker:before{content:'';width:24px;height:2px;background:#1b43f5}
+.strategy-panel h2 .strategy-guarantee{display:block;color:#1b43f5;font-size:clamp(22px,2.4vw,34px);font-weight:500;line-height:1.2;letter-spacing:-.04em;margin-top:24px}
+.strategy-description{font-size:18px;line-height:1.7;color:#46594f;max-width:460px;margin:28px 0 0}
+.strategy-invitation{position:relative;min-width:0;background:#1b43f5;border-radius:20px;padding:30px;color:#fff;box-shadow:0 18px 32px -24px #142e8a80}
+.strategy-art-frame{display:flex;align-items:center;justify-content:center;min-height:220px;border:1px solid #ffffff36;border-radius:12px;background:#ffffff0a;padding:18px;margin-bottom:26px}
+.strategy-art{width:270px;max-width:100%;height:auto;margin:0;filter:drop-shadow(0 10px 12px #0b238c40)}
+.strategy-promise{font-size:18px;line-height:1.55;font-weight:400;letter-spacing:-.015em;margin:0 0 24px;max-width:350px;color:#fff}
+.strategy-promise span{display:block;margin-top:10px;color:#fff;font-size:14px}
+.strategy-panel .cta{width:100%;justify-content:space-between;min-height:60px;background:#caff83;border-color:#caff83;color:#123d31;font-size:14px;letter-spacing:.04em}
+.strategy-panel .cta .arrow{background:#123d31;color:#caff83;width:40px;height:40px}
+.strategy-panel .cta:hover{background:#dbffae;box-shadow:0 8px 20px #09217338;transform:translateY(-2px)}
+.strategy-panel .cta:hover .arrow{transform:translateX(2px)}
+.strategy-panel .strategy-motion{right:auto;left:clamp(40px,5vw,80px);color:#46594f;font-size:11px}
+@media(max-width:980px){.strategy-content{gap:32px;grid-template-columns:minmax(0,1fr) minmax(0,.9fr)}.strategy-panel{padding:40px 32px 48px}.strategy-panel h2{font-size:43px}.strategy-invitation{padding:22px}.strategy-description{font-size:16px}.strategy-art-frame{min-height:180px;padding:14px}.strategy-promise{font-size:16px}.strategy-panel .strategy-motion{left:32px}}
+@media(max-width:700px){.strategy-panel{padding:36px 24px 52px;margin-top:20px}.strategy-content{grid-template-columns:1fr;gap:30px;max-width:500px}.strategy-editorial{padding:0}.strategy-panel h2{font-size:clamp(35px,8.5vw,52px)}.strategy-panel h2 .strategy-kicker{margin-bottom:24px}.strategy-panel h2 .strategy-guarantee{font-size:24px;margin-top:18px}.strategy-description{margin-top:20px;font-size:16px;line-height:1.65}.strategy-invitation{padding:24px}.strategy-art-frame{min-height:0;padding:14px;margin-bottom:22px}.strategy-art{width:220px}.strategy-promise{max-width:none;font-size:17px}.strategy-panel .strategy-motion{left:24px}}
+@media(max-width:600px){.intro .army-headline{font-size:clamp(20px,5.7vw,34px);line-height:1.2;letter-spacing:-.045em}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -394,7 +419,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 <nav class="links" id="navigation" aria-label="Main navigation">
 <a class="nav-link" href="#our-playbook">Our playbook</a><a class="nav-link" href="#why-wave">Why wave</a><a class="nav-link" href="#campaign">For brands</a><button class="nav-link" data-section="For creators">For creators</button><button class="nav-link" id="creative-link">Our creatives</button>
 </nav><button class="cta book">Book a strategy call <span class="arrow" aria-hidden="true">↗</span></button><button class="menu" aria-controls="navigation" aria-expanded="false" aria-label="Open navigation">☰</button></header>
-<div class="hero-content"><div class="intro"><p class="eyebrow">Creator-led. Tested daily. Built to scale.</p><h1>Make your brand go viral<br><span class="offer-line">with <em>UGC ambassador programs.</em></span></h1>
+<div class="hero-content"><div class="intro"><p class="eyebrow">Creator-led. Tested daily. Built to scale.</p><h1 class="army-headline"><span>build an army of</span> <em>dedicated creator accounts</em> <span>that make your product go viral</span></h1>
 <p class="sub">Wave builds a network of UGC creator accounts posting about your brand every day. We test different hooks, messages and formats, then double down on what works to build organic distribution.</p>
 <div class="actions"><button class="cta book">Book a strategy call <span class="arrow" aria-hidden="true">↗</span></button><button class="secondary" id="playbook">Explore our playbook <span aria-hidden="true">↘</span></button></div></div>
 <section class="media orbit-media" id="creatives" aria-label="Revolving creator video previews"><div class="orbit-stage" aria-hidden="true"></div></section>
@@ -431,7 +456,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
           <div class="post-node post-a" aria-hidden="true"><i class="creator-portrait"></i><span></span><span></span></div><div class="post-node post-b" aria-hidden="true"><i class="creator-portrait"></i><span></span><span></span></div><div class="post-node post-c" aria-hidden="true"><i class="creator-portrait"></i><span></span><span></span></div><div class="post-node post-d" aria-hidden="true"><i class="creator-portrait"></i><span></span><span></span></div>
           <span class="network-dot dot-top" aria-hidden="true"></span><span class="network-dot dot-bottom" aria-hidden="true"></span>
         </div>
-        <div class="card-copy"><h3>build an army of creator pages talking about you.</h3><p>Creators keep posting about your brand every day, flooding the algorithm and creating a wave of content around your brand.</p></div>
+        <div class="card-copy"><h3>Make your brand impossible to forget.</h3><p>A network of creator accounts keeps your brand in front of consumers every day, keeping you top of mind when it matters.</p></div>
       </article>
     </div>
   </div>
@@ -483,11 +508,15 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 <section class="strategy-panel" id="strategy-call" aria-labelledby="offer-title">
  <span class="strategy-glow" aria-hidden="true"></span>
  <div class="strategy-content">
-<svg class="strategy-art" viewBox="45 55 390 280" aria-hidden="true" focusable="false" aria-label="Audience insights become hooks, formats and angles in a creative playbook." xmlns="http://www.w3.org/2000/svg"><g font-family="DM Sans,Arial,sans-serif"><rect x="55" y="62" width="346" height="264" rx="24" fill="#ffffffed"/><text x="79" y="94" font-size="11" fill="#123d31" font-weight="600">AUDIENCE → CREATIVE DIRECTION</text><rect x="79" y="116" width="224" height="37" rx="10" fill="#f1f5f1"/><text x="96" y="140" font-size="14" fill="#123d31" font-weight="600">What makes them stop?</text><rect x="79" y="174" width="130" height="29" rx="8" fill="#caff83"/><text x="93" y="194" font-size="12" fill="#123d31" font-weight="600">Hooks</text><rect x="226" y="186" width="112" height="5" rx="2" fill="#dce7e3"/><rect x="79" y="214" width="130" height="29" rx="8" fill="#f1f5f1"/><text x="93" y="234" font-size="12" fill="#123d31" font-weight="600">Formats</text><rect x="226" y="226" width="93" height="5" rx="2" fill="#dce7e3"/><rect x="79" y="254" width="130" height="29" rx="8" fill="#f1f5f1"/><text x="93" y="274" font-size="12" fill="#123d31" font-weight="600">Angles</text><rect x="226" y="266" width="74" height="5" rx="2" fill="#dce7e3"/><g transform="rotate(9 352 238)"><rect x="294" y="159" width="132" height="153" rx="16" fill="#1b43f5"/><text x="311" y="187" font-size="10" fill="#fff" font-weight="600">THE CREATIVE</text><text x="311" y="204" font-size="13" fill="#fff" font-weight="600">PLAYBOOK</text><rect x="311" y="224" width="79" height="5" rx="2" fill="#caff83"/><rect x="311" y="243" width="67" height="5" rx="2" fill="#caff83"/><rect x="311" y="262" width="55" height="5" rx="2" fill="#caff83"/></g></g></svg>
-  <h2 id="offer-title">BOOK A CALL. WE'LL BUILD YOUR STRATEGY. <span>NO QUESTIONS ASKED</span></h2>
-  <p class="strategy-description">We'll look at your brand, ICP and category and show you what we'd test in your first 45 days.</p>
-  <p class="strategy-promise">You get the strategy, sample creative and distribution plan. No obligation.</p>
-  <button class="cta book" type="button">BOOK A CALL <span class="arrow" aria-hidden="true">→</span></button>
+  <div class="strategy-editorial">
+   <h2 id="offer-title"><span class="strategy-kicker">BOOK A CALL.</span> WE'LL BUILD<br>YOUR STRATEGY. <span class="strategy-guarantee">NO QUESTIONS ASKED</span></h2>
+   <p class="strategy-description">We'll look at your brand, ICP and category and show you what we'd test in your first 45 days.</p>
+  </div>
+  <div class="strategy-invitation">
+   <div class="strategy-art-frame"><svg class="strategy-art" viewBox="45 55 390 280" aria-hidden="true" focusable="false" aria-label="Audience insights become hooks, formats and angles in a creative playbook." xmlns="http://www.w3.org/2000/svg"><g font-family="DM Sans,Arial,sans-serif"><rect x="55" y="62" width="346" height="264" rx="24" fill="#ffffffed"/><text x="79" y="94" font-size="11" fill="#123d31" font-weight="600">AUDIENCE → CREATIVE DIRECTION</text><rect x="79" y="116" width="224" height="37" rx="10" fill="#f1f5f1"/><text x="96" y="140" font-size="14" fill="#123d31" font-weight="600">What makes them stop?</text><rect x="79" y="174" width="130" height="29" rx="8" fill="#caff83"/><text x="93" y="194" font-size="12" fill="#123d31" font-weight="600">Hooks</text><rect x="226" y="186" width="112" height="5" rx="2" fill="#dce7e3"/><rect x="79" y="214" width="130" height="29" rx="8" fill="#f1f5f1"/><text x="93" y="234" font-size="12" fill="#123d31" font-weight="600">Formats</text><rect x="226" y="226" width="93" height="5" rx="2" fill="#dce7e3"/><rect x="79" y="254" width="130" height="29" rx="8" fill="#f1f5f1"/><text x="93" y="274" font-size="12" fill="#123d31" font-weight="600">Angles</text><rect x="226" y="266" width="74" height="5" rx="2" fill="#dce7e3"/><g transform="rotate(9 352 238)"><rect x="294" y="159" width="132" height="153" rx="16" fill="#1b43f5"/><text x="311" y="187" font-size="10" fill="#fff" font-weight="600">THE CREATIVE</text><text x="311" y="204" font-size="13" fill="#fff" font-weight="600">PLAYBOOK</text><rect x="311" y="224" width="79" height="5" rx="2" fill="#caff83"/><rect x="311" y="243" width="67" height="5" rx="2" fill="#caff83"/><rect x="311" y="262" width="55" height="5" rx="2" fill="#caff83"/></g></g></svg></div>
+   <p class="strategy-promise">You get the strategy, sample creative and distribution plan. <span>No obligation.</span></p>
+   <button class="cta book" type="button">BOOK A CALL <span class="arrow" aria-hidden="true">→</span></button>
+  </div>
  </div>
  <button class="strategy-motion" type="button" aria-pressed="false" aria-label="Pause border animation">Pause animation</button>
 </section>
