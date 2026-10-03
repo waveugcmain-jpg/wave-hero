@@ -1,5 +1,13 @@
 # Wave website design handoff
 
+## Booking-first hierarchy and dark Calendly — 2026-10-04
+
+Supersedes the editorial strategy invitation below. BOOK A CALL is now the dominant heading, set in oversized Manrope on charcoal #111614 with a lime period and directional arrow. The existing strategy promise, explanation, reassurance and lime CTA form a quieter two-column lower area separated by a fine rule; mobile stacks the content. Removed the decorative playbook illustration. Main offer copy unchanged; no new marketing text. Existing border animation/pause and booking focus retained.
+
+Calendly uses documented embed parameters background_color=111614, text_color=f4f6ef and primary_color=caff83. The surrounding booking section matches; fallback link remains available. Live iframe inspected and confirmed rgb(17,22,20) background with light text and lime controls. No booking submitted. Reference: https://calendly.com/help/how-to-customize-your-embed.
+
+Verified heading hierarchy, no overflow and booking navigation at 320, 390, 768, 1024, 1440 and 1920px. Desktop/mobile offer screenshots and live Calendly screenshot inspected. Production build passed.
+
 ## Editorial strategy invitation and copy updates — 2026-10-04
 
 Replaced the centered pale-blue strategy invitation with a warm-paper (#F8F9F5) two-column layout. Left: small existing BOOK A CALL label, large Manrope strategy promise, cobalt NO QUESTIONS ASKED and existing description. Right: cobalt inset panel with the enlarged existing creative-playbook SVG, unchanged takeaway/reassurance and a full-width lime booking button. No new text, claims or testimonials. Stacks below 700px. Existing border motion/pause and Calendly navigation retained.
