@@ -6,6 +6,9 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 const outputDir = path.join(projectRoot, "dist");
 const files = [
   "index.html",
+  "creator-network.css",
+  "creator-network.js",
+  "creator-network.jpg",
   "creator-grid.png",
   "cta-portraits.png",
   "footer-waves.png",
@@ -37,6 +40,8 @@ for (const font of ["dm-sans-latin.woff2", "manrope-latin.woff2", "OFL.txt"]) {
 
 const html = await readFile(path.join(outputDir, "index.html"), "utf8");
 const localReferences = [
+  "creator-network.css",
+  "creator-network.js",
   "footer-waves.png",
   "founder-sunset.png",
   "cta-portraits.png",

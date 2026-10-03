@@ -1,0 +1,49 @@
+.creator-network{position:relative;background:#fff;color:#123d31;margin:16px auto 0;border-radius:24px;isolation:isolate}
+.network-stage{position:relative;max-width:1440px;margin:auto;padding:32px 20px 38px}
+.network-scene{height:660px;position:relative;width:100%;max-width:1240px;margin:auto}
+.network-note{display:flex;justify-content:space-between;gap:16px;max-width:1200px;margin:0 auto;padding:12px 12px 0;font:400 12px/1.5 'DM Sans',sans-serif;color:#65726b}
+.network-note span:last-child{font-size:11px;color:#65726b}
+.network-center-brand{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);z-index:2;width:174px;height:174px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #dce3de;box-shadow:0 0 0 14px #fff,0 12px 60px #143d3110}
+.network-center-brand:before{content:'';position:absolute;inset:8px;border:1px solid #edf0ed;border-radius:50%}
+.network-center-brand h2{font:600 26px/1.1 Manrope,sans-serif;letter-spacing:-.05em;margin:0;text-align:center}
+.network-center-brand h2 span{display:block;color:#1b43f5}
+.network-connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.network-connections path{fill:none;stroke:#d9e2df;stroke-width:1.25;vector-effect:non-scaling-stroke;transition:stroke .2s,stroke-width .2s}
+.network-connections path.is-active{stroke:#1b43f5;stroke-width:2}
+.network-person{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);z-index:3;width:var(--size,90px)}
+.network-person-inner{position:relative;transform-origin:center}
+.network-person button{display:block;position:relative;width:100%;aspect-ratio:1;padding:5px;border-radius:50%;border:1px solid #dce4df;background:#fff;box-shadow:0 6px 20px #123d3110;cursor:pointer;transition:transform .22s cubic-bezier(.2,.7,.2,1),box-shadow .22s,border-color .22s;color:#123d31}
+.network-person button:hover,.network-person button[aria-expanded=true]{transform:translateY(-4px) scale(1.045);border-color:#1b43f5;box-shadow:0 0 0 4px #1b43f50b,0 14px 28px #123d3120}
+.network-person button:focus-visible{outline:3px solid #1b43f5;outline-offset:5px;box-shadow:0 0 0 8px #fff}
+.network-face{display:block;width:100%;height:100%;border-radius:50%;background-image:url('creator-network.jpg');background-size:400% 300%;background-position:var(--crop-x) var(--crop-y)}
+.network-plus{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:24px;height:24px;background:#fff;color:#1b43f5;border:1px solid #e0e6e2;border-radius:50%;font:500 18px/1 'DM Sans',sans-serif;box-shadow:0 3px 8px #123d3112}
+.network-person button[aria-expanded=true] .network-plus{background:#1b43f5;color:#fff;border-color:#1b43f5}
+.network-handle{position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);font:500 10px/1.4 'DM Sans',sans-serif;color:#526259;white-space:nowrap;pointer-events:none;background:#fff;padding:2px 5px;border-radius:5px}
+.network-handle small{display:block;font-size:9px;font-weight:400;color:#66766d;text-align:center}
+.network-mini-check{display:inline-grid;place-items:center;width:11px;height:11px;margin-left:3px;border-radius:50%;background:#e6edff;color:#1b43f5;font-size:8px}
+.network-popover{position:absolute;z-index:20;width:310px;max-width:calc(100% - 16px);padding:20px 42px 20px 20px;background:#fff;border:1px solid #dce3de;border-radius:16px;box-shadow:0 20px 64px #123d3126,0 4px 12px #123d310a;color:#123d31}
+.network-popover[hidden]{display:none}
+.network-popover h3{font:650 18px/1.2 Manrope,sans-serif;margin:0 0 10px;letter-spacing:-.025em}
+.network-popover p{font:400 14px/1.6 'DM Sans',sans-serif;margin:0;color:#43594d}
+.network-popover .network-angles{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.network-angles span{font:500 11px/1.4 'DM Sans',sans-serif;background:#f0f4ef;color:#294838;border:1px solid #e3e9df;padding:6px 8px;border-radius:6px}
+.network-close{position:absolute;right:2px;top:2px;min-width:40px;min-height:40px;padding:0;background:none;border:0;border-radius:50%;color:#526259;font-size:22px}
+.creator-network.is-network-enhanced{height:185svh;min-height:1100px}
+.is-network-enhanced .network-stage{position:sticky;top:0;height:100svh;min-height:650px;display:flex;flex-direction:column;justify-content:center}
+.is-network-enhanced .network-scene{height:min(74svh,720px);min-height:550px;flex-shrink:0}
+.is-network-enhanced .network-person-inner{opacity:var(--reveal,0);transform:translateY(calc((1 - var(--reveal,0))*24px)) scale(calc(.66 + var(--reveal,0)*.34));visibility:hidden;will-change:transform,opacity}
+.is-network-enhanced .network-person.is-revealed .network-person-inner{visibility:visible}
+.is-network-enhanced .network-connections path{opacity:var(--reveal,0);stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--reveal,0))}
+@media(max-width:700px){
+ .network-stage{padding:22px 4px 32px}.network-scene{height:640px}
+ .network-center-brand{width:108px;height:108px;box-shadow:0 0 0 8px #fff,0 8px 32px #143d3110}
+ .network-center-brand h2{font-size:20px}.network-center-brand:before{inset:5px}
+ .network-person{left:var(--mx);top:var(--my);width:var(--msize,58px)}
+ .network-person button{padding:3px}.network-plus{width:20px;height:20px;font-size:15px}
+ .network-handle{font-size:9px;top:calc(100% + 4px)}.network-handle small{font-size:8px}
+ .network-note{padding:12px 12px 0;flex-direction:column;gap:4px;text-align:center;font-size:11px}
+ .is-network-enhanced .network-stage{min-height:620px}.is-network-enhanced .network-scene{min-height:530px;height:72svh;max-height:690px}
+ .network-popover{width:285px;padding:17px 38px 17px 17px}.network-popover p{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.creator-network.is-network-enhanced{height:auto;min-height:0}.is-network-enhanced .network-stage{position:relative;height:auto}.is-network-enhanced .network-person-inner{opacity:1;transform:none;visibility:visible}.is-network-enhanced .network-connections path{opacity:1;stroke-dashoffset:0}}
+@media(max-height:640px){.creator-network.is-network-enhanced{height:auto;min-height:0}.is-network-enhanced .network-stage{position:relative;height:auto;min-height:0}.is-network-enhanced .network-scene{height:550px}}

@@ -1,5 +1,15 @@
 # Wave website design handoff
 
+## Interactive creator network — 2026-10-04
+
+New white #creator-network section after Why Wave and before Our Playbook. Centered Your brand hub connects via subtle native SVG curves to 12 distinct circular Indian creator portraits. Scroll position reveals portraits with staggered opacity, translation and scale; reverse scroll retraces the reveal. Desktop/mobile use tuned asymmetric coordinates. Short viewports use an unpinned reveal; reduced motion displays the whole scene. No scroll interception or new runtime dependency.
+
+Each avatar is a semantic button with a plus badge, focus ring, hover lift and expanded state. Hover/focus opens a shared detail panel; click/tap pins it. The selected line turns cobalt. Panels include a fictional name, account-creation explanation and two distinct sample creative angles. Close button, Escape, outside tap and repeat click dismiss. Pointer dismissal suppresses accidental reopening beneath the removed panel. Panels are clamped to the scene width; keyboard navigation can reveal the entire scene.
+
+creator-network.jpg is a generated fictional 4x3 portrait sheet (built-in ImageGen), optimized to 295KB JPEG. Names, handles and two sample follower counts are explicitly labeled illustrative in the section. Portraits are not real team members or testimonials. New CSS/JS files and JPEG are included in scripts/build.mjs.
+
+Verified at 320, 390, 768 and 1440px: start/mid/end/reverse reveals, 12 connectors, all 12 clicks, panel bounds, hover, keyboard Enter/Escape, reduced motion and zero page errors. Additional mobile touch tests cover open/close/outside dismissal; short viewport reveal verified at 1024x600. Desktop/mobile captures inspected and production build passed.
+
 ## Booking-first hierarchy and dark Calendly — 2026-10-04
 
 Supersedes the editorial strategy invitation below. BOOK A CALL is now the dominant heading, set in oversized Manrope on charcoal #111614 with a lime period and directional arrow. The existing strategy promise, explanation, reassurance and lime CTA form a quieter two-column lower area separated by a fine rule; mobile stacks the content. Removed the decorative playbook illustration. Main offer copy unchanged; no new marketing text. Existing border animation/pause and booking focus retained.
