@@ -9,6 +9,7 @@ const files = [
   "creator-network.css",
   "creator-network.js",
   "creator-network.jpg",
+  "creator-army.jpg",
   "creator-grid.png",
   "cta-portraits.png",
   "footer-waves.png",

@@ -15,7 +15,7 @@
 .network-person button{display:block;position:relative;width:100%;aspect-ratio:1;padding:5px;border-radius:50%;border:1px solid #dce4df;background:#fff;box-shadow:0 6px 20px #123d3110;cursor:pointer;transition:transform .22s cubic-bezier(.2,.7,.2,1),box-shadow .22s,border-color .22s;color:#123d31}
 .network-person button:hover,.network-person button[aria-expanded=true]{transform:translateY(-4px) scale(1.045);border-color:#1b43f5;box-shadow:0 0 0 4px #1b43f50b,0 14px 28px #123d3120}
 .network-person button:focus-visible{outline:3px solid #1b43f5;outline-offset:5px;box-shadow:0 0 0 8px #fff}
-.network-face{display:block;width:100%;height:100%;border-radius:50%;background-image:url('creator-network.jpg');background-size:400% 300%;background-position:var(--crop-x) var(--crop-y)}
+.network-face{display:block;width:100%;height:100%;border-radius:50%;background-image:url('creator-army.jpg');background-size:600% 600%;background-position:var(--crop-x) var(--crop-y)}
 .network-plus{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:24px;height:24px;background:#fff;color:#1b43f5;border:1px solid #e0e6e2;border-radius:50%;font:500 18px/1 'DM Sans',sans-serif;box-shadow:0 3px 8px #123d3112}
 .network-person button[aria-expanded=true] .network-plus{background:#1b43f5;color:#fff;border-color:#1b43f5}
 .network-handle{position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);font:500 10px/1.4 'DM Sans',sans-serif;color:#526259;white-space:nowrap;pointer-events:none;background:#fff;padding:2px 5px;border-radius:5px}
@@ -47,3 +47,15 @@
 }
 @media(prefers-reduced-motion:reduce){.creator-network.is-network-enhanced{height:auto;min-height:0}.is-network-enhanced .network-stage{position:relative;height:auto}.is-network-enhanced .network-person-inner{opacity:1;transform:none;visibility:visible}.is-network-enhanced .network-connections path{opacity:1;stroke-dashoffset:0}}
 @media(max-height:640px){.creator-network.is-network-enhanced{height:auto;min-height:0}.is-network-enhanced .network-stage{position:relative;height:auto;min-height:0}.is-network-enhanced .network-scene{height:550px}}
+
+/* A denser army of social profile circles, with a restrained Instagram-style story ring. */
+.network-person button{padding:4px;border:0;background:linear-gradient(145deg,#f2a157 0%,#dc647f 45%,#9a63bd 80%);box-shadow:0 4px 14px #123d3112}
+.network-face{border:3px solid #fff}
+.network-person button:hover,.network-person button[aria-expanded=true]{box-shadow:0 0 0 3px #1b43f515,0 10px 24px #123d3120}
+.network-plus{width:20px;height:20px;font-size:15px;right:-1px;bottom:-1px}
+.network-center-brand{width:150px;height:150px}
+.network-handle{font-size:9px;top:calc(100% + 3px);padding:1px 3px}
+.network-connections path{stroke:#dfe6e2;stroke-width:1}
+@media(min-width:701px) and (max-width:1000px){.network-person{width:calc(var(--size)*.78)}.network-center-brand{width:128px;height:128px}}
+@media(max-width:700px){.network-person{width:46px}.network-person button{padding:2px}.network-face{border-width:2px}.network-plus{width:16px;height:16px;font-size:12px}.network-center-brand{width:100px;height:100px}.network-handle{display:none}.network-scene,.is-network-enhanced .network-scene{min-height:580px}.network-stage,.is-network-enhanced .network-stage{min-height:720px}.network-note{padding-top:18px}}
+@media(max-width:350px){.network-person{width:44px}.network-center-brand{width:94px;height:94px}.network-center-brand h2{font-size:18px}}

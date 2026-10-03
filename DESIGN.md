@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## 36-creator Instagram army — 2026-10-04
+
+Expanded the interactive scene from 12 to 36 individual creators. A new generated fictional 6x6 contact sheet (creator-army.jpg) uses casual Instagram-style profile photos with varied outdoor/home/cafe settings and expressions. Subtle coral/pink/purple story rings frame each avatar. Desktop uses three concentric, size-varied groups; mobile uses a dense 6-column arrangement with clear space for the centered brand hub. No portraits repeat within the network. Existing illustrative-profile disclosure retained.
+
+Every profile says “[Name] will make a dedicated Instagram account talking about your brand, post twice a day and test multiple angles like:” followed by three sample angles. Scroll stagger normalized for 36 people. All 36 click interactions, hover, keyboard, reverse reveal, reduced motion and overflow checks passed at 320, 390, 768 and 1440px; production build passed. ChatGPT Sites publication requested but blocked before source synchronization: workflow stdin was rejected by session approval policy. GitHub remains the current source of truth.
+
 ## Interactive creator network — 2026-10-04
 
 New white #creator-network section after Why Wave and before Our Playbook. Centered Your brand hub connects via subtle native SVG curves to 12 distinct circular Indian creator portraits. Scroll position reveals portraits with staggered opacity, translation and scale; reverse scroll retraces the reveal. Desktop/mobile use tuned asymmetric coordinates. Short viewports use an unpinned reveal; reduced motion displays the whole scene. No scroll interception or new runtime dependency.
