@@ -1,10 +1,11 @@
-import { cp, mkdir, readFile, rm, stat, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(projectRoot, "dist");
 const files = [
+  "_headers",
   "index.html",
   "creator-network.css",
   "creator-network.js",
@@ -63,5 +64,6 @@ if (/localhost|127\.0\.0\.1|file:\/\//i.test(html)) {
   throw new Error("Development-only URL found in production HTML.");
 }
 
-await writeFile(path.join(outputDir, "_redirects"), "/* /index.html 200\n", "utf8");
+// Pages serves existing assets directly and falls back to index.html when there
+// is no top-level 404.html. A /* rewrite would also match CSS, JS and images.
 console.log(`Production site built in ${path.relative(projectRoot, outputDir)}/`);

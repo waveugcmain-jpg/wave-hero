@@ -1,5 +1,5 @@
 .openai/
-.netlify/
+.wrangler/
 dist/
 node_modules/
 npm-debug.log*

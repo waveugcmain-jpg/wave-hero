@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Cloudflare Pages compatibility and campaign verification — 2026-10-04
+
+Removed netlify.toml, selected Node 22 through .node-version, and copied the existing security headers into dist/_headers. The build no longer emits a catch-all _redirects rule: Pages serves assets directly and supplies its native index.html fallback. Default Pages caching replaces long immutable caching of unversioned files. README documents GitHub-connected Pages settings (None / npm run build / dist / main), domain setup and the distinction between repository readiness and a live migration. No frontend design or animation changes.
+
+Production build passed. Edge/Playwright checks passed at 1440x900, 1280x720, 800x700, 961x652, 390x844 and 320x700 under both motion preferences. Desktop cards start hidden, reveal progressively, all six finish by 85%, and reverse positions match exactly. Mobile/short viewports reveal all six individual cards. No JavaScript errors, horizontal overflow or desktop card text overflow. Desktop/mobile captures inspected. Cloudflare account deployment and DNS cutover have not been performed.
+
 ## Laptop-scale network and staged interaction — 2026-10-04
 
 The network now uses the full available laptop width and most of the viewport height, with larger portraits and a responsive larger brand hub. Replaced the 185svh runway with 300svh. Scroll reveals all 36 creators progressively with smoothstep opacity/scale/translation; each native button remains disabled until its reveal finishes, then its plus badge appears. Full reveal finishes at roughly 75% progress, leaving the last quarter for exploration before sticky release. Reverse scroll restores prior states. This explicitly requested user-controlled choreography stays active under reduced-motion settings; there is no autonomous animation. Tab from the focusable section reveals/enables all profiles for keyboard access.
