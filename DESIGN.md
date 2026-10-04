@@ -1,5 +1,9 @@
 # Wave website design handoff
 
+## Full-resolution Plix replacement — 2026-10-04
+
+Replaced the thumbnail with user-supplied 6a73e04d-ab59-4bc2-bd4a-9e4bfd2ac6cc.png, preserving its complete 948 × 1659 composition in the existing contain-sized image slot. Optimized WebP is 133,704 bytes. Build passed; browser confirmed all three orbit instances load the new dimensions with contain sizing and no horizontal overflow. Screenshot inspected. This supersedes the thumbnail-quality limitation in the earlier entries.
+
 ## Plix replacement and shorter-laptop campaign animation — 2026-10-04
 
 Re-encoded the newly supplied Plix file (codex-clipboard-28741154-7a26-4158-8e16-6a01e3923226.png) at WebP quality 95, preserving the complete 113 × 170 source. The replacement is still a thumbnail, not a higher-resolution post.
