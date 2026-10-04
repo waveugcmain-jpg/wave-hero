@@ -418,6 +418,18 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 @media(max-width:700px){.strategy-panel{padding:36px 24px 52px;margin-top:20px}.call-heading{gap:12px;padding-bottom:26px}.strategy-panel h2{font-size:clamp(43px,9.5vw,66px);letter-spacing:-.065em}.call-direction{font-size:46px}.call-details{grid-template-columns:1fr;gap:28px;padding-top:26px}.call-explanation h3{font-size:25px;max-width:380px}.strategy-description{margin-top:18px;font-size:16px;line-height:1.65}.call-action{padding-top:24px;border-top:1px solid #ffffff30}.strategy-promise{max-width:420px;font-size:17px;margin-bottom:22px}.strategy-panel .cta{min-height:62px}}
 @media(max-width:360px){.call-direction{display:none}.strategy-panel h2{font-size:43px}.call-explanation h3{font-size:23px}}
 @media(max-width:600px){.intro .army-headline{font-size:clamp(20px,5.7vw,34px);line-height:1.2;letter-spacing:-.045em}}
+
+/* Supplied social posts: preserve the complete composition, with captions outside. */
+.orbit-media{height:520px;margin-top:30px}
+.orbit-card.creator-post{width:190px;height:auto;top:56%;margin:0;overflow:hidden;background:#fff!important;border:1px solid #ffffff99;border-radius:12px;color:#123d31!important;text-shadow:none;box-shadow:0 18px 38px #04153640}
+.orbit-card.creator-post:after{display:none}
+.creator-post img{display:block;width:100%;height:auto;aspect-ratio:941/1672;object-fit:contain;background:#171b19}
+.creator-post figcaption{display:flex;flex-direction:column;justify-content:center;gap:5px;min-height:62px;padding:12px 13px;background:#fff}
+.creator-post figcaption strong{font:600 13px/1.3 'DM Sans',sans-serif;letter-spacing:-.015em}
+.creator-post figcaption span{font:500 8px/1.4 'DM Sans',sans-serif;letter-spacing:.11em;text-transform:uppercase;color:#526259}
+@media(min-width:1600px){.orbit-media{height:560px}.orbit-card.creator-post{width:210px}}
+@media(max-width:980px){.orbit-media{height:480px}.orbit-card.creator-post{width:170px}}
+@media(max-width:600px){.orbit-media{height:374px;margin-top:20px}.orbit-card.creator-post{width:134px;top:55%;border-radius:9px}.creator-post figcaption{min-height:58px;padding:10px 9px;gap:4px}.creator-post figcaption strong{font-size:11px}.creator-post figcaption span{font-size:7px;letter-spacing:.06em}}
 </style>
 <link rel="stylesheet" href="creator-network.css">
 </head>
@@ -430,7 +442,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 <div class="hero-content"><div class="intro"><p class="eyebrow">Creator-led. Tested daily. Built to scale.</p><h1 class="army-headline"><span>build an army of</span> <em>dedicated creator accounts</em> <span>that make your product go viral</span></h1>
 <p class="sub">Wave builds a network of UGC creator accounts posting about your brand every day. We test different hooks, messages and formats, then double down on what works to build organic distribution.</p>
 <div class="actions"><button class="cta book">Book a strategy call <span class="arrow" aria-hidden="true">↗</span></button><button class="secondary" id="playbook">Explore our playbook <span aria-hidden="true">↘</span></button></div></div>
-<section class="media orbit-media" id="creatives" aria-label="Revolving creator video previews"><div class="orbit-stage" aria-hidden="true"></div></section>
+<section class="media orbit-media" id="creatives" aria-label="Creator army: multiple accounts posting different creative angles"><div class="orbit-stage"></div></section>
 <div class="hero-foot"><div class="foot-note">Real creators <span>/</span> Daily content <span>/</span> Organic distribution</div></div>
 </div></div>
 <section class="why-wave" id="why-wave" aria-labelledby="problem-statement">
@@ -631,10 +643,21 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 <aside class="popup" aria-label="Explore hooks or book a call" hidden><button class="close" id="dismiss" aria-label="Dismiss invitation">×</button><div class="popup-label">MAKE THE FIRST SECONDS COUNT</div><h2>Your next video starts with a hook.</h2><p>Find a fresh angle for your brand.</p><button class="cta" id="hook-library">View hook library <span aria-hidden="true">↗</span></button><button class="secondary book" style="display:block;margin:8px auto 0;font-size:13px;border-color:#536061">Or book a call ↗</button></aside>
 <dialog aria-labelledby="dialog-title"><button class="close" id="close-dialog" aria-label="Close dialog">×</button><span class="dialog-label" id="dialog-label">Hero prototype</span><h2 id="dialog-title"></h2><p id="dialog-copy"></p><button class="done">Back to wave</button></dialog>
 <script>
-const labels=['The first impression','The everyday ritual','The honest review','The fresh angle','The product story','The scroll stopper','The next favourite','The daily discovery'];
+const creatorPosts=[
+ {file:'creator-post-philips',label:'A new creator. A new angle.',alt:'Supplied Instagram-style creator post featuring a Philips trimmer'},
+ {file:'creator-post-zepto',label:'Your brand. In more feeds.',alt:'Supplied Instagram-style creator post featuring the Zepto app'},
+ {file:'creator-post-aqualogica',label:'More creators. More stories.',alt:'Supplied Instagram-style creator post featuring Aqualogica sunscreen'},
+ {file:'creator-post-tier-list',label:'Different hooks. Daily posts.',alt:'Supplied Instagram-style creator post comparing shaving brands'}
+];
 const media=document.querySelector('.media'),menu=document.querySelector('.menu'),nav=document.querySelector('.links'),dialog=document.querySelector('dialog');
 const orbitStage=document.querySelector('.orbit-stage');
-const orbitCards=Array.from({length:20},(_,i)=>{const card=document.createElement('div');card.className='tile orbit-card';card.innerHTML='<div class="tile-head"><span>WAVE / CREATORS</span><span>9:16</span></div><span class="play">▶</span><div class="tile-bottom">'+labels[i%labels.length]+'<small>Creator video preview</small></div>';orbitStage.append(card);return card});
+const orbitCards=Array.from({length:12},(_,i)=>{
+ const post=creatorPosts[i%creatorPosts.length],card=document.createElement('figure');
+ card.className='tile orbit-card creator-post';if(i>=creatorPosts.length)card.setAttribute('aria-hidden','true');
+ const image=document.createElement('img');image.src='assets/creator-posts/'+post.file+'.webp';image.alt=post.alt;image.width=941;image.height=1672;image.decoding='async';image.draggable=false;
+ const caption=document.createElement('figcaption'),title=document.createElement('strong'),detail=document.createElement('span');
+ title.textContent=post.label;detail.textContent='The creator army / Wave';caption.append(title,detail);card.append(image,caption);orbitStage.append(card);return card;
+});
 let orbitWidth=media.clientWidth,orbitPhase=0,lastOrbitTime=0;
 new ResizeObserver(()=>{orbitWidth=media.clientWidth}).observe(media);
 function orbitFrame(time){

@@ -6,6 +6,7 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 const outputDir = path.join(projectRoot, "dist");
 const files = [
   "_headers",
+  "assets/creator-posts",
   "index.html",
   "creator-network.css",
   "creator-network.js",
@@ -29,7 +30,7 @@ await mkdir(path.join(outputDir, "assets", "fonts"), { recursive: true });
 
 for (const file of files) {
   await stat(path.join(projectRoot, file));
-  await cp(path.join(projectRoot, file), path.join(outputDir, file));
+  await cp(path.join(projectRoot, file), path.join(outputDir, file), { recursive: true });
 }
 
 for (const font of ["dm-sans-latin.woff2", "manrope-latin.woff2", "OFL.txt"]) {
@@ -58,6 +59,10 @@ const localReferences = [
 for (const reference of localReferences) {
   if (!html.includes(reference)) throw new Error(`Missing expected HTML reference: ${reference}`);
   await stat(path.join(outputDir, reference));
+}
+
+for (const name of ['creator-post-philips','creator-post-zepto','creator-post-aqualogica','creator-post-tier-list']) {
+  await stat(path.join(outputDir, 'assets', 'creator-posts', name + '.webp'));
 }
 
 if (/localhost|127\.0\.0\.1|file:\/\//i.test(html)) {

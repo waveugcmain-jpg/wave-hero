@@ -1,5 +1,13 @@
 # Wave website design handoff
 
+## Supplied creator posts in the hero orbit — 2026-10-04
+
+Replaced the hero's cropped creator-grid placeholders with the four user-supplied Instagram-style compositions: Philips product recommendation, Zepto, Aqualogica, and Philips tier list. Optimized WebP files live in assets/creator-posts; all retain the original 941 × 1672 dimensions and complete image composition. Images use width:100%, height:auto and object-fit:contain. No generated image changes, added engagement metrics, or new client/result claims. Supplied post interfaces and metrics are part of the supplied artwork, not independently verified campaign results.
+
+Retained the continuous 76-second 3D orbit, with 12 repeated cards instead of 20 so the taller posts have room. Enlarged the responsive stage to keep complete cards inside its vertical bounds. Removed the extra play icon, faux video header and image overlays. Small white caption strips sit below each image: “A new creator. A new angle.”, “Your brand. In more feeds.”, “More creators. More stories.” and “Different hooks. Daily posts.” Each carries “The creator army / Wave”. Hero headline and supporting paragraph are unchanged. The first four images have descriptive alt text; duplicate orbit cards are hidden from assistive technology.
+
+Production build copies and validates the four assets. Build and inline JavaScript syntax checks passed. Browser checks at 320, 390, 768, 1440 and 1920px confirmed image loading, contain sizing, no horizontal overflow, no caption overflow, and no vertical card clipping in sampled orbit states. Desktop/mobile screenshots inspected; popup dismissal and mobile navigation to Our creatives passed; no browser errors reported. Total new image payload is approximately 697 KB, down from 7.4 MB of supplied PNGs. Live deployment is separate from the GitHub push.
+
 ## Cloudflare Workers deployment directory correction — 2026-10-04
 
 User's logs show a successful site build followed by Workers automatic setup with assets.directory='.'; this uploaded node_modules and failed on a 128MiB workerd binary. Added wrangler.json for the observed wave-website project with assets.directory='./dist' and single-page-application fallback. No Worker script or website design change. README distinguishes the existing Workers pipeline (npm run build / npx wrangler deploy) from the alternative Pages setup. Production build and configuration/output checks passed; actual Cloudflare deployment requires its next build and was not performed locally.
