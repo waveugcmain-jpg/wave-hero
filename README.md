@@ -12,7 +12,24 @@ npm run build
 
 The build creates a clean `dist/`, copies the website, creator modules, images, local fonts and `_headers`, validates required assets and rejects development-only URLs. Serve `dist/` with any static web server to preview the production output. `dist/` is generated and should not be committed.
 
-## Cloudflare Pages — GitHub deployment
+## Existing Cloudflare Workers project — GitHub deployment
+
+The Cloudflare deployment logs identify a Workers project named `wave-website` using `npx wrangler deploy`. This repository now includes `wrangler.json` for that project, explicitly setting the static asset directory to `./dist`. This prevents Wrangler's automatic setup from selecting the repository root and uploading `node_modules` or development files.
+
+For this existing project, use:
+
+| Setting | Value |
+| --- | --- |
+| Production branch | `main` |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+| Root directory | Repository root (leave blank) |
+
+Wrangler reads the committed configuration; no Worker script is required. It uploads only the built static website, applies `dist/_headers`, and uses the configured single-page fallback for unmatched navigation. No account IDs or tokens are committed; Cloudflare's Git integration supplies deployment credentials. If the project is renamed, update `name` in `wrangler.json` to match.
+
+Official reference: [Workers static assets configuration](https://developers.cloudflare.com/workers/static-assets/).
+
+## Alternative: Cloudflare Pages — GitHub deployment
 
 Create a **Pages** project with Git integration and connect `waveugcmain-jpg/wave-hero`. Use these settings:
 
@@ -24,7 +41,7 @@ Create a **Pages** project with Git integration and connect `waveugcmain-jpg/wav
 | Build output directory | `dist` |
 | Root directory | Repository root (leave blank) |
 
-No environment variables, secrets, Functions, Workers or additional packages are needed. `.node-version` selects Node 22; remove any old `NODE_VERSION=20` dashboard override. With Git integration enabled, subsequent pushes to `main` trigger production builds.
+Pages needs no environment variables, secrets, Functions or additional packages. The root `wrangler.json` configures the separate Workers deployment path; for Pages use the build settings above and do not add a `wrangler deploy` command. `.node-version` selects Node 22; remove any old `NODE_VERSION=20` dashboard override. With Git integration enabled, subsequent pushes to `main` trigger production builds.
 
 Deploy and check the assigned `*.pages.dev` URL first. Then add `waveugc.in` through the Pages project's **Custom domains** settings and follow Cloudflare's DNS instructions. Repository changes do not switch DNS or disconnect the previous hosting provider.
 

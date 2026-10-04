@@ -1,5 +1,9 @@
 # Wave website design handoff
 
+## Cloudflare Workers deployment directory correction — 2026-10-04
+
+User's logs show a successful site build followed by Workers automatic setup with assets.directory='.'; this uploaded node_modules and failed on a 128MiB workerd binary. Added wrangler.json for the observed wave-website project with assets.directory='./dist' and single-page-application fallback. No Worker script or website design change. README distinguishes the existing Workers pipeline (npm run build / npx wrangler deploy) from the alternative Pages setup. Production build and configuration/output checks passed; actual Cloudflare deployment requires its next build and was not performed locally.
+
 ## Cloudflare Pages compatibility and campaign verification — 2026-10-04
 
 Removed netlify.toml, selected Node 22 through .node-version, and copied the existing security headers into dist/_headers. The build no longer emits a catch-all _redirects rule: Pages serves assets directly and supplies its native index.html fallback. Default Pages caching replaces long immutable caching of unversioned files. README documents GitHub-connected Pages settings (None / npm run build / dist / main), domain setup and the distinction between repository readiness and a live migration. No frontend design or animation changes.
@@ -267,3 +271,4 @@ Reused the existing native creative-playbook SVG as a small decorative accent ab
 
 ## Live Calendly booking
 Added official Calendly inline widget for https://calendly.com/founder-waveugc/new-meeting immediately after final CTA and before footer. White/deep-green/cobalt customization, fixed responsive height to avoid embed resize collapse, accessible section heading and direct external fallback link. All .book buttons now scroll and focus the inline booking section instead of opening placeholder dialog. Verified live event title/date calendar in iframe, section order, focus and mobile overflow. No booking submitted. Calendly external widget requires network; no credentials required. Reference: https://developer.calendly.com/api-docs/overview/embedding/getting-started.
+
