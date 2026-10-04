@@ -147,7 +147,7 @@
 .campaign-card p{font-size:15px;line-height:1.5;letter-spacing:-.015em;margin:0;max-width:310px}
 .campaign-card:nth-child(1) p,.campaign-card:nth-child(6) p{color:#dce9e1}.campaign-card:nth-child(2) p{color:#edf1ff}
 .campaign-scroll-note{display:none}
-@media(min-width:800px) and (min-height:700px){
+@media(min-width:800px) and (min-height:600px){
  .campaign.is-scrubbed{height:250svh}
  .is-scrubbed .campaign-stage{height:100svh;max-height:1050px;position:sticky;top:0;padding:0}
  .is-scrubbed .campaign-intro{position:absolute;left:29%;width:42%;top:50%;transform:translateY(-50%);margin:0;padding:24px 0}
@@ -173,7 +173,7 @@
 .is-stacking .playbook-step:last-child{margin-bottom:0}
 
 
-@media(min-width:800px) and (max-width:1099px) and (min-height:700px){.is-scrubbed .campaign-stage{padding:0}.is-scrubbed .campaign-intro{left:29%;width:42%;padding:16px 0}.is-scrubbed .campaign h2{font-size:36px}.is-scrubbed #campaign-title{font-size:clamp(32px,4vw,43px)}.is-scrubbed .campaign-sub{font-size:15px}.is-scrubbed .campaign-card{padding:18px;height:29%;border-radius:22px}.is-scrubbed .campaign-card h3{font-size:21px;margin-bottom:10px}.is-scrubbed .campaign-card h3 .campaign-quantity{font-size:40px}.is-scrubbed .campaign-card p{font-size:14px;line-height:1.4}.is-scrubbed .campaign-number{margin-bottom:8px}.is-scrubbed .campaign-card:nth-child(6){height:31%;top:67%}.is-scrubbed .campaign-card:nth-child(6) .campaign-number{position:absolute;right:16px;top:14px}.is-scrubbed .campaign-card:nth-child(6) h3{margin-top:8px}}
+@media(min-width:800px) and (max-width:1099px) and (min-height:600px){.is-scrubbed .campaign-stage{padding:0}.is-scrubbed .campaign-intro{left:29%;width:42%;padding:16px 0}.is-scrubbed .campaign h2{font-size:36px}.is-scrubbed #campaign-title{font-size:clamp(32px,4vw,43px)}.is-scrubbed .campaign-sub{font-size:15px}.is-scrubbed .campaign-card{padding:18px;height:29%;border-radius:22px}.is-scrubbed .campaign-card h3{font-size:21px;margin-bottom:10px}.is-scrubbed .campaign-card h3 .campaign-quantity{font-size:40px}.is-scrubbed .campaign-card p{font-size:14px;line-height:1.4}.is-scrubbed .campaign-number{margin-bottom:8px}.is-scrubbed .campaign-card:nth-child(6){height:31%;top:67%}.is-scrubbed .campaign-card:nth-child(6) .campaign-number{position:absolute;right:16px;top:14px}.is-scrubbed .campaign-card:nth-child(6) h3{margin-top:8px}}
 
 /* Audit fixes that preserve every existing word. */
 a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5px;box-shadow:0 0 0 5px #fff}.hero a:focus-visible,.hero button:focus-visible{outline-color:#caff83;box-shadow:0 0 0 5px #123d31}.nav .cta,.menu{min-height:44px;min-width:44px}
@@ -340,7 +340,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 .strategy-glow{offset-path:none;animation:none!important;will-change:transform}
 .strategy-motion{display:block!important;min-height:44px;bottom:0}
 /* Keep deliverable copy inside the final cards on shorter laptop screens. */
-@media(min-width:800px) and (min-height:700px) and (max-height:850px){
+@media(min-width:800px) and (min-height:600px) and (max-height:850px){
  .is-scrubbed .campaign-card{padding:18px 20px}
  .is-scrubbed .campaign-number{margin-bottom:8px}
  .is-scrubbed .campaign-card h3{font-size:22px;margin-bottom:8px}
@@ -349,7 +349,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
  .is-scrubbed .campaign-card:nth-child(6){top:67%;height:31%}
  .is-scrubbed .campaign-card:nth-child(6) h3{font-size:21px}
 }
-@media(min-width:800px) and (max-width:1099px) and (min-height:700px) and (max-height:850px){.is-scrubbed .campaign-card{padding:14px}.is-scrubbed .campaign-card h3{font-size:20px}.is-scrubbed .campaign-card h3 .campaign-quantity{font-size:38px}.is-scrubbed .campaign-card h3 .campaign-unit{font-size:10px}.is-scrubbed .campaign-card p{font-size:12px;line-height:1.3}.is-scrubbed .campaign-card:nth-child(6) h3{font-size:19px}}
+@media(min-width:800px) and (max-width:1099px) and (min-height:600px) and (max-height:850px){.is-scrubbed .campaign-card{padding:14px}.is-scrubbed .campaign-card h3{font-size:20px}.is-scrubbed .campaign-card h3 .campaign-quantity{font-size:38px}.is-scrubbed .campaign-card h3 .campaign-unit{font-size:10px}.is-scrubbed .campaign-card p{font-size:12px;line-height:1.3}.is-scrubbed .campaign-card:nth-child(6) h3{font-size:19px}}
 .strategy-art{display:block;width:150px;height:108px;margin:0 auto 22px;filter:drop-shadow(0 8px 12px #1b43f514)}
 .strategy-panel{padding-top:36px}
 .founder-texture{opacity:.14}
@@ -430,6 +430,29 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 @media(min-width:1600px){.orbit-media{height:560px}.orbit-card.creator-post{width:210px}}
 @media(max-width:980px){.orbit-media{height:480px}.orbit-card.creator-post{width:170px}}
 @media(max-width:600px){.orbit-media{height:374px;margin-top:20px}.orbit-card.creator-post{width:134px;top:55%;border-radius:9px}.creator-post figcaption{min-height:58px;padding:10px 9px;gap:4px}.creator-post figcaption strong{font-size:11px}.creator-post figcaption span{font-size:7px;letter-spacing:.06em}}
+
+/* Keep the full campaign choreography on ordinary laptop-height viewports. */
+@media(min-width:800px) and (min-height:600px) and (max-height:699px){
+ .is-scrubbed .campaign-intro{padding:16px 0}
+ .is-scrubbed #campaign-title{font-size:clamp(30px,3.5vw,46px)}
+ .is-scrubbed .campaign-kicker{margin-bottom:16px}
+ .is-scrubbed .campaign-sub{font-size:15px;margin-top:18px}
+ .is-scrubbed .campaign-scroll-note{margin-top:24px}
+ .is-scrubbed .campaign-card{padding:14px 18px;border-radius:22px}
+ .is-scrubbed .campaign-card h3{font-size:21px;margin-bottom:8px}
+ .is-scrubbed .campaign-card h3 .campaign-quantity{font-size:38px;margin-bottom:4px}
+ .is-scrubbed .campaign-card p{font-size:13px;line-height:1.35}
+ .is-scrubbed .campaign-number{margin-bottom:6px}
+ .is-scrubbed .campaign-card:nth-child(2){height:30%;top:4%}
+ .is-scrubbed .campaign-card:nth-child(6){height:31%;top:67%}
+ .is-scrubbed .campaign-card:nth-child(6) h3{font-size:20px;margin-top:7px}
+}
+@media(min-width:800px) and (max-width:1000px) and (min-height:600px) and (max-height:699px){
+ .is-scrubbed .campaign-card{padding:12px}
+ .is-scrubbed .campaign-card h3{font-size:19px}
+ .is-scrubbed .campaign-card h3 .campaign-quantity{font-size:34px}
+ .is-scrubbed .campaign-card p{font-size:12px;line-height:1.3}
+}
 </style>
 <link rel="stylesheet" href="creator-network.css">
 </head>
@@ -760,7 +783,7 @@ document.querySelectorAll('.playbook-illustration').forEach(el=>el.classList.add
  const section=document.querySelector('#campaign');
  const stage=section.querySelector('.campaign-stage');
  const cards=[...section.querySelectorAll('.campaign-card')];
- const desktop=matchMedia('(min-width:800px) and (min-height:700px)');
+ const desktop=matchMedia('(min-width:800px) and (min-height:600px)');
  const reduce=matchMedia('(prefers-reduced-motion:reduce)');
  let frame=0, geometry=[];
  const clamp=v=>Math.max(0,Math.min(1,v));

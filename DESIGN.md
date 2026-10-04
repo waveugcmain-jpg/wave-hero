@@ -1,5 +1,13 @@
 # Wave website design handoff
 
+## Plix replacement and shorter-laptop campaign animation — 2026-10-04
+
+Re-encoded the newly supplied Plix file (codex-clipboard-28741154-7a26-4158-8e16-6a01e3923226.png) at WebP quality 95, preserving the complete 113 × 170 source. The replacement is still a thumbnail, not a higher-resolution post.
+
+Live inspection reproduced the full campaign choreography at 1280 × 720 but a basic grid at 1280 × 650 because the full effect required at least 700px viewport height. Lowered the synchronized CSS/JavaScript threshold to 800px width / 600px height and tuned the 600–699px layout so all six cards fit. Retained the center-origin stagger, 250svh runway, scroll-only progress and exact reverse traversal. Mobile and shorter-than-600px screens retain individual scroll reveals.
+
+Production build passed. Real browser scrolling verified initial hidden cards, early stagger, all-six completion and matching reverse transforms at 1280 × 650 under reduced-motion preference. All six cards completed without text or horizontal overflow at 800 × 600, 962 × 652 and 1440 × 900. Mobile at 390 × 844 retained progressive reveals, no overflow, and the replacement Plix image loaded with contain sizing. No browser errors reported. Screenshot: campaign-fixed-laptop.png in the task outputs.
+
 ## Six creator posts and tighter spacing — 2026-10-04
 
 Added the supplied Plix and Forest posts to the hero orbit. All six sources repeat through 18 cards, reducing angular spacing from 30 to 20 degrees. Responsive radius tuning keeps the mobile and tablet cards close together while retaining complete vertical framing. New captions: “More voices. One brand.” and “New angles. Every day.” Build asset validation includes both new WebPs. Plix was supplied as a 113 × 170 thumbnail and is preserved without cropping; it remains visibly softer than the full-resolution posts. Forest retains 941 × 1672 dimensions. Existing contain sizing preserves both compositions.
