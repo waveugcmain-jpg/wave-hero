@@ -647,11 +647,13 @@ const creatorPosts=[
  {file:'creator-post-philips',label:'A new creator. A new angle.',alt:'Supplied Instagram-style creator post featuring a Philips trimmer'},
  {file:'creator-post-zepto',label:'Your brand. In more feeds.',alt:'Supplied Instagram-style creator post featuring the Zepto app'},
  {file:'creator-post-aqualogica',label:'More creators. More stories.',alt:'Supplied Instagram-style creator post featuring Aqualogica sunscreen'},
- {file:'creator-post-tier-list',label:'Different hooks. Daily posts.',alt:'Supplied Instagram-style creator post comparing shaving brands'}
+ {file:'creator-post-tier-list',label:'Different hooks. Daily posts.',alt:'Supplied Instagram-style creator post comparing shaving brands'},
+ {file:'creator-post-plix',label:'More voices. One brand.',alt:'Supplied Instagram-style creator post featuring a Plix drink'},
+ {file:'creator-post-forest',label:'New angles. Every day.',alt:'Supplied Instagram-style creator post featuring the Forest focus app'}
 ];
 const media=document.querySelector('.media'),menu=document.querySelector('.menu'),nav=document.querySelector('.links'),dialog=document.querySelector('dialog');
 const orbitStage=document.querySelector('.orbit-stage');
-const orbitCards=Array.from({length:12},(_,i)=>{
+const orbitCards=Array.from({length:18},(_,i)=>{
  const post=creatorPosts[i%creatorPosts.length],card=document.createElement('figure');
  card.className='tile orbit-card creator-post';if(i>=creatorPosts.length)card.setAttribute('aria-hidden','true');
  const image=document.createElement('img');image.src='assets/creator-posts/'+post.file+'.webp';image.alt=post.alt;image.width=941;image.height=1672;image.decoding='async';image.draggable=false;
@@ -663,7 +665,7 @@ new ResizeObserver(()=>{orbitWidth=media.clientWidth}).observe(media);
 function orbitFrame(time){
  const delta=lastOrbitTime?Math.min(time-lastOrbitTime,64):0;lastOrbitTime=time;
  orbitPhase=(orbitPhase+delta*2*Math.PI/76000)%(2*Math.PI);
- const mobile=orbitWidth<600,radius=mobile?Math.max(290,orbitWidth*.72):Math.min(720,orbitWidth*.43),arc=mobile?35:60;
+ const mobile=orbitWidth<600,radius=mobile?Math.max(390,orbitWidth*.85):Math.max(500,Math.min(720,orbitWidth*.43)),arc=mobile?35:60;
  orbitCards.forEach((card,i)=>{
   const angle=orbitPhase+i*2*Math.PI/orbitCards.length,depth=Math.cos(angle),side=Math.sin(angle);
   const x=side*radius,y=-depth*arc+side*8,z=(depth-1)*140;

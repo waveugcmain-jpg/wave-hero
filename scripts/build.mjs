@@ -61,7 +61,7 @@ for (const reference of localReferences) {
   await stat(path.join(outputDir, reference));
 }
 
-for (const name of ['creator-post-philips','creator-post-zepto','creator-post-aqualogica','creator-post-tier-list']) {
+for (const name of ['creator-post-philips','creator-post-zepto','creator-post-aqualogica','creator-post-tier-list','creator-post-plix','creator-post-forest']) {
   await stat(path.join(outputDir, 'assets', 'creator-posts', name + '.webp'));
 }
 

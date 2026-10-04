@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Six creator posts and tighter spacing — 2026-10-04
+
+Added the supplied Plix and Forest posts to the hero orbit. All six sources repeat through 18 cards, reducing angular spacing from 30 to 20 degrees. Responsive radius tuning keeps the mobile and tablet cards close together while retaining complete vertical framing. New captions: “More voices. One brand.” and “New angles. Every day.” Build asset validation includes both new WebPs. Plix was supplied as a 113 × 170 thumbnail and is preserved without cropping; it remains visibly softer than the full-resolution posts. Forest retains 941 × 1672 dimensions. Existing contain sizing preserves both compositions.
+
+Production build passed. Browser checks at 320, 390, 768 and 1440px confirmed six distinct loaded images, no horizontal overflow, no caption overflow, and no vertical card clipping in sampled states. Desktop/mobile screenshots inspected; no browser errors reported.
+
 ## Supplied creator posts in the hero orbit — 2026-10-04
 
 Replaced the hero's cropped creator-grid placeholders with the four user-supplied Instagram-style compositions: Philips product recommendation, Zepto, Aqualogica, and Philips tier list. Optimized WebP files live in assets/creator-posts; all retain the original 941 × 1672 dimensions and complete image composition. Images use width:100%, height:auto and object-fit:contain. No generated image changes, added engagement metrics, or new client/result claims. Supplied post interfaces and metrics are part of the supplied artwork, not independently verified campaign results.
