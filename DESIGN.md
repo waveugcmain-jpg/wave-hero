@@ -1,5 +1,9 @@
 # Wave website design handoff
 
+## Original playbook copy restored — 2026-10-06
+
+Restored all six playbook headlines and body copy from the version before the simplification, at the user’s request. The sole punctuation change replaces the em dash in step 01 with a comma. Card 03 retains its lavender background; heading-free booking, five practical FAQs, assets, motion and other sections are unchanged. This supersedes the previous playbook copy rewrite.
+
 ## Simpler playbook, focused FAQs and heading-free booking — 2026-10-06
 
 Removed both visible booking headings and their wrapper. The booking section retains an accessible name and becomes the programmatic focus target for all booking buttons, preserving Calendly loading and the direct fallback link. Reduced top padding to avoid an empty heading-sized gap.
