@@ -1,5 +1,15 @@
 # Wave website design handoff
 
+## Simpler playbook, focused FAQs and heading-free booking — 2026-10-06
+
+Removed both visible booking headings and their wrapper. The booking section retains an accessible name and becomes the programmatic focus target for all booking buttons, preserving Calendly loading and the direct fallback link. Reduced top padding to avoid an empty heading-sized gap.
+
+Rewrote all six playbook cards with shorter, conversational, outcome-focused copy. Removed the em dash and ICP jargon from this section. The step sequence and creator/posting commitments are unchanged. Step 03 now uses a clean #E9EDFF lavender background with no photo or decorative pseudo-elements. Removed its unused photo asset from optimized deployment assets and both lazy-load/fallback maps.
+
+Reduced the FAQs from 13 to five practical questions: paid ad usage, campaign handoff, creator management, building on a successful video, and realistic viral expectations. Ad rights refer to the campaign scope without inventing a duration, unlimited license or account ownership terms. Management copy distinguishes done-for-you from done-with-you. Intro is “The practical bits, before we get going.”
+
+Build and JavaScript syntax checks passed, including content-hash and local-reference validation. Browser checks at desktop and 390px mobile confirmed no horizontal or copy overflow, no visible booking header, the new card background, five functional FAQ toggles, and booking-section focus with Calendly initialization. No application errors. Screenshot: simple-playbook.png in task outputs. This supersedes earlier copy and step 03 art direction.
+
 ## BlaBliBlu creative strategy — 2026-10-06
 
 Replaced the empty content-bank area with the user-supplied creative strategy: three audiences, all 18 angles and all 54 example hooks. The opening explains the 70% proven winners / 30% new angles mix across 300–600 reels and consistent formats repeated by multiple creators to create mini trends. Clearly labeled as an example strategy, aimed at finding repeatable winning formats.

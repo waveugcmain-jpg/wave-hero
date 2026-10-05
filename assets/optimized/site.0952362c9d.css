@@ -456,3 +456,9 @@ a:focus-visible,button:focus-visible{outline:3px solid #123d31;outline-offset:5p
 .hero-star{display:block;flex:0 0 18px;width:18px;height:18px;color:#caff83;filter:drop-shadow(0 0 4px #caff83) drop-shadow(0 0 10px #caff8380)}
 .work-bottom{justify-content:flex-end}
 @media(max-width:600px){.hero-eyebrow{letter-spacing:.9px}.hero-star{flex-basis:16px;width:16px;height:16px}}
+
+/* A calm, photo-free surface for the posting and testing step. */
+.playbook-step:nth-child(3){background:#e9edff}
+.playbook-step:nth-child(3):before,.playbook-step:nth-child(3):after{display:none}
+.booking-section{padding-top:24px}
+@media(max-width:600px){.booking-section{padding-top:16px}}
