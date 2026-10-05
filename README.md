@@ -10,7 +10,9 @@ Use Node.js 22 (specified in `.node-version`).
 npm run build
 ```
 
-The build creates a clean `dist/`, copies the website, creator modules, images, local fonts and `_headers`, validates required assets and rejects development-only URLs. Serve `dist/` with any static web server to preview the production output. `dist/` is generated and should not be committed.
+The build creates a clean `dist/`, copies the website, creator modules, optimized assets, local fonts and `_headers`, validates local references and asset filename hashes, and rejects development-only URLs. Serve `dist/` with any static web server to preview the production output. `dist/` is generated and should not be committed. Original full-resolution artwork remains in the repository but is excluded from deployment.
+
+The page CSS and primary JavaScript live in `assets/optimized/site.<hash>.css` and `site.<hash>.js`. After modifying any file in this folder, rename it using the first 10 characters of its SHA-256 content hash and update every reference. The build rejects stale hashes because these assets receive immutable caching. Creator posts have 240px and 480px responsive variants; preserve their complete compositions. Decorative backgrounds load within 600px of their section. Calendly loads within 800px of booking, or immediately when a booking button is clicked.
 
 ## Existing Cloudflare Workers project — GitHub deployment
 
@@ -49,7 +51,7 @@ Deploy and check the assigned `*.pages.dev` URL first. Then add `waveugc.in` thr
 
 - `_headers` is copied to `dist/` and supplies the existing security headers in Cloudflare's supported format.
 - No top-level `404.html` or catch-all `_redirects` is generated. Pages serves files normally and provides its built-in `index.html` fallback for unmatched paths. In-page `#campaign`, `#creator-network` and booking anchors remain browser navigation.
-- Pages' default ETag/revalidation caching is retained. Unversioned images, CSS and JavaScript no longer receive a year-long immutable browser cache, so later design edits can reach returning visitors.
+- Files under `/assets/optimized/` have content-hashed filenames and receive a year-long immutable cache. HTML, fonts and unversioned creator modules retain default revalidation so future edits reach returning visitors.
 - The old `netlify.toml` has been removed. The site does not require Netlify to build or run.
 
 Official references: [build settings](https://developers.cloudflare.com/pages/configuration/build-configuration/), [static routing and caching](https://developers.cloudflare.com/pages/configuration/serving-pages/), [custom headers](https://developers.cloudflare.com/pages/configuration/headers/), [custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/).

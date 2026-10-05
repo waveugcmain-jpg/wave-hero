@@ -1,5 +1,17 @@
 # Wave website design handoff
 
+## Site-wide performance optimization — 2026-10-05
+
+Removed the invitation/banner popup markup, styling, event handlers and dock dependencies. The ordinary booking dock remains. Tab title is exactly `wave - building distribution`. This supersedes all earlier popup requirements.
+
+Converted large backgrounds and creator sprite sheets to appropriately sized WebP assets, externalized and optimized the six embedded brand logos, and added 240px/480px responsive creator-post variants without cropping. The eight background/sprite assets plus six source creator posts were 12,972,203 bytes; the new backgrounds plus both responsive variants total 1,573,242 bytes (87.9% less). HTML shrank from 632,243 bytes to approximately 59 KB after separating CSS/JS and logos. These are uncompressed asset-size comparisons, not measured load-time or Lighthouse scores.
+
+Content-hashed assets in assets/optimized receive immutable caching. Original artwork remains available in the repository, outside dist. Build checks all local references and SHA-256 filename hashes. CSS URLs are root-relative because styles now live in assets/optimized. Manrope and the hero background are preloaded. Below-fold backgrounds activate 600px before their section, with a no-JavaScript fallback. Brand images use native lazy loading and async decoding. Calendly starts only near booking (800px) or on a booking-button click; the direct link remains.
+
+The hero orbit and playbook SVG loops pause offscreen and when the tab is hidden, retaining continuous motion while visible. Scroll scenes skip repeated style writes when clamped progress has not changed. The 45-day choreography, network interactions and sticky layouts retain their existing behavior.
+
+Validation: dependency-free production build and JavaScript syntax checks passed. Browser checks at 1280px desktop, 1280 × 650 short laptop and 390 × 844 mobile confirmed loaded full-frame creator posts, no horizontal overflow, six loaded brand logos, staged backgrounds and deferred Calendly. All six campaign cards completed on short laptop and returned to their initial transforms on upward scrolling. Mobile menu and booking focus/iframe initialization passed. No application errors; Calendly emitted its own storage/telemetry warning in the preview browser. Screenshot saved as optimized-mobile.png in task outputs. Publishing to GitHub and hosting deployment are separate steps.
+
 ## Full-resolution Plix replacement — 2026-10-04
 
 Replaced the thumbnail with user-supplied 6a73e04d-ab59-4bc2-bd4a-9e4bfd2ac6cc.png, preserving its complete 948 × 1659 composition in the existing contain-sized image slot. Optimized WebP is 133,704 bytes. Build passed; browser confirmed all three orbit instances load the new dimensions with contain sizing and no horizontal overflow. Screenshot inspected. This supersedes the thumbnail-quality limitation in the earlier entries.

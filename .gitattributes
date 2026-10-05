@@ -1,0 +1,2 @@
+# Hashed assets must retain exact bytes on every operating system.
+assets/optimized/** -text

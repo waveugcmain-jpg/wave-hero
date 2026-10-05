@@ -15,7 +15,7 @@
 .network-person button{display:block;position:relative;width:100%;aspect-ratio:1;padding:5px;border-radius:50%;border:1px solid #dce4df;background:#fff;box-shadow:0 6px 20px #123d3110;cursor:pointer;transition:transform .22s cubic-bezier(.2,.7,.2,1),box-shadow .22s,border-color .22s;color:#123d31}
 .network-person button:hover,.network-person button[aria-expanded=true]{transform:translateY(-4px) scale(1.045);border-color:#1b43f5;box-shadow:0 0 0 4px #1b43f50b,0 14px 28px #123d3120}
 .network-person button:focus-visible{outline:3px solid #1b43f5;outline-offset:5px;box-shadow:0 0 0 8px #fff}
-.network-face{display:block;width:100%;height:100%;border-radius:50%;background-image:url('creator-army.jpg');background-size:600% 600%;background-position:var(--crop-x) var(--crop-y)}
+.network-face{display:block;width:100%;height:100%;border-radius:50%;background-image:var(--creator-army,none);background-size:600% 600%;background-position:var(--crop-x) var(--crop-y)}
 .network-plus{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:24px;height:24px;background:#fff;color:#1b43f5;border:1px solid #e0e6e2;border-radius:50%;font:500 18px/1 'DM Sans',sans-serif;box-shadow:0 3px 8px #123d3112}
 .network-person button[aria-expanded=true] .network-plus{background:#1b43f5;color:#fff;border-color:#1b43f5}
 .network-handle{position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);font:500 10px/1.4 'DM Sans',sans-serif;color:#526259;white-space:nowrap;pointer-events:none;background:#fff;padding:2px 5px;border-radius:5px}

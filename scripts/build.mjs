@@ -1,74 +1,35 @@
-import { cp, mkdir, readFile, rm, stat } from "node:fs/promises";
+import { cp, mkdir, readFile, readdir, rm, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(projectRoot, "dist");
-const files = [
-  "_headers",
-  "assets/creator-posts",
-  "index.html",
-  "creator-network.css",
-  "creator-network.js",
-  "creator-network.jpg",
-  "creator-army.jpg",
-  "creator-grid.png",
-  "cta-portraits.png",
-  "footer-waves.png",
-  "founder-sunset.png",
-  "wave-background.png",
-  "wave-card-3.jpg",
-  "wave-card-4.jpg",
-];
-
 if (path.dirname(outputDir) !== projectRoot || path.basename(outputDir) !== "dist") {
   throw new Error("Refusing to build outside the project dist directory.");
 }
-
 await rm(outputDir, { recursive: true, force: true });
-await mkdir(path.join(outputDir, "assets", "fonts"), { recursive: true });
-
-for (const file of files) {
-  await stat(path.join(projectRoot, file));
+await mkdir(outputDir, { recursive: true });
+for (const file of ["_headers", "index.html", "creator-network.css", "creator-network.js", "assets/optimized", "assets/fonts"]) {
   await cp(path.join(projectRoot, file), path.join(outputDir, file), { recursive: true });
 }
-
-for (const font of ["dm-sans-latin.woff2", "manrope-latin.woff2", "OFL.txt"]) {
-  await stat(path.join(projectRoot, "assets", "fonts", font));
-  await cp(
-    path.join(projectRoot, "assets", "fonts", font),
-    path.join(outputDir, "assets", "fonts", font),
-  );
+// Validate local URLs, including runtime image maps. Original source images
+// remain in the repository for future design edits, outside deployment.
+const sources = ["index.html", "creator-network.css", "creator-network.js"];
+const optimizedFiles = await readdir(path.join(outputDir, "assets/optimized"));
+for (const file of optimizedFiles) {
+  const expected = file.match(/\.([a-f0-9]{10})\.[\w]+$/)?.[1];
+  const actual = createHash("sha256").update(await readFile(path.join(outputDir, "assets/optimized", file))).digest("hex").slice(0, 10);
+  if (expected !== actual) throw new Error(`Asset changed without updating its cache filename: ${file}`);
 }
-
-const html = await readFile(path.join(outputDir, "index.html"), "utf8");
-const localReferences = [
-  "creator-network.css",
-  "creator-network.js",
-  "footer-waves.png",
-  "founder-sunset.png",
-  "cta-portraits.png",
-  "creator-grid.png",
-  "wave-background.png",
-  "wave-card-3.jpg",
-  "wave-card-4.jpg",
-  "assets/fonts/dm-sans-latin.woff2",
-  "assets/fonts/manrope-latin.woff2",
-];
-
-for (const reference of localReferences) {
-  if (!html.includes(reference)) throw new Error(`Missing expected HTML reference: ${reference}`);
-  await stat(path.join(outputDir, reference));
+sources.push(...optimizedFiles
+  .filter(file => /\.(css|js)$/.test(file)).map(file => "assets/optimized/" + file));
+let references = 0;
+for (const file of sources) {
+  const source = await readFile(path.join(outputDir, file), "utf8");
+  if (/localhost|127\.0\.0\.1|file:\/\//i.test(source)) throw new Error(`Development URL in ${file}`);
+  for (const match of source.matchAll(/(?:assets\/(?:optimized|fonts)\/[\w.-]+|creator-network\.(?:css|js))/g)) {
+    await stat(path.join(outputDir, match[0])); references++;
+  }
 }
-
-for (const name of ['creator-post-philips','creator-post-zepto','creator-post-aqualogica','creator-post-tier-list','creator-post-plix','creator-post-forest']) {
-  await stat(path.join(outputDir, 'assets', 'creator-posts', name + '.webp'));
-}
-
-if (/localhost|127\.0\.0\.1|file:\/\//i.test(html)) {
-  throw new Error("Development-only URL found in production HTML.");
-}
-
-// Pages serves existing assets directly and falls back to index.html when there
-// is no top-level 404.html. A /* rewrite would also match CSS, JS and images.
-console.log(`Production site built in ${path.relative(projectRoot, outputDir)}/`);
+console.log(`Production site built in dist/; validated ${references} local asset references.`);
