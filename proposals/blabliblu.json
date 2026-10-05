@@ -17,20 +17,251 @@
     "cadence": "Each creator posts twice a day for 30 days across Instagram Reels and YouTube Shorts."
   },
   "goals": [
-    { "title": "Go viral.", "description": "Give BlaBliBlu hundreds of chances to break through." },
-    { "title": "Be the first perfume brand they think of.", "description": "Show up often enough to earn a place in their mind." },
-    { "title": "Build awareness that turns into demand.", "description": "Get more people searching for BlaBliBlu and discovering it on quick commerce." }
+    {
+      "title": "Go viral.",
+      "description": "Give BlaBliBlu hundreds of chances to break through."
+    },
+    {
+      "title": "Be the first perfume brand they think of.",
+      "description": "Show up often enough to earn a place in their mind."
+    },
+    {
+      "title": "Build awareness that turns into demand.",
+      "description": "Get more people searching for BlaBliBlu and discovering it on quick commerce."
+    }
   ],
   "playbook": {
-    "headline": "First, we figure out what your audience wants to see.",
-    "description": "We’ll spend time researching BlaBliBlu’s ICP, the category, the creators they follow and the content already winning with them.",
+    "headline": "The ideas behind your next wave.",
+    "description": "Three audiences. 18 repeatable creative angles. A starting playbook built around what people want from a perfume — and what stops them buying.",
     "url": "",
-    "entries": []
+    "entries": [],
+    "strategy": {
+      "audiences": [
+        {
+          "id": "men",
+          "label": "Men",
+          "intro": "Confidence, compliments and a scent that feels like you.",
+          "desires": [
+            "Get compliments from women",
+            "Smell expensive",
+            "Attract women",
+            "Look well-groomed",
+            "Have a signature scent",
+            "Feel confident"
+          ],
+          "objections": [
+            "Affordable = cheap",
+            "Doesn't last long",
+            "Too many choices",
+            "Don't know what girls like",
+            "Don't want to smell like everyone else"
+          ],
+          "angles": [
+            {
+              "title": "What women really think",
+              "hooks": [
+                "I asked 20 girls what perfume they want their boyfriend to wear.",
+                "Girls ranked these perfumes on how attractive they smell on men.",
+                "The perfume girls complimented me on vs the one I thought they'd like."
+              ]
+            },
+            {
+              "title": "Confident dating & grooming advice",
+              "hooks": [
+                "If you're starting your first job, buy ONE good perfume.",
+                "My secrets for always smelling good on a date.",
+                "Perfumes I would wear if I wanted her to ask what I'm wearing."
+              ],
+              "execution": "Charismatic, playboy-style creators sharing grooming and dating advice."
+            },
+            {
+              "title": "3 things I wish I knew…",
+              "hooks": [
+                "3 things I wish I knew before I joined college.",
+                "3 things I wish I knew before my first job.",
+                "3 things I wish I knew before I started dating."
+              ]
+            },
+            {
+              "title": "Ranked for the occasion",
+              "hooks": [
+                "Ranking perfumes for a first date.",
+                "Ranking perfumes for college, office and nights out.",
+                "Ranking perfumes every guy should own — gym, date, wedding."
+              ]
+            },
+            {
+              "title": "Smells like…",
+              "hooks": [
+                "Perfumes that smell like the guy who always has his life together.",
+                "This perfume smells like a Gurgaon guy who knows everyone.",
+                "What generational wealth would smell like if it cost ₹700."
+              ]
+            },
+            {
+              "title": "The blind price test",
+              "hooks": [
+                "I asked 10 girls to guess which perfume costs ₹700 vs ₹3,000.",
+                "Can you actually tell the difference between a ₹700 and ₹3,000 perfume?",
+                "Guess the price of the perfume I'm wearing before I reveal it."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "women",
+          "label": "Women",
+          "intro": "A signature scent with personality, taste and discovery built in.",
+          "desires": [
+            "Smell expensive",
+            "Get compliments from girls",
+            "Have a signature scent",
+            "Feel attractive / put-together",
+            "Express personality",
+            "Discover before everyone else"
+          ],
+          "objections": [
+            "Affordable = basic",
+            "Too many options",
+            "Which scent fits me?",
+            "Will it actually smell expensive?",
+            "Will it last?",
+            "Don't want the same scent everyone has"
+          ],
+          "angles": [
+            {
+              "title": "Compliments from other women",
+              "hooks": [
+                "I don't care if a guy likes my perfume. I care when another girl asks what I'm wearing.",
+                "The best perfume compliment I've ever received came from another girl.",
+                "When a girl stops you to ask what perfume you're wearing >>>"
+              ],
+              "execution": "Conversational “yapper” storytelling."
+            },
+            {
+              "title": "Things every baddie must have",
+              "hooks": [
+                "5 things every baddie needs in her bathroom.",
+                "Things every baddie needs before a night out.",
+                "Things every girl needs to smell expensive."
+              ]
+            },
+            {
+              "title": "I would gatekeep this, but…",
+              "hooks": [
+                "I genuinely wasn't going to tell you about this perfume.",
+                "I found this before it gets overhyped.",
+                "The perfume I don't want everyone to know I'm wearing."
+              ]
+            },
+            {
+              "title": "What your perfume says about you",
+              "hooks": [
+                "If you wear Peaches, I already know what kind of girl you are.",
+                "Ranking perfumes by the personality they give you.",
+                "Your perfume says more about you than your outfit."
+              ]
+            },
+            {
+              "title": "Things I find chic",
+              "hooks": [
+                "Things that make you look expensive without spending much.",
+                "Things I find ridiculously chic — and they're all under ₹1,000.",
+                "Little things that instantly make a girl look put together."
+              ]
+            },
+            {
+              "title": "Smells like…",
+              "hooks": [
+                "Perfumes that smell like South Delhi at 7PM.",
+                "Smells like the girl everyone asks for outfit links.",
+                "Smells like having your life together when you absolutely don't."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gifting",
+          "label": "Gifting / Diwali",
+          "intro": "Thoughtful gifts that feel expensive, without stretching the budget.",
+          "desires": [
+            "Give something thoughtful",
+            "Make the gift feel expensive",
+            "Show taste",
+            "Avoid generic gifts",
+            "Find the right gift for different people",
+            "Stay within budget"
+          ],
+          "objections": [
+            "Perfume is too personal",
+            "What if they don't like it?",
+            "What do I gift someone who has everything?",
+            "Don't want it to look cheap",
+            "Don't want another boring Diwali gift"
+          ],
+          "angles": [
+            {
+              "title": "Gifts that don’t look last-minute",
+              "hooks": [
+                "Diwali gifts that don't look like you bought them on the way to the party.",
+                "If you're still gifting dry fruits to everyone, watch this.",
+                "Diwali gifts that actually make you look like you have taste."
+              ]
+            },
+            {
+              "title": "Gift their personality",
+              "hooks": [
+                "What to gift your best friend based on her personality.",
+                "What perfume to gift the guy who already owns everything.",
+                "Your Diwali gift, based on what kind of person they are."
+              ]
+            },
+            {
+              "title": "Send this to…",
+              "hooks": [
+                "Send this to the person who still hasn't bought your Diwali gift.",
+                "Send this to your boyfriend before Diwali.",
+                "Send this to the friend who always gives the best gifts."
+              ]
+            },
+            {
+              "title": "The ₹1,000 gift challenge",
+              "hooks": [
+                "You have ₹1,000. Build a Diwali gift that doesn't look like ₹1,000.",
+                "What can you actually gift someone for under ₹1,000?",
+                "I gave my friend ₹1,000 and told her to build the perfect Diwali gift."
+              ]
+            },
+            {
+              "title": "Let the family guess",
+              "hooks": [
+                "I asked my mom how much she thinks my Diwali gift cost.",
+                "My parents guessed the price of my Diwali gifts. They were VERY wrong.",
+                "Which Diwali gift would an Indian mom actually choose?"
+              ]
+            },
+            {
+              "title": "The gifting dilemma",
+              "hooks": [
+                "What do you take when someone says, 'Don't bring anything'?",
+                "You got your office crush for Secret Santa. What are you buying?",
+                "When your best friend's Diwali gift has to be better than everyone else's."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   "testing": {
     "headline": "We’re not trying to guess what will work.",
     "description": "Creators start posting twice a day.",
-    "variables": ["Different hooks.", "Different formats.", "Different messages.", "Different angles."],
+    "variables": [
+      "Different hooks.",
+      "Different formats.",
+      "Different messages.",
+      "Different angles."
+    ],
     "closing": "We watch what gets people to stop, watch, share and talk about BlaBliBlu."
   },
   "winners": {
@@ -41,7 +272,13 @@
   "creatives": [],
   "result": {
     "headline": "A brand people keep seeing.",
-    "items": ["More creator accounts.", "More content.", "More chances to go viral.", "More people talking about BlaBliBlu.", "More people searching for it."],
+    "items": [
+      "More creator accounts.",
+      "More content.",
+      "More chances to go viral.",
+      "More people talking about BlaBliBlu.",
+      "More people searching for it."
+    ],
     "closing": "And a repeatable organic growth channel you can keep building."
   }
 }

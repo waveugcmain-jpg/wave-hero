@@ -50,3 +50,7 @@ For an externally hosted creative, omit `video` and supply `url`. Supply descrip
 - Booking links use the brand file's `bookingUrl`, currently Wave's existing Calendly event.
 - The mobile action dock appears after the hero and hides at the final booking CTA.
 - Core brand tokens: Manrope / DM Sans, blue #1B43F5, lime #CAFF83, green #123D31, neutral #F3F4F0.
+
+### Optional creative strategy
+
+Set `playbook.strategy.audiences` to show a full creative playbook in place of the empty content bank. Each audience has `id`, `label`, `intro`, `desires`, `objections`, and `angles`. Each angle has `title`, `hooks` (three example strings), and an optional `execution` note. The first hook is visible; the rest expand in a native details control. Use the BlaBliBlu configuration as a complete example. Audience names, copy and hooks must be tailored for the next brand. The renderer computes displayed counts from the content. The 70/30 campaign approach is shared strategy copy. The generated stylesheet filename changes with its content to refresh cached browsers.

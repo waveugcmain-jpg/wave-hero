@@ -1,5 +1,13 @@
 # Wave website design handoff
 
+## BlaBliBlu creative strategy — 2026-10-06
+
+Replaced the empty content-bank area with the user-supplied creative strategy: three audiences, all 18 angles and all 54 example hooks. The opening explains the 70% proven winners / 30% new angles mix across 300–600 reels and consistent formats repeated by multiple creators to create mini trends. Clearly labeled as an example strategy, aimed at finding repeatable winning formats.
+
+Each audience has six visible format cards, with one hook shown and two more in native details disclosures. Desires and objections are preserved in expandable semantic tables. Audience jump links, differentiated quiet surfaces and a strategy CTA support scanning. Cards use three columns on desktop, two on tablet and one on mobile. Optional strategy data stays in the proposal JSON; rendering is in `proposals/strategy.mjs`. Proposal CSS now receives a content-derived filename at build time to prevent stale styling after updates.
+
+Verified all 18 cards/54 hooks, keyboard disclosure, audience anchors, desktop and 390px/320px layouts, expanded mobile tables and hooks, and no horizontal overflow or application errors. Production build and syntax checks passed. Main homepage files remain untouched. Sample UGC slots are still waiting for supplied media. Evidence: blabliblu-strategy-desktop.jpg and blabliblu-strategy-mobile.jpg in task outputs.
+
 ## Reusable BlaBliBlu outreach proposal — 2026-10-06
 
 Added `/blabliblu` as a standalone generated proposal. Homepage markup, styles, scripts and assets remain unchanged. `proposals/blabliblu.json` holds brand copy, campaign figures, booking URL, content-bank entries and sample creatives. Duplicate that configuration with a new slug to create another outreach page; see `proposals/README.md`. The existing production build now generates these pages alongside the homepage.
