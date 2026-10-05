@@ -2,6 +2,7 @@ import { cp, mkdir, readFile, readdir, rm, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
+import { buildProposals } from "../proposals/render.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(projectRoot, "dist");
@@ -16,6 +17,8 @@ for (const file of ["_headers", "index.html", "creator-network.css", "creator-ne
 // Validate local URLs, including runtime image maps. Original source images
 // remain in the repository for future design edits, outside deployment.
 const sources = ["index.html", "creator-network.css", "creator-network.js"];
+const proposalPages = await buildProposals(outputDir);
+sources.push(...proposalPages, "proposal-assets/proposal.css", "proposal-assets/proposal.js");
 const optimizedFiles = await readdir(path.join(outputDir, "assets/optimized"));
 for (const file of optimizedFiles) {
   const expected = file.match(/\.([a-f0-9]{10})\.[\w]+$/)?.[1];
@@ -28,7 +31,7 @@ let references = 0;
 for (const file of sources) {
   const source = await readFile(path.join(outputDir, file), "utf8");
   if (/localhost|127\.0\.0\.1|file:\/\//i.test(source)) throw new Error(`Development URL in ${file}`);
-  for (const match of source.matchAll(/(?:assets\/(?:optimized|fonts)\/[\w.-]+|creator-network\.(?:css|js))/g)) {
+  for (const match of source.matchAll(/(?:assets\/(?:optimized|fonts)\/[\w.-]+|proposal-assets\/[\w.-]+|creator-network\.(?:css|js))/g)) {
     await stat(path.join(outputDir, match[0])); references++;
   }
 }

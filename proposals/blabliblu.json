@@ -1,0 +1,47 @@
+{
+  "slug": "blabliblu",
+  "brand": "BlaBliBlu",
+  "category": "perfume",
+  "bookingUrl": "https://calendly.com/founder-waveugc/new-meeting",
+  "hero": {
+    "headline": "Make BlaBliBlu",
+    "emphasis": "impossible to ignore.",
+    "description": "We’ll build an army of dedicated creator accounts posting about BlaBliBlu every day — with one goal: get more people talking about the brand, remembering it, and looking for it when they’re ready to buy."
+  },
+  "campaign": {
+    "creators": "5–10",
+    "content": "300–600",
+    "days": "30",
+    "headline": "An army of dedicated creator accounts.",
+    "description": "We’ll work with 5–10 UGC creators who each create a new ambassador account dedicated to BlaBliBlu.",
+    "cadence": "Each creator posts twice a day for 30 days across Instagram Reels and YouTube Shorts."
+  },
+  "goals": [
+    { "title": "Go viral.", "description": "Give BlaBliBlu hundreds of chances to break through." },
+    { "title": "Be the first perfume brand they think of.", "description": "Show up often enough to earn a place in their mind." },
+    { "title": "Build awareness that turns into demand.", "description": "Get more people searching for BlaBliBlu and discovering it on quick commerce." }
+  ],
+  "playbook": {
+    "headline": "First, we figure out what your audience wants to see.",
+    "description": "We’ll spend time researching BlaBliBlu’s ICP, the category, the creators they follow and the content already winning with them.",
+    "url": "",
+    "entries": []
+  },
+  "testing": {
+    "headline": "We’re not trying to guess what will work.",
+    "description": "Creators start posting twice a day.",
+    "variables": ["Different hooks.", "Different formats.", "Different messages.", "Different angles."],
+    "closing": "We watch what gets people to stop, watch, share and talk about BlaBliBlu."
+  },
+  "winners": {
+    "headline": "When something works, we don’t let it die.",
+    "description": "We figure out why it worked. Then we give the winning idea more creators, more variations and more distribution.",
+    "statement": "The goal isn’t 300 videos. It’s finding the few worth making 300 more of."
+  },
+  "creatives": [],
+  "result": {
+    "headline": "A brand people keep seeing.",
+    "items": ["More creator accounts.", "More content.", "More chances to go viral.", "More people talking about BlaBliBlu.", "More people searching for it."],
+    "closing": "And a repeatable organic growth channel you can keep building."
+  }
+}

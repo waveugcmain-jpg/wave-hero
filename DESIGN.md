@@ -1,5 +1,13 @@
 # Wave website design handoff
 
+## Reusable BlaBliBlu outreach proposal — 2026-10-06
+
+Added `/blabliblu` as a standalone generated proposal. Homepage markup, styles, scripts and assets remain unchanged. `proposals/blabliblu.json` holds brand copy, campaign figures, booking URL, content-bank entries and sample creatives. Duplicate that configuration with a new slug to create another outreach page; see `proposals/README.md`. The existing production build now generates these pages alongside the homepage.
+
+Uses the established Manrope/DM Sans, blue/lime/green palette and optimized ocean/creator imagery. Illustrative creator portraits are labeled. Compact campaign cards use reversible scroll transforms; the creator network appears once. Reduced motion shows stable content. Mobile uses a keyboard-accessible scroll-snap creative gallery and a contextual booking dock. All booking CTAs use the existing Wave Calendly URL.
+
+The user approved building spaces first: the content bank and three sample UGC slots are explicitly marked coming next. Populate them with real material before outreach. Proposal pages have noindex/nofollow metadata. Scoped QA and its limits are recorded in `proposals/design-qa.md`; production build, syntax checks, responsive visual inspection and booking navigation passed.
+
 ## Browser annotation copy and styling refinements — 2026-10-05
 
 Applied all five user annotations. The creator-network exploration prompt is bold (700) in brand green. Hero eyebrow is now “The viral growth agency for consumer products” with a decorative four-point lime SVG star and static glow; the old diamond is suppressed. The star adds no image request or animation loop. The former “Real creators / Daily content / Organic distribution” hero footer is removed. Removed “Two ways to work together. One goal: build your wave.” while retaining the booking button, aligned right on desktop. Final reassurance is “No obligation. A clear plan to build your next growth channel.”
