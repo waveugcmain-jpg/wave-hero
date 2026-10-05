@@ -1,5 +1,11 @@
 # Wave website design handoff
 
+## Browser annotation copy and styling refinements — 2026-10-05
+
+Applied all five user annotations. The creator-network exploration prompt is bold (700) in brand green. Hero eyebrow is now “The viral growth agency for consumer products” with a decorative four-point lime SVG star and static glow; the old diamond is suppressed. The star adds no image request or animation loop. The former “Real creators / Daily content / Organic distribution” hero footer is removed. Removed “Two ways to work together. One goal: build your wave.” while retaining the booking button, aligned right on desktop. Final reassurance is “No obligation. A clear plan to build your next growth channel.”
+
+Updated the hashed stylesheet reference and preserved asset hash validation. Production build passed. Browser inspection confirmed all five changes, no application errors and no horizontal overflow at desktop and 320px mobile. Hero screenshot saved as hero-copy-star.png in task outputs. These changes supersede earlier copy at those locations.
+
 ## Site-wide performance optimization — 2026-10-05
 
 Removed the invitation/banner popup markup, styling, event handlers and dock dependencies. The ordinary booking dock remains. Tab title is exactly `wave - building distribution`. This supersedes all earlier popup requirements.

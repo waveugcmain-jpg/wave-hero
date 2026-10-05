@@ -3,6 +3,7 @@
 .network-scene{height:660px;position:relative;width:100%;max-width:1240px;margin:auto}
 .network-note{display:flex;justify-content:space-between;gap:16px;max-width:1200px;margin:0 auto;padding:12px 12px 0;font:400 12px/1.5 'DM Sans',sans-serif;color:#65726b}
 .network-note span:last-child{font-size:11px;color:#65726b}
+.network-note span:first-child{font-weight:700;color:#123d31}
 .network-center-brand{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);z-index:2;width:174px;height:174px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #dce3de;box-shadow:0 0 0 14px #fff,0 12px 60px #143d3110}
 .network-center-brand:before{content:'';position:absolute;inset:8px;border:1px solid #edf0ed;border-radius:50%}
 .network-center-brand h2{font:600 26px/1.1 Manrope,sans-serif;letter-spacing:-.05em;margin:0;text-align:center}
