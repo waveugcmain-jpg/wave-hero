@@ -6,7 +6,7 @@
   "hero": {
     "headline": "Make BlaBliBlu",
     "emphasis": "impossible to ignore.",
-    "description": "We’ll build an army of dedicated creator accounts posting about BlaBliBlu every day — with one goal: get more people talking about the brand, remembering it, and looking for it when they’re ready to buy."
+    "description": "We’ll build an army of dedicated creator accounts posting about BlaBliBlu every day with one goal: get more people talking about the brand, remembering it, and looking for it when they’re ready to buy."
   },
   "campaign": {
     "creators": "5–10",
@@ -26,13 +26,13 @@
       "description": "Show up often enough to earn a place in their mind."
     },
     {
-      "title": "Build awareness that turns into demand.",
+      "title": "Build awareness that drives quick-commerce demand.",
       "description": "Get more people searching for BlaBliBlu and discovering it on quick commerce."
     }
   ],
   "playbook": {
     "headline": "The ideas behind your next wave.",
-    "description": "Three audiences. 18 repeatable creative angles. A starting playbook built around what people want from a perfume — and what stops them buying.",
+    "description": "",
     "url": "",
     "entries": [],
     "strategy": {
@@ -87,7 +87,7 @@
               "hooks": [
                 "Ranking perfumes for a first date.",
                 "Ranking perfumes for college, office and nights out.",
-                "Ranking perfumes every guy should own — gym, date, wedding."
+                "Ranking perfumes every guy should own: gym, date, wedding."
               ]
             },
             {
@@ -166,7 +166,7 @@
               "title": "Things I find chic",
               "hooks": [
                 "Things that make you look expensive without spending much.",
-                "Things I find ridiculously chic — and they're all under ₹1,000.",
+                "Things I find ridiculously chic, and they're all under ₹1,000.",
                 "Little things that instantly make a girl look put together."
               ]
             },
@@ -280,5 +280,6 @@
       "More people searching for it."
     ],
     "closing": "And a repeatable organic growth channel you can keep building."
-  }
+  },
+  "logo": "/proposal-assets/blabliblu-logo.png"
 }

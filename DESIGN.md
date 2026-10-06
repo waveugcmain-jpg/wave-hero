@@ -1,5 +1,13 @@
 # Wave website design handoff
 
+## BlaBliBlu browser annotations and creator choreography - 2026-10-06
+
+Applied all six comments. The hero now centers the official BlaBliBlu logo and uses the homepage's smoothstep stagger, portrait reveal and curved SVG connections. Progress follows a short hero scroll and reverses exactly, without pinning. Reduced motion retains scroll-controlled opacity while suppressing portrait translation/scale and line drawing. No-JS keeps portraits visible. The brand logo was sourced unchanged from https://blabliblulife.com/cdn/shop/files/TOP_LOGO.png?v=1752316118&width=405 and is stored in proposals/assets/blabliblu-logo.png; the JSON logo field is optional for other brands.
+
+Campaign cards now say “Flooding the algorithm” and “Staying top of mind,” with supporting daily-feed copy. Goal three explicitly targets quick-commerce demand. Removed the selected strategy description while retaining its example-strategy label. The user's site-wide punctuation request removed em dashes from proposal copy/metadata and confirmed the latest homepage already has no em dashes; its concurrently published changes are preserved. Proposal JavaScript now has a content-derived filename, matching CSS cache versioning.
+
+Build passed with 52 asset references and JavaScript syntax passed. Browser checked logo load, ten connections, zero em dashes in proposal text, revised copy, no console errors and 320px overflow/readability. Desktop scroll states at 0px, 108px and 180px verified hidden, staggered and fully revealed portraits; returning to 108px reproduced the same opacity values exactly. The browser uses reduced-motion mode, so spatial transforms were inspected in source rather than visually played. Mobile network and cards were visually inspected.
+
 ## Branded homepage link preview — 2026-10-06
 
 Added explicit Open Graph and Twitter preview metadata and the homepage canonical URL. Preview title uses the homepage positioning line; description is the exact hero supporting paragraph. A content-hashed 1200 × 630 PNG uses the existing Manrope Wave wordmark, lime period and blue/lime palette with the same positioning line. This stops sharing clients from guessing a client logo or a headline fragment. Browser tab title remains unchanged. Artwork source is scripts/social-preview.html, rendered at 1200 × 630 using the bundled font; it is not copied to production. PNG is copied and hash-validated by the existing build. Social apps may retain previously cached previews until they refresh.
