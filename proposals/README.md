@@ -9,7 +9,7 @@
 3. Run the production build and inspect the resulting page on desktop and mobile.
 4. Update the design handoff, commit and push to main.
 
-The shared renderer is `render.mjs`. Proposal styles and interactions live in `assets/` and are deployed at `/proposal-assets/`. Existing Wave fonts, ocean artwork and fictional portrait sheet are reused by URL. Homepage HTML, styles and scripts remain separate. New pages have `noindex, nofollow`; this does not provide access control.
+The shared renderer is `render.mjs`. Proposal styles and interactions live in `assets/` and are deployed at `/proposal-assets/`. Existing Wave fonts, ocean artwork and fictional portrait sheet are reused by URL. Homepage HTML, styles and scripts remain separate. `homepage-proof.html` contains the copied homepage problems and credibility section, inserted directly after the hero in every proposal. Its scoped artwork and scroll reveal are included in the proposal assets. New pages have `noindex, nofollow`; this does not provide access control.
 
 ## Populate the viral content bank
 

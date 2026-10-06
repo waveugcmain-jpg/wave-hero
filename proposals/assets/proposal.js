@@ -86,3 +86,46 @@ if (dock) {
   }).observe(hero);
   new IntersectionObserver(entries => { finalVisible = entries[0].isIntersecting; dock.hidden = heroVisible || finalVisible; }).observe(finalInvite);
 }
+
+// Homepage scroll-linked problem reveal.
+(()=>{
+const statement=document.querySelector('#problem-statement');
+if(!statement)return;
+const statementCopy=statement.textContent;
+statement.setAttribute('aria-label',statementCopy);
+statement.textContent='';
+const revealWords=statementCopy.split(/\s+/).map((word,index)=>{
+  if(index)statement.append(document.createTextNode(' '));
+  const span=document.createElement('span');span.className='reveal-word';span.textContent=word;span.setAttribute('aria-hidden','true');statement.append(span);return span;
+});
+const statementReduce=matchMedia('(prefers-reduced-motion:reduce)');
+const statementRunway=document.createElement('div');statementRunway.className='statement-runway';
+const statementPin=document.createElement('div');statementPin.className='statement-pin';
+statement.before(statementRunway);statementRunway.append(statementPin);
+const statementSub=statement.nextElementSibling;statementPin.append(statement);
+if(statementSub?.classList.contains('problem-sub'))statementPin.append(statementSub);
+function measureStatement(){
+ const top=Math.max(24,Math.min(120,innerHeight*.13));
+ statementRunway.style.setProperty('--statement-top',top+'px');
+ statementRunway.style.setProperty('--statement-height',statementPin.offsetHeight+'px');
+ statementRunway.classList.toggle('is-pinned',statementPin.offsetHeight<innerHeight-top-32);
+}
+measureStatement();
+let revealFrame=0,lastStatementProgress=-1;
+function paintStatement(){
+  revealFrame=0;
+  const pinned=statementRunway.classList.contains('is-pinned');
+  const distance=pinned?statementRunway.offsetHeight-statementPin.offsetHeight:Math.max(innerHeight*.9,statement.offsetHeight);
+  const start=pinned?parseFloat(statementRunway.style.getPropertyValue('--statement-top')):innerHeight*.9;
+  const progress=Math.max(0,Math.min(1,(start-(pinned?statementRunway:statement).getBoundingClientRect().top)/distance));
+  if(progress===lastStatementProgress)return;lastStatementProgress=progress;
+  revealWords.forEach((word,index)=>{
+    const amount=Math.max(0,Math.min(1,progress*(revealWords.length+2)-index));
+    const from=[133,137,132],to=[22,28,24];
+    word.style.color='rgb('+from.map((channel,i)=>Math.round(channel+(to[i]-channel)*amount)).join(',')+')';
+  });
+}
+function scheduleReveal(){if(!revealFrame)revealFrame=requestAnimationFrame(paintStatement)}
+addEventListener('scroll',scheduleReveal,{passive:true});addEventListener('resize',()=>{measureStatement();scheduleReveal()});statementReduce.addEventListener('change',()=>{measureStatement();scheduleReveal()});
+document.fonts.ready.then(()=>{measureStatement();scheduleReveal()});paintStatement();
+})();

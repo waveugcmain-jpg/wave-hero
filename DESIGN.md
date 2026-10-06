@@ -1,5 +1,12 @@
 # Wave website design handoff
 
+## Homepage problems and credibility on proposals - 2026-10-07
+
+Copied the complete homepage problems section immediately after the proposal hero. Shared markup is stored in proposals/homepage-proof.html, preserving the exact problem statement, four proof cards, 500+ creator claim, six founder-experience logos and existing qualification copy. Proposal CSS and JavaScript copy the original section styling and reversible scroll-linked word-color reveal with its sticky runway. Asset URLs are root-relative; portrait sprite variables are defined on the copied section. Homepage source remains unchanged. A narrow-screen override sizes avatars, the creator numeral and logo grid to prevent clipping at 320px.
+
+Production build passed with 61 validated asset references; JavaScript syntax passed. Desktop reveal and proof cards were visually checked. At 320px, all four cards and the page have no horizontal overflow. Six brand logos load. Section placement is directly between hero and campaign. The shared proposal template includes this proof section for future brand pages.
+
+
 ## BlaBliBlu browser annotations and creator choreography - 2026-10-06
 
 Applied all six comments. The hero now centers the official BlaBliBlu logo and uses the homepage's smoothstep stagger, portrait reveal and curved SVG connections. Progress follows a short hero scroll and reverses exactly, without pinning. Reduced motion retains scroll-controlled opacity while suppressing portrait translation/scale and line drawing. No-JS keeps portraits visible. The brand logo was sourced unchanged from https://blabliblulife.com/cdn/shop/files/TOP_LOGO.png?v=1752316118&width=405 and is stored in proposals/assets/blabliblu-logo.png; the JSON logo field is optional for other brands.
