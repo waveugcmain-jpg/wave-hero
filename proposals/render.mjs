@@ -37,6 +37,14 @@ export async function buildProposals(outputDir) {
     const samples = data.creatives.length ? data.creatives.map((creative, i) => `<article class="sample"><div class="sample-media">${creative.video ? `<video controls playsinline preload="none" poster="${url(creative.poster)}" aria-label="${escape(creative.title)}"><source src="${url(creative.video)}" type="video/mp4">${creative.captions ? `<track kind="captions" src="${url(creative.captions)}" srclang="en" label="English" default>` : ''}</video>` : `<a href="${url(creative.url)}" aria-label="View ${escape(creative.title)}"><img src="${url(creative.poster)}" alt="${escape(creative.alt || creative.title)}" loading="lazy" width="540" height="960"></a>`}</div><div class="sample-caption"><span>0${i+1}</span><div><h3>${escape(creative.title)}</h3><p>${escape(creative.description)}</p></div></div></article>`).join('') : [1,2,3].map(i => `<article class="sample"><div class="sample-media sample-empty"><span class="sample-top">${brand} <span>× wave.</span></span><div class="sample-empty-copy"><span class="sample-numeral" aria-hidden="true">0${i}</span><p>Sample creative</p><span class="status-label">Coming next</span></div><span class="sample-bottom">MADE FOR YOUR FEED.</span></div><div class="sample-caption"><span>0${i}</span><div><h3>Reserved for your creative</h3><p>Sample UGC will appear here.</p></div></div></article>`).join('');
     const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJ8KM8B88Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XJ8KM8B88Z');
+</script>
 <title>${brand} × Wave | Your next growth channel</title><meta name="description" content="A personalized creator campaign, content playbook and sample UGC for ${brand}, by Wave."><meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="${brand} × Wave | Make your next wave."><meta property="og:description" content="Your brand. An army of creators. A new organic growth channel."><meta property="og:type" content="website"><meta property="og:url" content="https://waveugc.in/${data.slug}">
 <link rel="canonical" href="https://waveugc.in/${data.slug}"><meta name="theme-color" content="#1b43f5">

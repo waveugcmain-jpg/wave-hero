@@ -1,5 +1,10 @@
 # Wave website design handoff
 
+## Google tag across the website - 2026-10-07
+
+Added the provided GA4 Google tag ID G-XJ8KM8B88Z to the homepage head and shared proposal renderer head. The generated BlaBliBlu page and future proposal pages load the same tag once per page. Kept the supplied async loader and default `gtag('config', ...)` setup without extra events or consent changes.
+
+
 ## Homepage problems and credibility on proposals - 2026-10-07
 
 Copied the complete homepage problems section immediately after the proposal hero. Shared markup is stored in proposals/homepage-proof.html, preserving the exact problem statement, four proof cards, 500+ creator claim, six founder-experience logos and existing qualification copy. Proposal CSS and JavaScript copy the original section styling and reversible scroll-linked word-color reveal with its sticky runway. Asset URLs are root-relative; portrait sprite variables are defined on the copied section. Homepage source remains unchanged. A narrow-screen override sizes avatars, the creator numeral and logo grid to prevent clipping at 320px.
