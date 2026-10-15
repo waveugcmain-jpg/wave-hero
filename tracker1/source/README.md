@@ -1,26 +1,19 @@
 # Wave Production Control Centre
 
-A private ChatGPT Site for Wave × Linkrunner: 100 valid publications, 50 per page, 22 October–5 December 2026, with 18 approved assets targeted by 21 October.
+Dependency-aware calendar and per-video production board for Wave × Linkrunner: 100 publications, 50 per page, 22 October–5 December 2026, with 18 approved assets targeted by 21 October.
 
-## Run locally
+## Password access
 
-Use Node 22.13 or later. Run npm install, npm run build, then apply the generated SQL migration to local D1 with Wrangler before npm run dev. The Sites starter supplies local-only mock sign-in. Production requires ChatGPT authentication and the private Site access gate.
+The page and every data/save API require a valid password session. The shared team password permits viewing and editing. Runtime secrets TRACKER_PASSWORD and TRACKER_SESSION_SECRET are configured in Sites, never in source or hosting.json. Use a random session signing secret with at least 32 characters. Cookies are signed, HttpOnly, Secure in production, SameSite=Lax and valid for seven days. Password rotation invalidates earlier sessions. Lock tracker clears the device's cookie. Login attempts are limited in D1. ChatGPT sign-in is not required when the outer Site audience allows visitors. This supersedes earlier owner-only/public-read modes.
 
-## Storage and scheduling
+## Data storage
 
-The vanilla browser interface calls authenticated API routes in Vinext. Cloudflare D1 stores immutable campaign snapshots and an optimistic versioned head. Stale saves are rejected; Undo restores earlier saved input. Recalculation runs in public/engine.js. Original baselines are preserved separately from actuals and deadline overrides. lib/initial-campaign.json preserves the existing local campaign when an empty online database first starts. Subsequent deployments never overwrite stored data.
+Authenticated changes save to Cloudflare D1 as campaign snapshots with optimistic version checks. Stale writes are rejected. Undo restores earlier saved data. Refresh, locking and signing in again do not reset the campaign. Deployments preserve the existing database. Only an empty database starts from lib/initial-campaign.json. File URLs and metadata are saved with each video; file binaries remain at their linked storage location.
 
-Today, calendar, weekly operations, production board and performance all use the same per-video records. Forecasts are estimates based on editable capacities and turnaround rules. Only approved final assets enter inventory. Only valid publications count toward the 100-video target. Posts are recorded manually; the app does not publish to Instagram.
+## Run and verify
 
-## Validate
+Use Node 22.13 or later, npm ci, then npm test and npm run build. Apply drizzle SQL migrations to local D1 before npm run dev. Set local-only password/signing values through the starter's local environment support. Production migrations are included by Sites packaging. Twenty-six tests cover production dependencies, late and partial deliveries, revisions, exact publication reconciliation, password/session protection, durable saves and concurrent updates.
 
-Run npm test for dependency, partial-delivery, revision, inventory, publication, correction and storage/concurrent-save tests. Run npm run build for the production build. D1 migrations are in drizzle/ and included by Sites packaging.
+## Daily use
 
-## Access and backups
-
-Published owner-private by default. Team members require Site access before they can use this shared campaign. Export downloads CSV and JSON backups; import, reset and duplicate are available in Settings. There is no separate role-based editor/admin permission system within this private app.
-
-## Daily workflow update (15 October)
-Calendar opens in week view with current next actions above it. The board uses direct action labels, owners, planned/recovery dates and publication slots. Reports and alternatives are available in Settings. Writing capacity can be changed for any date; zero means no writing. Actuals are recorded separately.
-
-Migration 0001 records the owner-requested zero writing capacity on 14 October for the original campaign. It creates an undo snapshot and preserves all actuals and original dates. It does not apply to differently dated campaigns. With the initial actuals, four scripts are allocated to 15 October and four to 16 October, including the missed work, without increasing daily capacity or moving publication slots.
+Open the calendar to see today's next actions and the week. Enter actual completions, receive files, review edits and record verified publications. Change writing capacity to reschedule unfinished work. The board shows each video's next action, owner, working date and publication slot. Reports, backup/import/reset and alternative scripts are in Settings. Forecasts are estimates; original plan dates and recorded actuals remain distinct. Publishing to Instagram is recorded manually.
