@@ -370,3 +370,7 @@ Reused the existing native creative-playbook SVG as a small decorative accent ab
 ## Live Calendly booking
 Added official Calendly inline widget for https://calendly.com/founder-waveugc/new-meeting immediately after final CTA and before footer. White/deep-green/cobalt customization, fixed responsive height to avoid embed resize collapse, accessible section heading and direct external fallback link. All .book buttons now scroll and focus the inline booking section instead of opening placeholder dialog. Verified live event title/date calendar in iframe, section order, focus and mobile overflow. No booking submitted. Calendly external widget requires network; no credentials required. Reference: https://developer.calendly.com/api-docs/overview/embedding/getting-started.
 
+
+## Production tracker entry — 2026-10-15
+
+Added /tracker1 and /tracker1/ as 302 shortcuts to the existing authenticated ChatGPT Site, as approved by the owner. A minimal fallback page provides the same link when server redirects are unavailable. Tracker source is stored under tracker1/source with an empty campaign seed and no live actuals, runtime data or credentials. Only tracker1/index.html is copied to website output. Existing homepage and proposal assets are unchanged.

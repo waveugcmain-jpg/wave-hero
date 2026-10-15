@@ -11,7 +11,7 @@ if (path.dirname(outputDir) !== projectRoot || path.basename(outputDir) !== "dis
 }
 await rm(outputDir, { recursive: true, force: true });
 await mkdir(outputDir, { recursive: true });
-for (const file of ["_headers", "index.html", "creator-network.css", "creator-network.js", "assets/optimized", "assets/fonts"]) {
+for (const file of ["_headers", "_redirects", "tracker1/index.html", "index.html", "creator-network.css", "creator-network.js", "assets/optimized", "assets/fonts"]) {
   await cp(path.join(projectRoot, file), path.join(outputDir, file), { recursive: true });
 }
 // Validate local URLs, including runtime image maps. Original source images
